@@ -1,25 +1,3 @@
-Skip to content
-Why GitHub? 
-Enterprise
-Explore 
-Marketplace
-Pricing 
-Search
-
-Sign in
-Sign up
-41 402 407 docker-library/tomcat
- Code  Issues 6  Pull requests 0  Security  Insights
-All your code in one place
-GitHub makes it easy to scale back on context switching. Read rendered documentation, see the history of any file, and collaborate with contributors on projects across GitHub.
-
- See pricing for teams and enterprises
-tomcat/8.5/jdk8/openjdk/Dockerfile
-@docker-library-bot docker-library-bot Update to 8.5.43
-171f0ec 15 days ago
-@tianon @docker-library-bot
-126 lines (118 sloc)  4.65 KB
-  
 FROM openjdk:8-jdk
 
 ENV CATALINA_HOME /usr/local/tomcat
