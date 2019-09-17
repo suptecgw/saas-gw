@@ -123,16 +123,3 @@ RUN set -e \
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-
