@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_emails" modulo="0,1,2,3,4" codTela="67">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='remetente' width="" visivel="true" format="" type="varchar" label="E-mail Remetente" />
+    <column name='fatura' width="" visivel="true" format="" type="varchar" label="E-mail para Fatura" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />
+    
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="remetente" label="E-mail Remetente" ordem="2"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnOrdenacaoSelect name="remetente" label="E-mail Remetente" ordem="2"/>
+    
+    
+</target>

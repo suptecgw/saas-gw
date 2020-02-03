@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00130">
+    <permissao sigla="cadcertificado" observacao=" "/>
+    <campo name="descricao_certificado" label="Descrição" observacao="Descrição do certificado digital."/>
+    <campo name="arquivo_certificado" label="Certificado" observacao="Botão para selecionar o certificado digital."/>
+    <campo name="download_certificado" label="Download" observacao="Efetuar download do certificado digital."/>    
+    <campo name="razaosocial_certificado" label="Razão Social" observacao="Razão social do certificado digital."/>
+    <campo name="cnpj_certificado" label="CNPJ" observacao="CNPJ do certificado digital."/>
+    <campo name="validade_certificado" label="Validade do Certificado " observacao="Validade do certificado digital."/>
+    <campo name="cadeia_certificado" label="Cadeia de Certificado" observacao="Mostra a cadeia de certificado atual"/>
+    <campo name="atualizar_cadeia_certificado" label="Atualizar Cadeia de Certificado" observacao="Atualizar a cadeia de certificado para que possa ser enviado os documentos fiscais."/>
+    <campo name="adicionar_filial_certificado" label="Adicionar uma filial" observacao="Adicionar uma filial ao certificado"/>
+    <campo name="remover_filial_certificado" label="Remover uma filial" observacao="Remover uma filial da lista."/>
+</tela>

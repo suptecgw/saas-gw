@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_mercadoria_deposito" modulo="0,1,2,3,4" codTela="69">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='num_cte' width="100px" visivel="true" format="" type="varchar" label="Nº CT-e" />
+    <column name='vendedor_id' width="" visivel="false" format="" type="varchar" label="Vendedor ID" />
+    <column name='is_cancelado' width="" visivel="false" format="" type="varchar" label="Cancelado" />
+    <column name='tipo' width="" visivel="false" format="" type="varchar" label="Tipo" />
+    <column name='emissao_cte' width="110px" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Emissão" />
+    <column name='filial_id' width="" visivel="false" format="" type="int" label="Filial ID" />
+    <column name='filial' width="85px" visivel="true" format="" type="varchar" label="Filial" />
+    <column name='valor_kg_ideal' width="" visivel="false" format="" type="int" label="Valor Kg Ideal" />
+    <column name='num_manifesto' width="120px" visivel="true" format="" type="varchar" label="Nº Manifesto" />
+    <column name='data_saida' width="120px" visivel="true" format="dd/MM/yyyy" type="varchar" label="Saída Manifesto" />
+    <column name='numero_nota_fiscal' width="120px" visivel="true" format="" type="varchar" label="Nº Nota Fiscal" />    
+    <column name='remetente_id' width="" visivel="false" format="" type="int" label="Remetente ID" />    
+    <column name='remetente' width="120px" visivel="true" format="" type="varchar" label="Remetente" />    
+    <column name='destinatario_id' width="" visivel="false" format="" type="int" label="Destinatário ID" />    
+    <column name='destinatario' width="120px" visivel="true" format="" type="varchar" label="Destinatário" />    
+    <column name='cidade_destino_id' width="" visivel="false" format="" type="int" label="Cidade Destino ID" />
+    <column name='destino' width="110px" visivel="true" format="" type="varchar" label="Cidade Destino" /> 
+    <column name='peso_notas_fiscais' width="100px" visivel="true" format="" type="varchar" label="Peso Real" />     
+    <column name='cubagem' width="110px" visivel="true" format="" type="int" label="Cubagem" />     
+    <column name='volume_notas_fiscais' width="150px" visivel="true" format="" type="varchar" label="Volume Notas Fiscais" />
+    <column name='tipo_pagto' width="120px" visivel="true" format="" type="varchar" label="Tipo Pagamento" />
+    <column name='valor_frete' width="110px" visivel="true" format="##,##" type="numeric" label="Valor Frete" />
+    <column name='num_coleta' width="" visivel="true" format="" type="varchar" label="Nº Coleta" />
+    <column name='num_orcamento' width="" visivel="true" format="" type="varchar" label="Nº Orçamento" />                
+    <column name='conteudo_nota_fiscal' width="" visivel="true" format="" type="varchar" label="Conteúdo Nota Fiscal" />                
+    <column name='peso_cubado' width="" visivel="true" format="" type="int" label="Peso Cubado" />  
+    <column name='peso_taxado' width="" visivel="true" format="" type="int" label="Peso Taxado" />  
+    <column name='hora_saida' width="" visivel="true" format="" type="varchar" label="Hora Saída" />              
+    <column name='data_chegada' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Chegada" />              
+    <column name='hora_chegada' width="" visivel="true" format="" type="varchar" label="Hora Chegada" />              
+    <column name='num_romaneio' width="" visivel="true" format="" type="varchar" label="Nº Romaneio" />              
+    <column name='data_romaneio' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Romaneio" />              
+    <column name='codigo_ocorrencia' width="" visivel="true" format="" type="varchar" label="Código Ocorrência" />              
+    <column name='ocorrencia' width="" visivel="true" format="" type="varchar" label="Ocorrência" />              
+    <column name='data_ocorrencia' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Ocorrência" />              
+    <column name='hora_ocorrencia' width="" visivel="true" format="" type="varchar" label="Hora Ocorrência" />              
+    <column name='filial_destino_id' width="" visivel="false" format="" type="int" label="Filial Destino ID" />              
+    <column name='filial_destino' width="" visivel="true" format="" type="varchar" label="Filial Destino" />              
+    <column name='cte_confirmado' width="" visivel="true" format="" type="varchar" label="CT-e Confirmado" />              
+    <column name='consignatario_id' width="" visivel="false" format="" type="int" label="Consignatário ID" />              
+    <column name='consignatario' width="" visivel="true" format="" type="varchar" label="Consignatário" />              
+    <column name='num_carga' width="" visivel="true" format="" type="varchar" label="Nº Carga" />              
+    <column name='dias_deposito_origem' width="" visivel="true" format="" type="varchar" label="Dias Dep. Origem" />              
+    <column name='dias_deposito_destino' width="" visivel="true" format="" type="varchar" label="Dias Dep. Destino" />              
+    <column name='dias_transferencia' width="" visivel="true" format="" type="varchar" label="Dias Transferência" />              
+    <column name='tipo_produto' width="" visivel="true" format="" type="varchar" label="Tipo de Produto" />              
+    <column name='status' width="" visivel="true" format="" type="varchar" label="Status" />              
+    <column name='data_entrega' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de Entrega" />              
+    <column name='hora_entrega' width="" visivel="true" format="" type="varchar" label="Hora de Entrega" />              
+    <column name='previsao_entrega' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Previsão de Entrega" />              
+    <column name='valor_notas_fiscais' width="" visivel="true" format="" type="varchar" label="Valor Notas Fiscais" />              
+    <column name='representante_coleta' width="" visivel="true" format="" type="varchar" label="Representante Coleta" />              
+    <column name='representante_entrega' width="" visivel="true" format="" type="varchar" label="Representante Entrega" />
+    <column name='preco_kilo' width="" visivel="true" format="##,##" type="numeric" label="R$/Kg" />
+    <column name='status_carga' width="" visivel="false" format="" type="varchar" label="Status Carga" />
+    <column name='representante_destino_id' width="" visivel="false" format="" type="varchar" label="Representante Destino" />
+    
+    <columnFiltroSelect name="emissao_cte" label="Data Emissão" ordem="1"/>
+    <columnFiltroSelect name="num_cte" label="Nº CT-e" ordem="2"/>
+    <columnFiltroSelect name="num_manifesto" label="Nº Manifesto" ordem="3"/>
+    <columnFiltroSelect name="data_saida" label="Saída Manifesto" ordem="4"/>
+    <columnFiltroSelect name="numero_nota_fiscal" label="Nº Nota Fiscal" ordem="5"/>
+    <columnFiltroSelect name="num_coleta" label="Nº Coleta" ordem="6"/>
+    <columnFiltroSelect name="num_romaneio" label="Nº Romaneio" ordem="7"/>
+    <columnFiltroSelect name="data_chegada" label="Data Chegada" ordem="8"/>
+    <columnFiltroSelect name="data_entrega" label="Data de Entrega" ordem="9"/>
+    <columnFiltroSelect name="num_carga" label="Nº Carga" ordem="10"/>
+    <columnFiltroSelect name="previsao_entrega" label="Previsão de Entrega" ordem="11"/>
+        
+    <columnOrdenacaoSelect name="num_cte" label="Nº CT-e" ordem="1"/>
+    <columnOrdenacaoSelect name="emissao_cte" label="Data Emissão" ordem="2"/>
+    <columnOrdenacaoSelect name="filial" label="Filial" ordem="3"/>
+    <columnOrdenacaoSelect name="num_manifesto" label="Nº Manifesto" ordem="4"/>
+    <columnOrdenacaoSelect name="data_saida" label="Saída Manifesto" ordem="5"/>
+    <columnOrdenacaoSelect name="numero_nota_fiscal" label="Nº Nota Fiscal" ordem="6"/>
+    <columnOrdenacaoSelect name="remetente" label="Remetente" ordem="7"/>
+    <columnOrdenacaoSelect name="destinatario" label="Destinatário" ordem="8"/>
+    <columnOrdenacaoSelect name="destino" label="Cidade Destino" ordem="9"/>
+    <columnOrdenacaoSelect name="peso_notas_fiscais" label="Peso Real" ordem="10"/>
+    <columnOrdenacaoSelect name="cubagem" label="Cubagem" ordem="11"/>
+    <columnOrdenacaoSelect name="volume_notas_fiscais" label="Volume Notas Fiscais" ordem="12"/>
+    <columnOrdenacaoSelect name="tipo_pagto" label="Tipo de pagamento" ordem="13"/>
+    <columnOrdenacaoSelect name="valor_frete" label="Valor Frete" ordem="14"/>
+    <columnOrdenacaoSelect name="num_coleta" label="Nº Coleta" ordem="15"/>
+    <columnOrdenacaoSelect name="num_orcamento" label="Nº Orçamento" ordem="16"/>
+    <columnOrdenacaoSelect name="conteudo_nota_fiscal" label="Conteúdo Nota Fiscal" ordem="17"/>
+    <columnOrdenacaoSelect name="peso_cubado" label="Peso Cubado" ordem="18"/>
+    <columnOrdenacaoSelect name="peso_taxado" label="Peso Taxado" ordem="19"/>
+    <columnOrdenacaoSelect name="hora_saida" label="Hora Saída" ordem="20"/>
+    <columnOrdenacaoSelect name="data_chegada" label="Data Chegada" ordem="21"/>
+    <columnOrdenacaoSelect name="hora_chegada" label="Hora Chegada" ordem="22"/>
+    <columnOrdenacaoSelect name="num_romaneio" label="Nº Romaneio" ordem="23"/>
+    <columnOrdenacaoSelect name="data_romaneio" label="Nº Romaneio" ordem="24"/>
+    <columnOrdenacaoSelect name="codigo_ocorrencia" label="Código Ocorrência" ordem="25"/>
+    <columnOrdenacaoSelect name="ocorrencia" label="Ocorrência" ordem="26"/>
+    <columnOrdenacaoSelect name="data_ocorrencia" label="Data Ocorrência" ordem="27"/>
+    <columnOrdenacaoSelect name="hora_ocorrencia" label="Hora Ocorrência" ordem="28"/>
+    <columnOrdenacaoSelect name="filial_destino" label="Filial Destino" ordem="29"/>
+    <columnOrdenacaoSelect name="cte_confirmado" label="CT-e Confirmado" ordem="30"/>
+    <columnOrdenacaoSelect name="consignatario" label="Consignatário" ordem="32"/>
+    <columnOrdenacaoSelect name="num_carga" label="Nº Carga" ordem="33"/>
+    <columnOrdenacaoSelect name="dias_deposito_origem" label="Dias Dep. Origem" ordem="34"/>
+    <columnOrdenacaoSelect name="dias_deposito_destino" label="Dias Dep. Destino" ordem="35"/>
+    <columnOrdenacaoSelect name="dias_transferencia" label="Dias Transferência" ordem="36"/>
+    <columnOrdenacaoSelect name="tipo_produto" label="Tipo de Produto" ordem="37"/>
+    <columnOrdenacaoSelect name="status" label="Status" ordem="38"/>
+    <columnOrdenacaoSelect name="data_entrega" label="Data de Entrega" ordem="39"/>
+    <columnOrdenacaoSelect name="hora_entrega" label="Hora de Entrega" ordem="40"/>
+    <columnOrdenacaoSelect name="previsao_entrega" label="Previsão de Entrega" ordem="41"/>
+    <columnOrdenacaoSelect name="valor_notas_fiscais" label="Valor Notas Fiscais" ordem="42"/>
+    
+    
+</target>

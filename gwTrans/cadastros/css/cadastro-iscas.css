@@ -1,0 +1,23 @@
+.btn-tertiary {
+    background: var(--tonalidade2);
+    color: #fff;
+    padding: 0;
+    line-height: 27px;
+    width: 100%;
+    margin: auto;
+    display: block;
+    border: 2px solid var(--tonalidade2);
+}
+.btn-tertiary:hover, .btn-tertiary:focus {
+    color: #fff;
+}
+
+.btn-tertiary {
+    width: 81%;
+    margin: 0px;
+    margin-right: 100px;
+}
+
+.datebox, .sombra {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}

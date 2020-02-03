@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tela name="XmlAjuda" codigo="T00076">
+    <permissao sigla="cadcategoriacarga" observacao=" " />
+    <campo name="descricao" label="Descrição" observacao="Descrição da categoria de carga. Exemplo: Lastro, Sensível, Vidro e etc... Esse campo será utilizado no lançamento do CT-e para facilitar a arrumação da carga no caminhão." />
+</tela>

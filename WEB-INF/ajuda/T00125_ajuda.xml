@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00125">
+    <permissao sigla="lanorcamentacao" observacao=" "/>
+    <campo name="competencia" label="Competência" observacao="Mês/Ano do lançamento da orçamentação."/>
+    <campo name="filial" label="Filial" observacao="Filial da orçamentação."/>
+    <campo name="plano_custo_ajuda" label="Plano de Custo" observacao="Planos de custos da orçamentação."/>
+    <campo name="tipo_ajuda" label="Tipo" observacao="Tipo da orçamentação para o plano de custo. Poderá ser &quot;Geral&quot; ou &quot;Por Unidade de Custo&quot;."/>
+    <campo name="valor_total_ajuda" label="Valor Total" observacao="Valor total orçado para o plano de custo. Esse campo só poderá ser alterado manualmente caso o campo tipo esteja marcado com &quot;Geral&quot;, caso contrário e campo será a soma dos valores dos campos &quot;Valor Und Custo&quot;."/>
+    <campo name="valor_und_custo_ajuda" label="Valor Und Custo" observacao="Valor orçado para a unidade de custo e o plano de custo. Esse campo só poderá ser alterado manualmente caso o campo tipo esteja marcado com &quot;Por Unidade de Custo&quot;, caso contrário e campo desabilitado."/>
+</tela>

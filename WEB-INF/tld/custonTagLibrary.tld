@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+    <display-name>Custom EL Functions</display-name>    
+    <tlib-version>1.0</tlib-version>
+    <short-name>cg</short-name>
+    <uri>/WEB-INF/tld/customTagLibrary</uri>
+    <function>
+        <name>roundABNT</name>
+        <function-class>nucleo.Apoio</function-class>
+        <function-signature>
+            double roundABNT(double, int)
+        </function-signature>
+    </function>
+    <function>
+        <name>indexOf</name>
+        <function-class>nucleo.Apoio</function-class>
+        <function-signature>int indexOf(java.util.List,java.lang.Object)
+        </function-signature>
+    </function>
+    <function>
+        <name>formatCampoConsulta</name>
+        <function-class>nucleo.Apoio</function-class>
+        <function-signature>String formatCampoConsulta(java.lang.Object)</function-signature>
+    </function>
+    <function>
+        <name>getDataAtual</name>
+        <function-class>nucleo.Apoio</function-class>
+        <function-signature>String getDataAtual()</function-signature>
+    </function>
+    <function>
+        <name>getHoraAtual</name>
+        <function-class>nucleo.Apoio</function-class>
+        <function-signature>String getHoraAtual()</function-signature>
+    </function>
+    <function>
+        <name>resultListToJson</name>
+        <function-class>nucleo.Apoio</function-class>
+        <function-signature>String resultListToJson(br.com.gwsistemas.eutil.consulta.ResultList)</function-signature>
+    </function>
+    <function>
+        <name>removeQuebraLinha</name>
+        <function-class>nucleo.Apoio</function-class>
+        <function-signature>String removeQuebraLinha(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getAcesso</name>
+        <function-class>nucleo.Apoio</function-class>
+        <function-signature>int getAcesso(usuario.BeanUsuario, java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>listaEmailFatura</name>
+        <function-class>nucleo.Apoio</function-class>
+        <function-signature>java.util.List listarEmailFatura()</function-signature>
+    </function>
+</taglib>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00099">
+    <permissao sigla="cadcaixapostalseg" observacao=" " />
+    <campo name="descricao" label="Descrição" observacao="Descrição da Caixa Postal." />
+    <campo name="codigo_averbacao" label="Código de Averbação" observacao="Código de Averbação, essa informação você deverá verificar com o corretor de seguro." />
+    <campo name="login_averbacao" label="Login" observacao="Login no sistema da seguradora." />
+    <campo name="senha_averbacao" label="Senha" observacao="Senha no sistema da seguradora." />
+</tela>

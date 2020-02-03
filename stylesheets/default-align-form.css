@@ -1,0 +1,97 @@
+form label {
+	float:left !important; 
+	padding:5px; 
+	font-family: "Arial", Times New Roman;
+	font-size:12px;
+	font-variant:small-caps;
+	text-align: left;
+} 
+
+form fieldset { 
+	padding: 10px; 
+	background-color:#FAFAFA; 
+	border-left: 1px solid #bbb; 
+	border-right: 1px solid #bbb; 
+	overflow: auto; 
+	width: 100%; 
+} 
+
+form fieldset legend { 
+	padding: 2px 5px; 
+	color: #333; 
+	font-weight: bold; 
+} 
+
+fieldset.mid { text-align: center; }
+/* HTML TAGS */
+
+table th{
+	font-family: "Arial", Times New Roman;
+	font-size:13px;
+}
+
+
+/* IDs 
+
+form fieldset
+{
+	display: block;
+	margin: 5px 5px 5px 5px;
+	padding: 3px 3px 3px 9px;
+	/*width: 700px;*/
+/*}
+
+form fieldset.radio
+{
+	margin: 5px 0px 0px 0px;
+}
+
+form fieldset.radio input
+{
+	clear: both;
+	float: left;
+	width: auto;
+}
+
+form fieldset.radio label
+{
+	font-weight: normal;
+}
+
+form input
+{
+	display: block;
+	/*width: 15em;*/
+/*}
+
+form input.submit
+{
+	clear: both;
+}
+
+form label
+{
+	float: left;
+	display: block;
+	margin: 1px 1px 0 0;
+	font-weight: bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+form select
+{
+	display: block;
+	font-weight: normal;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+#formSearch fieldset legend{
+	font-size:14px;
+	font-variant:small-caps;
+}
+
+
+
+/* CLASSES */

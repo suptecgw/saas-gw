@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GW Sistemas - Notícia Menu</title>
+        <meta charset="ISO-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html,body{
+                margin: 0;
+                padding: 0;
+                font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+            }
+
+            header{
+                background: #fff;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                color: #666;
+                border-bottom: 1px solid #ccc;
+            }
+
+            section > center > img{
+                margin-top: 15px;
+            }
+
+            .container-label{
+                font-size: 14px;
+                width: 650px;
+                margin-top: 10px;
+            }
+
+            .container-label{
+                text-align: left;
+            }
+            
+            #consulta{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            
+            #consulta:hover{
+                color: #13385C;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Novidades da versão 16.00 (GW Trans)
+        </header>
+        <section>
+            <center>
+                <img src="../../assets/img/caminhao-gw-1600.png" width="200px">
+                <div class="container-label" style="text-align: center;font-size: 15px;font-weight: bold;">
+                    Para visualizar todas as novidades da versão
+                </div>
+                <div class="container-label" style="text-align: center;font-size: 15px;font-weight: bold;">
+                    <label>
+                        <a class="validarSessaoMenu" onclick="parent.clickNovidade('16');" id="consulta">Clique Aqui!</a>
+                    </label>
+                </div>
+            </center>
+        </section>
+    </body>
+</html>

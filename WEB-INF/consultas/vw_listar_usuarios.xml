@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_usuarios" modulo="0,1,2,3,4" codTela="62">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='nome' width="" visivel="true" format="" type="varchar" label="Nome" />
+    <column name='id_filial' width="" visivel="false" format="" type="int" label="Filial ID" />
+    <column name='filial' width="" visivel="true" format="" type="varchar" label="Filial" />  
+    <column name='email' width="" visivel="true" format="" type="varchar" label="E-mail" />  
+    <column name='grupo_id' width="" visivel="false" format="" type="int" label="Grupo ID" />  
+    <column name='grupo_usuario' width="" visivel="true" format="" type="varchar" label="Grupo de Usuário" />  
+    <column name='ativo' width="" visivel="true" format="" type="varchar" label="Ativo" />  
+    <column name='aviso_backup' width="" visivel="true" format="" type="varchar" label="Aviso de backup" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />
+    
+    <columnFiltroSelect name="nome" label="Nome" ordem="1"/>
+    <columnFiltroSelect name="email" label="E-mail" ordem="2"/>
+    
+    <columnOrdenacaoSelect name="nome" label="Nome" ordem="1"/>
+    <columnOrdenacaoSelect name="filial" label="Filial" ordem="2"/>
+    <columnOrdenacaoSelect name="email" label="E-mail" ordem="3"/>
+    <columnOrdenacaoSelect name="grupo_usuario" label="Grupo de Usuário" ordem="4"/>
+    
+    
+</target>

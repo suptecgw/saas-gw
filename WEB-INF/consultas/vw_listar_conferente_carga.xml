@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_conferente_carga" modulo="0,1,2,3,4" codTela="73">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='nome' width="" visivel="true" format="" type="varchar" label="Nome" />
+    <column name='valor_hora' width="" visivel="false" format="" type="numeric" label="Valor Hora" />
+    <column name='ativo' width="" visivel="true" format="" type="boolean" label="Ativo" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Ultima Alteração" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />
+    
+    <columnFiltroSelect name="nome" label="Nome" ordem="1"/>
+    
+    <columnOrdenacaoSelect name="nome" label="Nome" ordem="1"/>
+    
+</target>

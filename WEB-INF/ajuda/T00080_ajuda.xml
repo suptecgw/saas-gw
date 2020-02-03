@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00080">
+    <permissao sigla="contratocomercial" observacao=" "/>
+    <campo name="numero" label="Nº Contrato" observacao="Nº do contrato, será gerado automaticamente ao salvar o contrato."/>
+    <campo name="emissao" label="Data" observacao="Data do contrato."/>
+    <campo name="validade" label="Validade" observacao="Validade do contrato."/>
+    <campo name="filial" label="Filial" observacao="Filial responsável pelo contrato."/>
+    <campo name="inptCliente" label="Cliente" observacao="Cliente do contrato."/>
+    <campo name="obs" label="Observação" observacao="Observações sobre o contrato."/>
+    <campo name="obs-condicoes" label="Condições de pagamento" observacao="Campo específico para informar os detalhes das condições de pagamento."/>
+    <campo name="obs-gerais" label="Observações gerais" observacao="Observações gerais sobre o contrato."/>
+    <campo name="tabela" label="Código da Tabela" observacao="Informações sobre a tabela de preço escolhida."/>
+    <campo name="origem" label="Origem" observacao="Informações sobre a tabela de preço escolhida."/>
+    <campo name="destino" label="Destino" observacao="Informações sobre a tabela de preço escolhida."/>
+    <campo name="tipoProduto" label="Tipo de Produto" observacao="Informações sobre a tabela de preço escolhida."/>
+    <campo name="valorFrete" label="Frete/Kg" observacao="Informações sobre a tabela de preço escolhida."/>
+    <campo name="porcentagemNF" label="% NF" observacao="Informações sobre a tabela de preço escolhida."/>
+    <campo name="freteMinimo" label="Frete Mínimo" observacao="Informações sobre a tabela de preço escolhida."/>
+</tela>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00083">
+    <permissao sigla="cadastronat" observacao=" " />
+    <campo name="descricao" label="Descrição" observacao="Descrição da NAT. Exemplo: Casa de Luciano, Rede Local, Escritório SP... Esse campo será utilizado no cadastro do usuário para informar de qual IP ele poderá acessar o sistema." />
+    <campo name="tipoAcesso" label="Tipo de Acesso" observacao="Tipo de acesso: Deverá ser informado se a configuração da NAT é para o acesso interno ou acesso externo." />
+    <campo name="ip" label="IP" observacao="IP que será liberado para o usuário acessar o sistema." />
+    <campo name="ipFinal" label="IP Final" observacao="IP Final deverá ser preenchido apenas se o tipo de acesso for INTERNO. Nesse caso o IP final será necessário para informar a faixa de IP que será liberado." />
+</tela>

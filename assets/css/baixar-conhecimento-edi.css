@@ -1,0 +1,64 @@
+.btn-tertiary {
+    display: inline-block;
+}
+
+.input-file-layout + .js-labelFile {
+    width: 100%;
+}
+
+.titulo-dom {
+    float: left;
+    margin-bottom: 0.5vw;
+}
+
+.titulo-dom:first-of-type {
+    margin-left: 1vw;
+}
+
+.truncate {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.corpo-ocorrencia {
+    margin-top: 0.3vw;
+    margin-bottom: 0.3vw;
+}
+
+.corpo-ocorrencia > div {
+    float: left;
+}
+
+.corpo-ocorrencia > div:first-of-type {
+    margin-left: 1vw;
+}
+
+#importar_edi {
+    margin-top: unset;
+}
+
+#container-dom-ocorrencias {
+    overflow: auto;
+    height: 20vw;
+}
+
+.qtd_ocorrencias {
+    position: absolute;
+    bottom: 0;
+}
+
+#importar_edi {
+    margin: 31px 0 0;
+}
+
+.js-labelFile {
+    width: 90% !important;
+    padding: unset !important;
+}
+
+.lb-name-page {
+    margin-top: 0.6vw !important;
+}

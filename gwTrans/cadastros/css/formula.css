@@ -1,0 +1,149 @@
+/* 
+    Created on : 28/02/2018, 06:08:29
+    Author     : KALUNGA
+*/
+:root{
+    --tonalidade1: #0c253e; 
+    --tonalidade2: #13385C;
+    --tonalidade14:#a0c2e4;
+    --tonalidade43:#000066;
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container-formula{
+    width: 700px;
+    height: 600px;
+    overflow: hidden;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.75);
+}
+
+.topo-formula{
+    position: relative;
+    width: 100%;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    color: var(--tonalidade14);
+    background: var(--tonalidade1);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.75);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo-gwsistemas{
+    width: 120px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.img-sair-formula{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.corpo-formula{
+    width: 100%;
+    box-shadow: 0 0 6px 1px rgba(0,0,0,0.5);
+    float: left;
+}
+
+.nome-formula{
+    float: left;
+    width: 25%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: right;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.formula{
+    float: left;
+    width: calc(25% - 10px);
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: var(--tonalidade43);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formula:hover{
+    text-decoration: underline;
+}
+
+.zebra{
+    background: #f1f1f1;
+}
+
+.container-text-area{
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #999;
+}
+
+.text-formula{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    height: 150px;
+    width: 95%;
+    margin-left: 13px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+
+.bt-confirmar-formula{
+    margin-left: calc(50% - 80px);
+    color: #FFF;
+    font-size: 12px;
+    padding: 6px 12px 6px 12px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    background-size: 13px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    -webkit-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.75);
+    border: 0;
+    cursor: pointer;
+    margin-top: 13px;
+    background: var(--tonalidade2);
+}
+.bt-confirmar-formula:hover{
+    background-color: var(--tonalidade1);
+}
+
+.bt-cancelar-formula{
+    color: #FFF;
+    font-size: 12px;
+    padding: 6px 12px 6px 12px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    background-size: 13px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    -webkit-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.75);
+    border: 0;
+    cursor: pointer;
+    margin-top: 13px;
+    background: var(--tonalidade2);
+}
+.bt-cancelar-formula:hover{
+    background-color: var(--tonalidade1);
+}

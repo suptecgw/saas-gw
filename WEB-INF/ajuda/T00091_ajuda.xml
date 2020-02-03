@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00091">
+    <permissao sigla="cadcfop" observacao=" "/>
+    <campo name="cfop" label="CFOP" observacao="Código Fiscal de Operação, esse código pode ser consultado no site da SEFAZ. Utilizamos esse código na geração de CT-e/NF-e/NFS-e."/>
+    <campo name="descricao" label="Descricao" observacao="Descrição do CFOP."/>
+    <campo name="planoCusto" label="Plano de Custo" observacao="Plano de custo padrão para lançamentos de CT-e. Ao incluir um conhecimento de transporte o plano de custo poderá ser preenchido de acordo com o CFOP utilizado."/>
+</tela>

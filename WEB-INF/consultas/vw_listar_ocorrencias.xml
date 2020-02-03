@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_ocorrencias" modulo="0,1,2,3,4" codTela="44">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='codigo' width="75px" visivel="true" format="" type="varchar" label="Código" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='oculta_cliente' width="" visivel="true" format="" type="varchar" label="Ocultar p/ cliente" />  
+    <column name='ineficiencia_cliente' width="" visivel="true" format="" type="varchar" label="Ineficiência do cliente" />
+    <column name='libera_pagto_representante' width="" visivel="true" format="" type="varchar" label="Liberar representante" />
+    <column name='enviar_email' width="50px" visivel="true" format="" type="varchar" label="Enviar e-mail" />
+    <column name='entrega_realizada' width="" visivel="true" format="" type="varchar" label="Ocorrência Entrega" />
+    <column name='entrega_nao_realizada' width="" visivel="true" format="" type="varchar" label="Ocorrência Não Entrega" />
+    <column name='is_coleta' width="" visivel="false" format="" type="varchar" label="Utilização Coleta" />
+    <column name='is_conhecimento' width="" visivel="false" format="" type="varchar" label="Utilização Conhecimento" />
+    <column name='is_contrato_frete' width="" visivel="false" format="" type="varchar" label="Utilização Contrato de Frete" />
+    <column name='is_sincronizado_mobile' width="" visivel="false" format="" type="varchar" label="Sincronizado no Mobile" />
+    <column name='is_sincronizado_mobile_bloqueado' width="" visivel="false" format="" type="varchar" label="Sincronizado Mobile Bloqueado" />
+    <column name='is_enviado_mobile' width="" visivel="false" format="" type="varchar" label="Enviado para o Mobile" />
+    <column name='filial_cnpj_integracao' width="" visivel="false" format="" type="varchar" label="CNPJ da Filial Integradora" />
+    
+    <columnFiltroSelect name="codigo" label="Código" ordem="1"/>
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="2"/>
+    
+    <columnOrdenacaoSelect name="codigo" label="Código" ordem="1"/>
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="2"/>
+    
+    
+</target>

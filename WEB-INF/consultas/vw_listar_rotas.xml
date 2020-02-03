@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_rotas" modulo="0,1,2,3,4" codTela="47">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Nome" />
+    <column name='cidade_origem_id' width="" visivel="false" format="" type="int" label="Origem ID"/>
+    <column name='cidade_origem' width="" visivel="true" format="" type="varchar" label="Origem"/>
+    <column name='cidade_destino_id' width="" visivel="false" format="" type="int" label="Destino ID"/>
+    <column name='cidade_destino' width="" visivel="true" format="" type="varchar" label="Destino"/>
+    <column name='distancia' width="" visivel="true" format="#,###" type="numeric" label="Distância"/>
+    <column name='ativa' width="" visivel="true" format="" type="varchar" label="Ativa"/>
+    <column name='area_destino_id' width="" visivel="false" format="" type="int" label="Àrea destino ID"/>
+    <column name='area_destino' width="" visivel="true" format="" type="varchar" label="Àrea destino"/>
+    <column name='prazo_entrega' width="" visivel="false" format="" type="varchar" label="Prazo Entrega"/>
+    <column name='valor_diaria' width="" visivel="false" format="#,##" type="numeric" label="Valor Diária"/>
+    <column name='valor_pernoite' width="" visivel="false" format="#,##" type="numeric" label="Valor Pernoite"/>
+    <column name='valor_refeicao' width="" visivel="false" format="#,##" type="numeric" label="Valor Refeição"/>
+    <column name='qtd_percursos' width="" visivel="false" format="" type="numeric" label="QTD de Percursos"/>
+    <column name='cod_int_pedagio' width="" visivel="false" format="" type="varchar" label="Cód. integ. Pedágio"/>
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Criado em"/>
+    <column name='atualizado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Atualizado em"/>
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criados por mim" />
+    <column name='rota_coleta' width="" visivel="false" format="" type="varchar" label="Rota Coleta" />
+    <column name='rota_manifesto' width="" visivel="false" format="" type="varchar" label="Rota Manifesto" />
+    <column name='rota_romaneio' width="" visivel="false" format="" type="varchar" label="Rota Romaneio" />
+    <column name='cliente_id' width="" visivel="false" format="" type="int" label="Cliente" />
+    <column name='produto_id' width="" visivel="false" format="" type="int" label="Produto" />
+        
+    <columnFiltroSelect name="descricao" label="Nome" ordem="1"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Nome" ordem="1"/>
+    <columnOrdenacaoSelect name="cidade_origem" label="Origem" ordem="2"/>
+    <columnOrdenacaoSelect name="cidade_destino" label="Destino" ordem="3"/>
+    <columnOrdenacaoSelect name="distancia" label="Distância" ordem="4"/>
+
+</target>

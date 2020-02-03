@@ -1,0 +1,63 @@
+# Sérgio Gustavo
+# Modelo de driver para Coleta com folha continua
+
+#Usando este driver:
+#[COLUNA,LINHA,<CONDENSADO>]=<Texto para impressao>
+
+MSG_BEFORE_PRINT=TRANSCOLINAS<=N><=N>Confirme a Impressão:<=N><=N><=N>Caminho da impressora:
+
+#DADOS DA TRANSPORTADORA
+[01,2,1/8]=@F(fi_cnpj,18,NOALIGN) - @F(fi_nome,50,NOALIGN)
+[01,3,1/8]=@F(fi_end,25,NOALIGN)- @F(fi_bai,15,NOALIGN)
+[01,4,1/8]=@F(fi_cid,25,NOALIGN)/@F(fi_uf,2,NOALIGN) CEP:@F(fi_cep,9,NOALIGN) FONE:@F(fi_fone,12,NOALIGN)
+[01,6,1/8]=----------------------------------------------------------------------------
+[25,7,1/8]=O R D E M  D A  C O L E T A  -  @F(numcoleta,6)
+[01,8,1/8]=----------------------------------------------------------------------------
+[01,9,1/8]=Data de solicitacao     : @F(dtlancamento,15,LEFT)
+[45,9,1/8]=Anotada por   :@F(usulanc,20,LEFT)
+[01,10,1/8]=Horario da solicitacao : @F(hrsolicitacao,08,LEFT)
+[45,10,1/8]=Solicitada por: @F(contato,20,LEFT)
+
+#LOCAL DA COLETA
+[01,11,1/8]=----------------------------------------------------------------------------
+[01,12,1/8]=LOCAL DA COLETA
+[01,13,1/8]=----------------------------------------------------------------------------
+[01,14,1/8]=CNPJ         : @F(cnpj_cli,18,LEFT) - FONE: @F(fone_cli,12,LEFT)
+[01,15,1/8]=Empresa      : @F(razaosocial,50,LEFT)
+[01,16,1/8]=Endereco     : @F(end_cli,40,NOALIGN),@F(bai_cli,22,LEFT)
+[01,17,1/8]=Cidade       : @F(cid_cli,15,NOALIGN)/@F(uf_cli,2,LEFT)
+[01,18,1/8]=----------------------------------------------------------------------------
+[01,19,1/8]=Horario      : @F(horario_cli,50,LEFT)
+
+#DESTINATARIO
+[01,20,1/8]=----------------------------------------------------------------------------
+[01,21,1/8]=Destinatario : @F(cnpj_dest,18,LEFT)
+[01,22,1/8]=Razao Social : @F(rzs_dest,30,LEFT)
+[01,23,1/8]=Cidade/UF    : @F(cid_destino,15,NOALIGN)/@F(uf_destino,2,LEFT)
+[01,24,1/8]=----------------------------------------------------------------------------
+
+#DADOS DA COLETA
+[01,25,1/8]=Volumes
+[01,26,1/8]=----------------------------------------------------------------------------
+[01,27,1/8]=@F(volume_solicitado,5,LEFT)
+[20,25,1/8]=Especie
+[20,27,1/8]=VOLUMES
+[35,25,1/8]=Peso
+[35,27,1/8]=@F(peso_solicitado,8,LEFT)
+[45,25,1/8]=Natureza
+[45,27,1/8]=DIVERSOS
+[60,25,1/8]=Nr.Pedido
+[60,27,1/8]=@F(numpedido,6,LEFT)
+
+#OBSERVACAO
+[02,28,1/8]=----------------------------------------------------------------------------
+
+[01,29,1/8]=Observacoes : @F(obs_linha1,60,LEFT)
+[16,30,1/8]=@F(obs_linha2,60,LEFT)
+[16,31,1/8]=FAVOR CONFIRMAR COM A TRANSPOR. A PLACA E NOME DO MOTORISTA
+[01,32,1/8]=Veiculo     : @F(cavalo,8,LEFT)/@F(carreta,8,LEFT)
+[01,33,1/8]=Motorista   : @F(motorista,40,LEFT)
+[01,34,1/8]=Pt. ref.    : @F(ponto_referencia,40,LEFT)
+[45,35,1/8]=Chegada:__________Saida:__________
+
+[80,42,COND,1/8]=<=N><=N>

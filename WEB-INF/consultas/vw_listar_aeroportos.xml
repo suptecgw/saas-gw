@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_aeroportos" modulo="0,1,2,3,4" codTela="34">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="200px" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='cidade' width="200px" visivel="true" format="" type="varchar" label="Cidade" />
+    <column name='uf' width="50px" visivel="true" format="" type="varchar" label="UF" />  
+    <column name='iata' width="50px" visivel="true" format="" type="varchar" label="IATA" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criados por mim" />
+    <column name='atualizado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Atualizado em"/>
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Criado em"/>
+    
+        
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="cidade" label="Cidade" ordem="2"/>
+    <columnFiltroSelect name="uf" label="UF" ordem="3"/>
+    <columnFiltroSelect name="iata" label="IATA" ordem="4"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnOrdenacaoSelect name="cidade" label="Cidade" ordem="2"/>
+    <columnOrdenacaoSelect name="uf" label="UF" ordem="3"/>
+    <columnOrdenacaoSelect name="iata" label="IATA" ordem="4"/>
+        
+</target>

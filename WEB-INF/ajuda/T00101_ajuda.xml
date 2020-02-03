@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00101">
+    <permissao sigla="cadcaixapostalseg" observacao=" " />
+    <campo name="descricao" label="Descrição" observacao="Descrição da Impressora Matricial" />
+</tela>

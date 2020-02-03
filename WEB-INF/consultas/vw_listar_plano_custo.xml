@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_plano_custo" modulo="0,1,2,3,4" codTela="21">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='codigo' width="100px" visivel="true" format="" type="int" label="Código" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='tipo' width="" visivel="true" format="" type="varchar" label="Tipo" />
+    <column name='observacao' width="" visivel="true" format="" type="varchar" label="Observação" />
+    <column name='contas_codigo' width="" visivel="true" format="" type="int" label="PL. Contas (Código)" />  
+    <column name='contas_conta' width="" visivel="true" format="" type="int" label="PL. Contas (Conta)" />
+    <column name='contas_descricao' width="" visivel="true" format="" type="int" label="PL. Contas (Descrição)" />
+    <column name='transitoria' width="" visivel="true" format="" type="int" label="Conta Transitória" />
+    <column name='provisao' width="" visivel="true" format="" type="int" label="Contabilizar Provisão" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="int" label="Data Criação" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="int" label="Data Última Alteração" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />
+    <column name='ativo' width="" visivel="true" format="" type="varchar" label="Ativo" />
+    
+    <columnFiltroSelect name="codigo" label="Código" ordem="1"/>
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="2"/>
+    <columnFiltroSelect name="contas_codigo" label="PL. Contas (Código)" ordem="3"/>
+    <columnFiltroSelect name="contas_conta" label="PL. Contas (Conta)" ordem="4"/>
+    <columnFiltroSelect name="contas_descricao" label="PL. Contas (Descrição)" ordem="5"/>
+    <columnFiltroSelect name="data_criacao" label="Data Criação" ordem="6"/>
+    <columnFiltroSelect name="data_ultima_alteracao" label="Data Última Alteração" ordem="7"/>
+    
+    <columnOrdenacaoSelect name="codigo" label="Código" ordem="1"/>
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="2"/>
+    <columnOrdenacaoSelect name="contas_codigo" label="PL. Contas (Código)" ordem="3"/>
+    <columnOrdenacaoSelect name="contas_conta" label="PL. Contas (Conta)" ordem="4"/>
+    <columnOrdenacaoSelect name="contas_descricao" label="PL. Contas (Descrição)" ordem="5"/>
+    <columnOrdenacaoSelect name="data_criacao" label="Data Criação" ordem="6"/>
+    <columnOrdenacaoSelect name="data_ultima_alteracao" label="Data Última Alteração" ordem="7"/>
+    
+    
+</target>
+

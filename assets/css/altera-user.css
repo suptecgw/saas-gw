@@ -1,0 +1,140 @@
+/* 
+    Created on : 31/10/2018, 14:10:56
+    Author     : diego
+*/
+:root{
+  --tonalidade1: #0c253e; 
+  --tonalidade7: #375471;
+  --tonalidade14: #a0c2e4;
+}
+.alt-foto{
+    border-radius: 10px;
+    background: #fff;
+    padding: 8px;
+    margin-left: 15px;
+    margin-top: 7px;
+    position: absolute;
+    font-size: 13px;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    color: #666;
+    font-weight: bold;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+}
+
+.bt-limpar-filtros{
+    border-radius: 10px;
+    background: #fff;
+    padding: 8px;
+    margin-left: 15px;
+    margin-top: -5px;
+    position: absolute;
+    font-size: 13px;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    color: #666;
+    font-weight: bold;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+
+}
+
+.alt-foto:hover, .bt-limpar-filtros:hover{
+    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+
+.div-tela-toda{
+    display: none;
+    opacity: 0.0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    z-index: 99;
+}
+
+.div-mudar-senha{
+    display: none;
+    opacity: 0.0;
+    position: absolute;
+    width: 515px;
+    height: 255px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -257px;
+    z-index: 999;
+    border-radius: 9px;
+    -moz-box-shadow:0px 8px 16px 0px rgba(0,0,0,1.0);
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,1.0);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,1.0);
+}
+
+.topo-senha{
+    width: 100%;
+    height: 60px;
+    background: var(--tonalidade1);
+    border-radius: 8px 8px 0 0;
+}
+
+.topo-senha img{
+    margin-top: 7px;
+    margin-left: 10px;
+    position: absolute;
+}
+
+.topo-senha label{
+    position: absolute;
+    left: 35%;
+    top: 20px;
+    color: var(--tonalidade14);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.footer-senha{
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    height: 10px;
+    background: var(--tonalidade1);
+}
+
+.img-senha-fechar{
+    right: 13px;top: 8px;
+    cursor:pointer;
+}
+.img-senha-fechar:hover{
+    transform: scale(1.1);
+}
+
+.mostrar-senha{
+    display: none;
+}
+
+.strong-filtro{
+    margin-top: 3px;
+    margin-right: 4px;
+    float: right;
+    font-size: 11px;
+}
+
+.filtroColuna{
+    background: var(--tonalidade7);
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    float: right;
+    border-radius: 4px;
+}
+
+.filtroColuna:focus{
+    outline: none;
+}
+
+.user-column-left-ajuda{
+    background-color:var(--tonalidade7) !important;
+}
+

@@ -1,0 +1,15 @@
+n
+M1500
+O0220
+V0
+SE
+D
+L
+D11
+PE
+A2
+1911A1204800005VOL @F(ordem_caixa) / @F(volume)
+1911A1204480202NF @F(numero)
+1911A1202240065@F(cidade_destinatario) - @F(uf_destinatario)
+Q0001
+E

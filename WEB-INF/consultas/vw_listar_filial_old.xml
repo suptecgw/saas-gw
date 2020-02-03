@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<target name="vw_listar_filial" modulo="0,1,2,3,4" codTela="1">
+    <column name="filial_id" width="50px" format="" type="int" label="Filial Id"/>
+    <column name="razaosocial" width="100px" format="" type="varchar" label="Razao Social"/>
+    <column name="abreviatura" width="100px" format="" type="varchar" label="Abreviatura"/>
+    <column name="modal_rodoviario_cte" width="50px" format="" type="varchar" label="Modal Rodoviario Cte"/>
+    <column name="bairro" width="50px" format="" type="varchar" label="Bairro"/>
+    <column name="cidade_id" width="50px" format="" type="int" label="Cidade Id"/>
+    <column name="cidade" width="65px" format="" type="varchar" label="Cidade"/>
+    <column name="conta_pamcard_id" width="50px" format="" type="int" label="Conta Pamcard Id"/>
+    <column name="conta_ndd_id" width="50px" format="" type="int" label="Conta Ndd Id"/>
+    <column name="conta_ticketfrete_id" width="50px" format="" type="int" label="Conta Ticketfrete Id"/>
+    <column name="conta_repom_id" width="50px" format="" type="int" label="Conta Repom Id"/>
+    <column name="conta_pamcard" width="50px" format="" type="varchar" label="Conta Pamcard"/>
+    <column name="conta_ndd" width="50px" format="" type="varchar" label="Conta Ndd"/>
+    <column name="conta_ticketfrete" width="50px" format="" type="varchar" label="Conta Ticketfrete"/>
+    <column name="conta_repom" width="50px" format="" type="varchar" label="Conta Repom"/>
+    <column name="endereco" width="50px" format="" type="varchar" label="Endereco"/>
+    <column name="uf" width="90px" format="" type="varchar" label="UF"/>
+    <column name="cep" width="60px" format="" type="varchar" label="CEP"/>
+    <column name="fone" width="50px" format="" type="varchar" label="Fone"/>
+    <column name="cnpj" width="50px" format="" type="varchar" label="CNPJ"/>
+    <column name="caminho_impressora" width="50px" format="" type="varchar" label="Caminho Impressora"/>
+    <column name="driver_impressora" width="50px" format="" type="varchar" label="Driver Impressora"/>
+    <column name="codigo_filial" width="50px" format="" type="varchar" label="Codigo Filial"/>
+    <column name="inscest" width="75px" format="" type="varchar" label="Inscest"/>
+    <column name="inscmun" width="75px" format="" type="varchar" label="Inscmun"/>
+    <column name="responsavel" width="105px" format="" type="varchar" label="Responsavel"/>
+    <column name="numero" width="50px" format="" type="varchar" label="Numero"/>
+    <column name="nome_contador" width="125px" format="" type="varchar" label="Nome Contador"/>
+    <column name="cpf_contador" width="50px" format="" type="varchar" label="Cpf Contador"/>
+    <column name="crc_contador" width="50px" format="" type="varchar" label="Crc Contador"/>
+    <column name="fone1_contador" width="50px" format="" type="varchar" label="Fone1 Contador"/>
+    <column name="fone2_contador" width="50px" format="" type="varchar" label="Fone2 Contador"/>
+    <column name="fax_contador" width="50px" format="" type="varchar" label="Fax Contador"/>
+    <column name="cxpostal_contador" width="50px" format="" type="varchar" label="Cxpostal Contador"/>
+    <column name="email_contador" width="50px" format="" type="varchar" label="Email Contador"/>
+    <column name="cpf_responsavel" width="50px" format="" type="varchar" label="Cpf Responsavel"/>
+    <column name="perfil_efd" width="50px" format="" type="varchar" label="Perfil Efd"/>
+    <column name="fone_responsavel" width="50px" format="" type="varchar" label="Fone Responsavel"/>
+    <column name="email_responsavel" width="50px" format="" type="varchar" label="Email Responsavel"/>
+    <column name="cnpj_contratante_pamcard" width="50px" format="" type="varchar" label="Cnpj Contratante Pamcard"/>
+    <column name="is_homologacao_cfe" width="50px" format="" type="boolean" label="Is Homologacao Cfe"/>
+    <column name="is_calcular_pedagio_cfe" width="50px" format="" type="boolean" label="Is Calcular Pedagio Cfe"/>
+    <column name="st_utilizacao_nfse" width="50px" format="" type="varchar" label="St Utilizacao Nfse"/>
+    <column name="nfse_is_homologacao" width="50px" format="" type="boolean" label="Nfse Is Homologacao"/>
+    <column name="is_deduzir_pedagio_icms" width="50px" format="" type="boolean" label="Is Deduzir Pedagio Icms"/>
+    <column name="is_ativa_divisao_icms_uf_destino" width="50px" format="" type="boolean" label="Is Ativa Divisao Icms Uf Destino"/>
+    <column name="is_ativa_aliquota_combate_pobreza" width="50px" format="" type="boolean" label="Is Ativa Aliquota Combate Pobreza"/>
+    <column name="numero_rntrc" width="111px" format="" type="long" label="Numero Rntrc"/>
+    <column name="st_utilizacao_cte" width="50px" format="" type="char" label="St Utilizacao Cte"/>
+    <column name="st_utilizacao_cfe" width="50px" format="" type="varchar" label="St Utilizacao Cfe"/>
+    <column name="site" width="50px" format="" type="varchar" label="Site"/>
+    <column name="is_gera_sequencia_ctrc" width="50px" format="" type="boolean" label="Is Gera Sequencia Ctrc"/>
+    <column name="is_sequencia_ct_multimodal" width="50px" format="" type="boolean" label="Is Sequencia Ct Multimodal"/>
+    <column name="token_avon" width="50px" format="" type="varchar" label="Token Avon"/>
+    <column name="modelodacte" width="50px" format="" type="varchar" label="Modelodacte"/>
+    <column name="recolhimento_icms_id" width="50px" format="" type="int" label="Recolhimento Icms Id"/>
+    <column name="averbacao_numero_apolice" width="50px" format="" type="varchar" label="Averbacao Numero Apolice"/>
+    <column name="averbacao_sub_grupo" width="50px" format="" type="varchar" label="Averbacao Sub Grupo"/>
+    <column name="is_averbar_rcf_doc" width="50px" format="" type="boolean" label="Is Averbar Rcf Doc"/>
+    <column name="is_averbar_trn" width="50px" format="" type="boolean" label="Is Averbar Trn"/>
+    <column name="is_controla_sequencia_selo" width="50px" format="" type="boolean" label="Is Controla Sequencia Selo"/>
+    <column name="idagente_pagador_repom" width="50px" format="" type="int" label="Idagente Pagador Repom"/>
+    <column name="agente_pagador_repom" width="50px" format="" type="varchar" label="Agente Pagador Repom"/>
+    <column name="descricao_cnae" width="50px" format="" type="varchar" label="Descricao Cnae"/>
+    <column name="codigo_cnae" width="50px" format="" type="varchar" label="Codigo Cnae"/>
+    <column name="cnae_id" width="50px" format="" type="int" label="Cnae Id"/>
+    <column name="natureza_operacao" width="50px" format="" type="int" label="Natureza Operacao"/>
+    <column name="regime_especial_tributacao" width="50px" format="" type="int" label="Regime Especial Tributacao"/>
+    <column name="st_utilizacao_cle" width="50px" format="" type="char" label="St Utilizacao Cle"/>
+    <column name="prf_ridf" width="50px" format="" type="boolean" label="Prf Ridf"/>
+    <column name="prf_rudf" width="50px" format="" type="boolean" label="Prf Rudf"/>
+    <column name="prf_lmf" width="50px" format="" type="boolean" label="Prf Lmf"/>
+    <column name="prf_rv" width="50px" format="" type="boolean" label="Prf Rv"/>
+    <column name="prf_ri" width="50px" format="" type="boolean" label="Prf Ri"/>
+    <column name="ind_iss" width="50px" format="" type="boolean" label="Ind Iss"/>
+    <column name="ind_rt" width="50px" format="" type="boolean" label="Ind Rt"/>
+    <column name="ind_icms" width="50px" format="" type="boolean" label="Ind Icms"/>
+    <column name="ind_st" width="50px" format="" type="boolean" label="Ind St"/>
+    <column name="ind_at" width="50px" format="" type="boolean" label="Ind At"/>
+    <column name="ind_ipi" width="50px" format="" type="boolean" label="Ind Ipi"/>
+    <column name="cnpj_contratante_gw_mobile" width="50px" format="" type="varchar" label="Cnpj Contratante Gw Mobile"/>
+    <column name="ind_ri" width="50px" format="" type="boolean" label="Ind Ri"/>
+    <column name="ind_arq_id" width="50px" format="" type="int" label="Ind Arq Id"/>
+    <column name="ind_arq_codigo" width="50px" format="" type="varchar" label="Ind Arq Codigo"/>
+    <column name="ind_arq_descricao" width="50px" format="" type="varchar" label="Ind Arq Descricao"/>
+    <column name="prf_iss_id" width="50px" format="" type="int" label="Prf Iss Id"/>
+    <column name="prf_iss_codigo" width="50px" format="" type="varchar" label="Prf Iss Codigo"/>
+    <column name="prf_iss_descricao" width="50px" format="" type="varchar" label="Prf Iss Descricao"/>
+    <column name="prf_icms_id" width="50px" format="" type="int" label="Prf Icms Id"/>
+    <column name="prf_icms_codigo" width="50px" format="" type="varchar" label="Prf Icms Codigo"/>
+    <column name="prf_icms_descricao" width="50px" format="" type="varchar" label="Prf Icms Descricao"/>
+    <column name="ind_ec_id" width="50px" format="" type="int" label="Ind Ec Id"/>
+    <column name="ind_ec_codigo" width="50px" format="" type="varchar" label="Ind Ec Codigo"/>
+    <column name="ind_ec_descricao" width="50px" format="" type="varchar" label="Ind Ec Descricao"/>
+    <column name="cpf_cnpj_confirmador_ndd" width="50px" format="" type="varchar" label="Cpf Cnpj Confirmador Ndd"/>
+    <column name="tipo_efetivacao_ndd" width="50px" format="" type="int" label="Tipo Efetivacao Ndd"/>
+    <column name="is_sped_informar_valores_agregados" width="50px" format="" type="boolean" label="Is Sped Informar Valores Agregados"/>
+    <column name="tipo_utilizacao_apisul" width="50px" format="" type="varchar" label="Tipo Utilizacao Apisul"/>
+    <column name="transmitir_cte_servidor_seguradora" width="50px" format="" type="boolean" label="Transmitir Cte Servidor Seguradora"/>
+    <column name="transmitir_automaticamente_confirmar_cte" width="50px" format="" type="boolean" label="Transmitir Automaticamente Confirmar Cte"/>
+    <column name="st_utilizacao_mdfe" width="50px" format="" type="char" label="St Utilizacao Mdfe"/>
+    <column name="caminho_certificado" width="50px" format="" type="varchar" label="Caminho Certificado"/>
+    <column name="senha_certificado" width="50px" format="" type="varchar" label="Senha Certificado"/>
+    <column name="cod_ibge" width="50px" format="" type="varchar" label="Cod Ibge"/>
+    <column name="seguradora_id" width="50px" format="" type="int" label="Seguradora Id"/>
+    <column name="is_averbar_normal" width="50px" format="" type="boolean" label="Is Averbar Normal"/>
+    <column name="is_averbar_dist_local" width="50px" format="" type="boolean" label="Is Averbar Dist Local"/>
+    <column name="is_averbar_diarias" width="50px" format="" type="boolean" label="Is Averbar Diarias"/>
+    <column name="is_averbar_pallets" width="50px" format="" type="boolean" label="Is Averbar Pallets"/>
+    <column name="is_averbar_complementar" width="50px" format="" type="boolean" label="Is Averbar Complementar"/>
+    <column name="is_averbar_reentrega" width="50px" format="" type="boolean" label="Is Averbar Reentrega"/>
+    <column name="is_averbar_devolucao" width="50px" format="" type="boolean" label="Is Averbar Devolucao"/>
+    <column name="is_averbar_cortesia" width="50px" format="" type="boolean" label="Is Averbar Cortesia"/>
+    <column name="versao_utilizacao_cte" width="50px" format="" type="varchar" label="Versao Utilizacao Cte"/>
+    <column name="is_averbar_substituicao" width="50px" format="" type="boolean" label="Is Averbar Substituicao"/>
+    <column name="is_utilizar_certificado_a1_pamcard" width="50px" format="" type="boolean" label="Is Utilizar Certificado A1 Pamcard"/>
+    <column name="email_recebimento_pre_alerta" width="50px" format="" type="varchar" label="Email Recebimento Pre Alerta"/>
+    <column name="tipo_impressao_paginacao_etiqueta" width="50px" format="" type="varchar" label="Tipo Impressao Paginacao Etiqueta"/>
+    <column name="rateio_comercial" width="50px" format="#0.00" type="double" label="Rateio Comercial"/>
+    <column name="rateio_administrativo" width="50px" format="#0.00" type="double" label="Rateio Administrativo"/>
+    <column name="justificativa_fsda" width="50px" format="" type="varchar" label="Justificativa Fsda"/>
+    <column name="data_fsda" width="50px" format="dd/MM/yyyy" type="date" label="Data Fsda"/>
+    <column name="hora_fsda" width="50px" format="" type="time" label="Hora Fsda"/>
+    <column name="is_contingencia_fsda" width="50px" format="" type="boolean" label="Is Contingencia Fsda"/>
+    <column name="is_criar_parcela_valor_descarga" width="50px" format="" type="boolean" label="Is Criar Parcela Valor Descarga"/>
+    <column name="cep_contador" width="50px" format="" type="varchar" label="Cep Contador"/>
+    <column name="logradouro_contador" width="50px" format="" type="varchar" label="Logradouro Contador"/>
+    <column name="num_logradouro_contador" width="50px" format="" type="int" label="Num Logradouro Contador"/>
+    <column name="complemento_logradouro_contador" width="50px" format="" type="varchar" label="Complemento Logradouro Contador"/>
+    <column name="bairro_contador" width="50px" format="" type="varchar" label="Bairro Contador"/>
+    <column name="cidade_contador_id" width="50px" format="" type="int" label="Cidade Contador Id"/>
+    <column name="cidade_id_contador" width="50px" format="" type="int" label="Cidade Id Contador"/>
+    <column name="cidade_contador" width="50px" format="" type="varchar" label="Cidade Contador"/>
+    <column name="cidade_contador_uf" width="50px" format="" type="varchar" label="Cidade Contador Uf"/>
+    <column name="st_utilizacao_buonny_roteirizador" width="50px" format="" type="varchar" label="St Utilizacao Buonny Roteirizador"/>
+    <column name="is_imprimir_mais_etiquetas" width="50px" format="" type="boolean" label="Is Imprimir Mais Etiquetas"/>
+    <column name="is_utilizacao_nfse_g2ka" width="50px" format="" type="boolean" label="Is Utilizacao Nfse G2ka"/>
+    <column name="is_acrescentar_hora_cancelamento_cte" width="50px" format="" type="boolean" label="Is Acrescentar Hora Cancelamento Cte"/>
+    <column name="is_valida_ip_nfse_g2ka" width="50px" format="" type="boolean" label="Is Valida Ip Nfse G2ka"/>
+    <column name="serie_padrao_cte_aereo" width="50px" format="" type="varchar" label="Serie Padrao Cte Aereo"/>
+    <column name="serie_padrao_cte_aquaviario" width="50px" format="" type="varchar" label="Serie Padrao Cte Aquaviario"/>
+    <column name="serie_padrao_cte_rodoviario" width="50px" format="" type="varchar" label="Serie Padrao Cte Rodoviario"/>
+    <column name="utiliza_filial_frete_avista_cte" width="50px" format="" type="int" label="Utiliza Filial Frete Avista Cte"/>
+    <column name="id_filial_frete_avista" width="50px" format="" type="int" label="Id Filial Frete Avista"/>
+    <column name="abreviatura_frete_avista" width="50px" format="" type="varchar" label="Abreviatura Frete Avista"/>
+    <column name="is_opcao_gerar_tac_agregado" width="50px" format="" type="boolean" label="Is Opcao Gerar Tac Agregado"/>
+    <column name="confirmar_pagamento_saldo_ndd" width="50px" format="" type="boolean" label="Confirmar Pagamento Saldo Ndd"/>
+    <column name="tipo_apuracao_custo_salarios" width="50px" format="" type="varchar" label="Tipo Apuracao Custo Salarios"/>
+    <column name="incentivador_cultural" width="50px" format="" type="boolean" label="Incentivador Cultural"/>
+    <column name="data_inicial_averbacao" width="50px" format="dd/MM/yyyy" type="date" label="Data Inicial Averbacao"/>
+    <column name="caixa_postal_seguradora_averbacao_rodoviario_id" width="50px" format="" type="int" label="Caixa Postal Seguradora Averbacao Rodoviario Id"/>
+    <column name="caixa_postal_seguradora_averbacao_aereo_id" width="50px" format="" type="int" label="Caixa Postal Seguradora Averbacao Aereo Id"/>
+    <column name="caixa_postal_seguradora_averbacao_aquaviario_id" width="50px" format="" type="int" label="Caixa Postal Seguradora Averbacao Aquaviario Id"/>
+    <column name="tipo_calculo_km_veiculo" width="50px" format="" type="varchar" label="Tipo Calculo Km Veiculo"/>
+    <column name="is_enviar_cnpj_antt" width="50px" format="" type="boolean" label="Is Enviar Cnpj Antt"/>
+    <column name="cnpj_antt" width="50px" format="" type="varchar" label="Cnpj Antt"/>
+    <column name="serie_mdfe" width="50px" format="" type="varchar" label="Serie Mdfe"/>
+    <column name="caixa_postal_seguradora_nfse_id" width="50px" format="" type="int" label="Caixa Postal Seguradora Nfse Id"/>
+    <column name="tipo_utilizacao_averbacao_nfse" width="50px" format="" type="varchar" label="Tipo Utilizacao Averbacao Nfse"/>
+    <column name="is_transmitir_automaticamente_confirmar_nfse" width="50px" format="" type="boolean" label="Is Transmitir Automaticamente Confirmar Nfse"/>
+    <column name="token_gw_mobile" width="50px" format="" type="varchar" label="Token Gw Mobile"/>
+    <column name="tipo_utilizacao_gwmobile" width="50px" format="" type="varchar" label="Tipo Utilizacao Gwmobile"/>
+    <column name="fgr_st_utilizacao" width="50px" format="" type="varchar" label="Tipo Utilizacao Gerenciadora Risco Golden Service"/>
+    <column name="fgr_tipo_bloqueio_rastreamento" width="50px" format="" type="varchar" label="Tipo Bloqueio Monitoramento"/>
+    <column name="carta_frete_natureza_carga_id" width="50px" format="" type="int" label="Carta Frete Natureza Carga Id"/>
+    <column name="descricao_natureza" width="50px" format="" type="varchar" label="Descricao Natureza"/>
+    <column name="codigo_natureza" width="50px" format="" type="varchar" label="Codigo Natureza"/>
+    <column name="controlar_tarifas_bancarias_contratado" width="50px" format="" type="boolean" label="Controlar Tarifas Bancarias Contratado"/>
+    <column name="quantidade_saques_contrato_frete" width="50px" format="" type="int" label="Quantidade Saques Contrato Frete"/>
+    <column name="valor_saques_contrato_frete" width="205px" format="#0.00" type="double" label="Valor Saques Contrato Frete"/>
+    <column name="quantidade_transferecias_contrato_frete" width="50px" format="" type="int" label="Quantidade Transferecias Contrato Frete"/>
+    <column name="valor_tranferencias_contrato_frete" width="50px" format="#0.00" type="double" label="Valor Tranferencias Contrato Frete"/>
+    <column name="fgr_codigo" width="50px" format="" type="varchar" label="Codigo Golden Service"/>
+    <column name="fgr_senha" width="50px" format="" type="varchar" label="Senha Golden Service"/>
+    <column name="is_add_efd_contribuicoes_contribuicao_previdenciaria" width="50px" format="" type="boolean" label="Is Add Efd Contribuicoes Contribuicao Previdenciaria"/>
+    <column name="efd_contribuicoes_cod_atividade_contribuicao_previdenciaria" width="50px" format="" type="varchar" label="Efd Contribuicoes Cod Atividade Contribuicao Previdenciaria"/>
+    <column name="fgr_pgr_id" width="50px" format="" type="varchar" label="Id Golden Service"/>
+    <column name="is_ativar_controle_cidades_atendidas" width="50px" format="" type="boolean" label="Is Ativar Controle Cidades Atendidas"/>
+    <column name="fgr_data_inicio_uso" width="50px" format="dd/MM/yyyy" type="date" label="Data Inicio Golden Service"/>
+    <column name="is_ativar_controle_valor_manifesto" width="50px" format="" type="boolean" label="Is Ativar Controle Valor Manifesto"/>
+    <column name="valor_maximo_controle_manifesto" width="50px" format="#0.00" type="double" label="Valor Maximo Controle Manifesto"/>
+</target>

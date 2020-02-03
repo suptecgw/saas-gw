@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00084">
+    <permissao sigla="cadastroftp" observacao=" " />
+    <campo name="descricao" label="Descrição" observacao="Descrição do FTP. Exemplo: FTP da AMBEV, FTP da LASA..." />
+    <campo name="tipoProtocolo" label="Tipo de Protocolo" observacao="Tipo de Protocolo: Poderá ser FTP ou SFTP, essa informação poderá ser verificada com o TI da empresa que está fornecendo os dados da conexão." />
+    <campo name="tipoCriptografia" label="Tipo de Criptografia" observacao="Verificar essa informação com o TI da empresa que está fornecendo os dados da conexão FTP." />
+    <campo name="porta" label="Porta" observacao="Porta de conexão com o host." />
+    <campo name="login" label="Login" observacao="Login para conexão com o FTP." />
+    <campo name="senha" label="Senha" observacao="Senha para conexão com o FTP." />
+    <campo name="host" label="Host" observacao="Endereço FTP que deverá ser realizado a conexão." />
+    <campo name="caminhoRemoto" label="Caminho Remoto" observacao="Deve ser informado a pasta de destino que o sistema irá acessar dentro do host informado." />
+    <campo name="observacao" label="Obervação" observacao="Campo livre para digitação de qualquer informação importante" />
+</tela>

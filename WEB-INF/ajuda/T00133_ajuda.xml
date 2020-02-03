@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00133">
+    <permissao sigla="cadplanocontas" observacao=" "/>
+    <campo name="layout_ajuda" label="Layout" observacao="Layout de importação."/>
+    <campo name="arquivo_ajuda" label="Escolher arquivo" observacao="Arquivo para importação. OBS: O arquivo deverá estar de acordo com o layout escolhido."/>
+</tela>

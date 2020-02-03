@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_cfop" modulo="0,1,2,3,4" codTela="92">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='cfop' width="" visivel="true" format="" type="varchar" label="CFOP" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='plano_custo' width="" visivel="true" format="" type="varchar" label="Plano de Custo" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criados por mim" />
+    <column name='atualizado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Última Alteração"/>
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação"/>
+    
+    <columnFiltroSelect name="cfop" label="CFOP" ordem="1"/>
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="2"/>
+    
+    <columnOrdenacaoSelect name="cfop" label="CFOP" ordem="1"/>
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="2"/>
+        
+</target>

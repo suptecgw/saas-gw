@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_grupos_servico_nfse" modulo="0,1,2,3,4" codTela="50">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='trib_municipal' width="" visivel="true" format="" type="varchar" label="Tributo Municipal" />
+    <column name='trib_federal' width="" visivel="true" format="" type="varchar" label="Tributo Federal" />
+    <column name='taxa' width="" visivel="true" format="" type="varchar" label="Taxa" />
+    <column name='exigibilidade_iss' width="" visivel="true" format="" type="varchar" label="Exigibilidade ISS" />
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='alterado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Ultima Alteração" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />
+    
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="trib_municipal" label="Tributo Municipal" ordem="2"/>
+    <columnFiltroSelect name="trib_federal" label="Tributo Federal" ordem="3"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnOrdenacaoSelect name="trib_municipal" label="Tributo Municipal" ordem="2"/>
+    <columnOrdenacaoSelect name="trib_federal" label="Tributo Federal" ordem="3"/>
+    
+    
+</target>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_plano_contas" modulo="0,1,2,3,4" codTela="22">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='codigo' width="65px" visivel="true" format="" type="varchar" label="Código" />
+    <column name='conta' width="" visivel="true" format="" type="int" label="Conta" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />
+    
+    <columnFiltroSelect name="codigo" label="Código" ordem="1"/>
+    <columnFiltroSelect name="conta" label="Conta" ordem="2"/>
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="3"/>
+    
+    <columnOrdenacaoSelect name="codigo" label="Código" ordem="1"/>
+    <columnOrdenacaoSelect name="conta" label="Conta" ordem="2"/>
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="3"/>
+    
+    
+</target>

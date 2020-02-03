@@ -1,0 +1,55 @@
+MSG_BEFORE_PRINT=Webtrans<=N><=N>Confirme a Impressao?<=N><=N><=N>Caminho da impressora:
+
+[103,1]=
+[106,2,COND,1/10]=@F(ctrc,6,LEFT)
+[113,4,COND,1/10]=@F(abreviaturafilial,12,LEFT)
+[113,6,COND,1/10]=@F(data,10,LEFT)
+
+#Dados do frete
+[09,11,COND,1/8]=@F(data,10,LEFT)
+[30,11,COND,1/8]=OBS:@F(observacao,80,LEFT)
+[116,11,COND,1/8]=@F(valorcontrato,10,RIGHT)
+[09,12,COND,1/8]=@F(ctrc_coleta,30,LEFT)
+[116,12,COND,1/8]=@F(INSS,10,RIGHT)
+[09,13,COND,1/8]=@F(ctrc_entrega,30,LEFT)
+[116,13,COND,1/8]=@F(IR,10,RIGHT)
+[09,14,COND,1/8]=@F(ctrc_notas,80,LEFT)
+[116,14,COND,1/8]=@F(vladiantado,10,RIGHT)
+[18,15,COND,1/8]=@F(ctrc_vlmercadorias,12,LEFT)
+[116,15,COND,1/8]=@F(vloutros,10,RIGHT)
+[18,16,COND,1/8]=@F(ctrc_vlpeso,12,LEFT)
+[116,16,COND,1/8]=@F(vlsaldo,10,RIGHT)
+
+#PROPRIETARIO DO VEICULO
+[17,19,COND,1/8]=@F(propcavalo,50,LEFT)
+[11,20,COND,1/8]=@F(endpcav,50,LEFT)
+[90,20,COND,1/8]=@F(bairropcav,20,LEFT)
+[11,21,COND,1/8]=@F(cidpcav,30,NOALIGN)-@F(ufpcav,2,LEFT)
+[88,21,COND,1/8]=@F(ceppcav,10,LEFT)
+[121,21,COND,1/8]=@F(cgcpcav,18,LEFT)
+
+#VEICULO
+[07,24,COND,1/8]=@F(cavalo,8,LEFT) 
+[40,24,COND,1/8]=@F(marcacav,16,LEFT) 
+[74,24,COND,1/8]=@F(modelocav,20,LEFT) 
+[104,24,COND,1/8]=@F(anomodelocav,4,LEFT) 
+[125,24,COND,1/8]=@F(cavcor,10,LEFT) 
+[07,25,COND,1/8]=@F(chassicav,20,LEFT) 
+[40,25,COND,1/8]=@F(cargacav,20,NOALIGN) Kg
+[74,25,COND,1/8]=@F(cidadecav,20,LEFT) 
+[104,25,COND,1/8]=@F(tipovei,20,LEFT) 
+[130,25,COND,1/8]=@F(carreta,8,LEFT) 
+
+#MOTORISTA
+[07,28,COND,1/8]=@F(motorista,40,LEFT) 
+[64,28,COND,1/8]=@F(enderecomot,40,LEFT)
+[118,28,COND,1/8]=@F(cepmot,10,LEFT)
+[07,29,COND,1/8]=@F(bairromot,40,LEFT) 
+[64,29,COND,1/8]=@F(cidademot,20,NOALIGN)-@F(ufmot,2,LEFT)
+[118,29,COND,1/8]=@F(fonemot,15,LEFT)
+[07,30,COND,1/8]=@F(rgmot,20,LEFT) 
+[43,30,COND,1/8]=@F(cnh,20,LEFT)
+[76,30,COND,1/8]=@F(categoriamot,2,LEFT)
+[118,30,COND,1/8]=@F(cpfmot,14,LEFT) 
+
+[1,43,COND,1/8]=<=>

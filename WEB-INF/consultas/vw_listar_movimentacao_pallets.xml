@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_movimentacao_pallets" modulo="0,1,2,3,4" codTela="126">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name="numero" width="" visivel="true" format="" type="varchar" label="Número" />
+    <column name="quantidade" width="" visivel="true" format="" type="varchar" label="Quantidade" />
+    <column name="numero_nota" width="" visivel="true" format="" type="varchar" label="Nº Nota" />
+    <column name="emissao_em" width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data" />
+    <column name="filial" width="" visivel="true" format="" type="varchar" label="Filial" />
+    <column name="tipo_movimentacao" width="" visivel="true" format="" type="varchar" label="Tipo" />
+    <column name="tipo_pallet" width="" visivel="true" format="int" type="varchar" label="Pallet" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criados por mim" />
+    
+    <column name="filial_id" width="" visivel="false" format="int" type="varchar" label="Filial id" />
+    <column name="cliente_id" width="" visivel="false" format="int" type="varchar" label="Cliente id" />
+    <column name="pallets_id" width="" visivel="false" format="int" type="varchar" label="Tipo Pallet id" />
+    <column name="is_confirmado" width="" visivel="false" format="int" type="varchar" label="Confirmado" />
+    
+    <columnFiltroSelect name="numero" label="Número" ordem="1"/>
+    <columnFiltroSelect name="numero_nota" label="Nº Nota" ordem="2"/>
+    <columnFiltroSelect name="emissao_em" label="Data" ordem="3"/>
+    
+    <columnOrdenacaoSelect name="numero" label="Número" ordem="1"/>  
+    <columnOrdenacaoSelect name="numero_nota" label="Nº Nota" ordem="2"/>  
+    <columnOrdenacaoSelect name="emissao_em" label="Data" ordem="3"/>   
+</target>

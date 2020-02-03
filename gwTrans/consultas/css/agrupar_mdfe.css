@@ -1,0 +1,131 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/10/2017, 14:01:40
+    Author     : anderson
+*/
+
+.body{
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    background-color: white;
+}
+
+.title{
+    height: 7%;
+    background: rgb(19, 56, 92);
+    color: #FFFFFF;
+}
+
+.titleText{
+    font-size: 1.4em;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.divPrincipal{
+    height: 75%; 
+    overflow-y: auto;
+}
+
+.rowHead:nth-child(1){width: 10%;}
+.rowHead:nth-child(2){width: 15%;}
+.rowHead:nth-child(3){width: 20%;}
+.rowHead:nth-child(4){width: 10%;}
+.rowHead:nth-child(5){width: 30%;}
+.rowHead:nth-child(6){width: 15%;}
+
+.geral-localizar{
+    width: 800px;
+    height: 620px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+    overflow: hidden !important;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.75);
+}
+
+.footer{
+    height:10%;
+}
+
+.tableAgrup{
+    margin-bottom: 20px;
+}
+
+.geral-localizar{
+    width: 800px;
+    height: 620px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+    overflow: hidden !important;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.75);
+}
+
+
+.topo-localizar{
+    width: 100%;
+    background: #0c253e;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-shadow: 0 3px 3px rgba(182, 182, 182, 0.75);
+}
+
+.logo{
+    margin-left: 20px;
+    position: absolute;
+    width: 120px;
+    top: 15px;
+}
+
+.fechar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.fechar:hover{
+    opacity: 0.9;
+}
+
+.topo-localizar label{
+    color: #a0c2e4;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.corpo-localizar{
+    width: 100%;
+    padding: 10px;
+    float: left;
+}
+
+.regra{
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.3);
+    background: #fff;
+    float: left;
+    position: absolute;
+    width: 95%;
+    height: 75%;
+    padding: 10px;
+}
+
+.paginacao{
+    position: absolute;
+    width: 100%;
+    float: left;
+    bottom: 10px;
+}
+
+.comHover:hover{
+    background: rgba(160,194,228,0.4) !important;
+}

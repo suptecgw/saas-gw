@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+
+.input-dom-gw{
+    height: 14px !important;
+    display: inline-block;
+    width: 215px;
+    padding: 10px 0 10px 15px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: var(--tonalidade2);
+    background: #fff;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    transition: all .3s ease-in-out;
+}
+
+.container-input-form-gw {
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.input-form-gw {
+    height: 10px !important;
+    display: inline-block;
+    width: 215px;
+    padding: 10px 0 10px 10px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: var(--tonalidade2);
+    background: #fff;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    /*text-indent: 80px;*/
+    transition: all .3s ease-in-out;
+}
+
+.input-form-gw::-webkit-input-placeholder {
+    color: #aaa;
+    text-indent: 0;
+    font-weight: 300;
+}
+
+.input-form-gw + label {
+    display: inline-block;
+    position: absolute;
+    transform: translateX(0);
+    top: -30px;
+    left: -5px;
+    font-size: 14px;
+    padding: 7px 15px;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+    transition: all .3s ease-in-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    overflow: hidden;
+
+}
+
+.input-form-gw + label:before, .input-form-gw + label:after {
+    border-radius: 4px;
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.input-form-gw + label:before {
+    top: 6px;
+    left: 5px;
+    right: 5px;
+    bottom: 4px;
+    background: #042c51;
+}
+
+.input-form-gw + label:after {
+    top: 0;
+    bottom: 0;
+    background: #042c51;
+    transform: translateY(100%);
+}
+
+.input-form-gw:focus,
+.input-form-gw:active {
+    color: var(--tonalidade2);
+    text-indent: 0;
+    background: #fff;
+}
+
+.input-form-gw:focus::-webkit-input-placeholder,
+.input-form-gw:active::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+.input-form-gw:focus + label,
+.input-form-gw:active + label {
+    /*transform: translateY(-100%);*/
+}
+
+.input-form-gw:focus + label:before,
+.input-form-gw:active + label:before {
+    border-radius: 5px;
+}
+
+.input-form-gw:focus + label:after,
+.input-form-gw:active + label:after {
+}
+
+
+/*
+    Tamanho Inputs
+*/
+
+.input-width-200{
+    width: 200px;
+}
+.input-width-300{
+    width: 300px;
+}
+
+.input-width-100{
+    width: calc(100% - 20px);
+}
+
+.input-width-95{
+    width: 95px;
+}
+
+.input-width-60{
+    width: 60px;
+}
+
+.input-width-80{
+    height: 30px !important;
+    width: calc(80% - 37px);
+}
+
+.input-width-90{
+    height: 30px !important;
+    width: calc(90% - 30px);
+}
+
+.input-width-50{
+    height: 30px !important;
+    width: calc(50% - 37px);
+}
+
+.bt-excluir{
+    width: 25px;
+    margin-top: 3px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.bt-excluir:hover{
+    opacity: 1;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--tonalidade34);
+  border-color: var(--tonalidade35);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: var(--tonalidade36);
+  border-color: var(--tonalidade37);
+}

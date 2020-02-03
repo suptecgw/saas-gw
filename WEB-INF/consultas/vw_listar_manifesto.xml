@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_manifesto" modulo="0,1,2,3,4" codTela="28">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='num_manifesto' width="" visivel="true" format="" type="varchar" label="Nº Manifesto" />
+    <column name='serie_mdfe' width="" visivel="true" format="" type="varchar" label="Série MDF-e" />
+    <column name='data_saida' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de Saída" />
+    <column name='id_filial' width="" visivel="false" format="" type="int" label="ID Filial" />
+    <column name='filial' width="" visivel="true" format="" type="varchar" label="Filial" />
+    <column name='st_utilizacao_cfe' width="" visivel="false" format="" type="varchar" label="Utilização CFE" />
+    <column name='origem_mapa' width="" visivel="false" format="" type="varchar" label="Origem Mapa" />
+    <!--ATENÇÃO! o campo abaixo foi comentado pois estava atrasando a tela de consulta... Deivid autorizou a remoção da SQL e do XML.-->
+    <!--<column name='destinos_mapa' width="" visivel="false" format="" type="varchar" label="Destinos Mapa" />-->
+    <column name='tipo_bloqueio_monitoramento' width="" visivel="false" format="" type="varchar" label="Tipo Bloqueio" />
+    <column name='tipo_utilizacao_gerenciadora_risco_golden_service' width="" visivel="false" format="" type="varchar" label="Tipo Uso" />
+    <column name='data_inicio_golden_service' width="" visivel="false" format="" type="varchar" label="Data Golden" />
+    <column name='protocolo' width="" visivel="false" format="" type="varchar" label="Protocolo" />
+    <column name='id_filial_destino' width="" visivel="false" format="" type="int" label="ID Filial Destino" />
+    <column name='filial_destino' width="" visivel="true" format="" type="varchar" label="Filial Destino" />    
+    <column name='modal' width="" visivel="true" format="" type="varchar" label="Modal" />    
+    <column name='cidade_origem_id' width="" visivel="false" format="" type="int" label="ID Origem" />    
+    <column name='cidade_origem' width="" visivel="true" format="" type="varchar" label="Origem" />
+    <column name='cidade_destino_id' width="" visivel="false" format="" type="int" label="ID Destino" /> 
+    <column name='cidade_destino' width="" visivel="true" format="" type="varchar" label="Destino" />     
+    <column name='motorista_id' width="" visivel="false" format="" type="int" label="ID Motorista" />
+    <column name='motorista' width="" visivel="true" format="" type="varchar" label="Motorista" url_cadastro="${homePath}/cadmotorista?acao=editar&amp;id=${motorista_id}" />
+    <column name='veiculo_id' width="" visivel="false" format="" type="int" label="ID Veículo" />
+    <column name='veiculo' width="" visivel="true" format="" type="varchar" label="Veículo" url_cadastro="${homePath}/cadveiculo?acao=editar&amp;id=${veiculo_id}" />                
+    <column name='num_contrato_frete' width="" visivel="true" format="" type="varchar" label="Nº Contrato Frete" url_cadastro="${homePath}/ContratoFreteControlador?acao=iniciarEditar&amp;id=${num_contrato_frete}" />                
+    <column name='status_mdfe' width="" visivel="true" format="" type="varchar" label="Status MDF-e" />  
+    <column name='hora_saida' width="" visivel="true" format="" type="varchar" label="Hora Saída" />              
+    <column name='prev_chegada' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Prev. Chegada" />              
+    <column name='hora_chegada' width="" visivel="true" format="" type="varchar" label="Hora Prev. Chegada" />              
+    <column name='pre_manifesto' width="" visivel="true" format="" type="varchar" label="Pré Manifesto" />              
+    <column name='num_liberacao' width="" visivel="true" format="" type="varchar" label="Nº Liberação" />              
+    <column name='peso_manifesto' width="" visivel="true" format="" type="int" label="Peso" />              
+    <column name='volume_manifesto' width="" visivel="true" format="" type="int" label="Vol(s)" />              
+    <column name='rota_id' width="" visivel="false" format="" type="int" label="ID Rota" />              
+    <column name='rota' width="" visivel="true" format="" type="varchar" label="Rota" url_cadastro="${homePath}/cadrota.jsp?acao=editar&amp;id=${rota_id}"  />              
+    <column name='percurso' width="" visivel="true" format="" type="varchar" label="Percurso" />              
+    <column name='carreta_id' width="" visivel="false" format="" type="int" label="ID Carreta" />              
+    <column name='carreta' width="" visivel="true" format="" type="varchar" label="Carreta" url_cadastro="${homePath}/cadveiculo?acao=editar&amp;id=${carreta_id}" />              
+    <column name='bitrem_id' width="" visivel="false" format="" type="int" label="ID Bi-Trem" />              
+    <column name='bitrem' width="" visivel="true" format="" type="varchar" label="Bi-Trem" url_cadastro="${homePath}/cadveiculo?acao=editar&amp;id=${bitrem_id}" />              
+    <column name='tri_reboque_id' width="" visivel="false" format="" type="int" label="ID 3º Reboque" />              
+    <column name='tri_reboque' width="" visivel="true" format="" type="varchar" label="3º Reboque" url_cadastro="${homePath}/cadveiculo?acao=editar&amp;id=${tri_reboque_id}" />              
+    <column name='agente_carga_id' width="" visivel="false" format="" type="int" label="ID Agente de Carga" />              
+    <column name='agente_carga' width="" visivel="true" format="" type="varchar" label="Agente de Carga" />              
+    <column name='seguradora_id' width="" visivel="true" format="" type="int" label="Seguradora" />              
+    <column name='conferente' width="" visivel="true" format="" type="varchar" label="Conferente" />              
+    <column name='arrumador' width="" visivel="true" format="" type="varchar" label="Arrumador" />              
+    <column name='ajudante' width="" visivel="true" format="" type="varchar" label="Ajudante" />              
+    <column name='numero_lacre' width="" visivel="true" format="" type="varchar" label="Nº Lacre" />              
+    <column name='numero_awb' width="" visivel="true" format="" type="varchar" label="Nº AWB" />              
+    <column name='numero_cte_cia_aerea' width="" visivel="true" format="" type="varchar" label="Nº CT-e Cia Aérea" />              
+    <column name='companhia_aerea_id' width="" visivel="false" format="" type="int" label="ID Cia Aérea" />              
+    <column name='companhia_aerea' width="" visivel="true" format="" type="varchar" label="Cia Aérea" />              
+    <column name='modelo_minuta' width="" visivel="false" format="" type="varchar" label="Modelo Minuta" />              
+    <column name='aeroporto_origem_id' width="" visivel="false" format="" type="int" label="ID Aeroporto Origem" />              
+    <column name='aeroporto_origem' width="" visivel="true" format="" type="varchar" label="Aeroporto Origem" />              
+    <column name='aeroporto_destino_id' width="" visivel="false" format="" type="int" label="ID Aeroporto Destino" />              
+    <column name='aeroporto_destino' width="" visivel="true" format="" type="varchar" label="Aeroporto Destino" />              
+    <column name='numero_voo' width="" visivel="true" format="" type="varchar" label="Nº Vôo" />              
+    <column name='valor_awb' width="" visivel="true" format="" type="int" label="Valor AWB" />              
+    <column name='prev_embarque' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Prev. Embarque" />              
+    <column name='hora_embarque' width="" visivel="true" format="" type="varchar" label="Hora Prev. Embarque" />              
+    <column name='criado_por_id' width="" visivel="false" format="" type="int" label="ID Usuário Inclusão" />              
+    <column name='criado_por' width="" visivel="true" format="" type="varchar" label="Usuário Inclusão" />              
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Inclusão" />              
+    <column name='alterado_por_id' width="" visivel="false" format="" type="int" label="ID Usuário Última Alteração" />              
+    <column name='alterado_por' width="" visivel="true" format="" type="varchar" label="Usuário Última Alteração" />              
+    <column name='alterado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Última Alteração" />              
+    <column name='redespachante_id' width="" visivel="false" format="" type="int" label="Representante Destino" />              
+    <column name='qtd_cte' width="" visivel="true" format="" type="int" label="QTD CT-e(s)" />              
+    <column name='chegada' width="" visivel="false" format="" type="varchar" label="Datas de chegada    " />              
+    <column name='qtd_nota_fiscal' width="" visivel="true" format="" type="int" label="QTD Notas" />              
+    <column name='valor_notas_fiscais' width="" visivel="true" format="" type="int" label="Valor Notas" />              
+    <column name='status' width="" visivel="true" format="" type="varchar" label="Status" />              
+    <column name='numeros_carga' width="" visivel="true" format="" type="varchar" label="Nº da Carga do CT-e" />              
+    <column name='numero_nota_fiscal' width="" visivel="false" format="" type="varchar" label="Nº da NF-e do CT-e" />              
+    <column name='uf_destino' width="" visivel="false" format="" type="varchar" label="UF Destino" />              
+    <column name='mdfe_pai_id' width="" visivel="false" format="" type="varchar" label="ID Manifesto Pai" />    
+    <column name='numero_manifesto_agrupado' width="" visivel="true" format="" type="varchar" label="Número Manifesto Agrupado" />    
+    <column name='is_pai' width="" visivel="false" format="" type="varchar" label="manifesto tem outros agregados" />    
+    <column name='manifestos_filhos' width="" visivel="false" format="" type="varchar" label="Número Manifesto Agrupado filhos" />    
+    <column name='nconhecimentos' width="" visivel="false" format="" type="varchar" label="Nº CT-e" />    
+    <column name='is_desativado_gwi' width="" visivel="false" format="" type="varchar" label="Desativado GW-i" />              
+    <column name='is_sincronizado_mobile' width="" visivel="true" format="" type="varchar" label="Sincronizado Mobile" />              
+    <column name='pode_reenviar' width="" visivel="false" format="" type="varchar" label="Pode reenviar" />              
+    <column name='roteirizado' width="" visivel="true" format="" type="varchar" label="Roteirizado" />
+    <column name='token' width="" visivel="true" format="" type="varchar" label="Código Localizador" />
+
+    <columnFiltroSelect name="data_saida" label="Data de Saída" ordem="1"/>
+    <columnFiltroSelect name="num_manifesto" label="Nº Manifesto" ordem="2"/>
+    <columnFiltroSelect name="nconhecimentos" label="Nº CT-e" ordem="3"/>
+    <columnFiltroSelect name="numero_awb" label="Nº AWB" ordem="4"/>
+    <columnFiltroSelect name="numeros_carga" label="Nº da Carga do CT-e" ordem="5"/>
+    <columnFiltroSelect name="numero_nota_fiscal" label="Nº da NF-e do CT-e" ordem="6"/>
+    <columnFiltroSelect name="num_liberacao" label="Nº Liberação" ordem="7"/>
+    <columnFiltroSelect name="prev_chegada" label="Prev. Chegada" ordem="8"/>
+    <columnFiltroSelect name="prev_embarque" label="Prev. Embarque" ordem="9"/>
+    <columnFiltroSelect name="criado_em" label="Data Inclusão" ordem="10"/>
+    <columnFiltroSelect name="alterado_em" label="Data Última Alteração" ordem="11"/>
+    <columnFiltroSelect name="token" label="Código Localizador" ordem="12"/>
+    
+    <columnOrdenacaoSelect name="num_manifesto" label="Nº Manifesto" ordem="1"/>
+    <columnOrdenacaoSelect name="serie_mdfe" label="Série MDF-e" ordem="2"/>
+    <columnOrdenacaoSelect name="data_saida" label="Data de Saída" ordem="3"/>
+    <columnOrdenacaoSelect name="filial" label="Filial" ordem="4"/>
+    <columnOrdenacaoSelect name="modal" label="Modal" ordem="5"/>
+    <columnOrdenacaoSelect name="cidade_origem" label="Origem" ordem="6"/>
+    <columnOrdenacaoSelect name="cidade_destino" label="Destino" ordem="7"/>
+    <columnOrdenacaoSelect name="motorista" label="Motorista" ordem="8"/>
+    <columnOrdenacaoSelect name="veiculo" label="Veículo" ordem="9"/>
+    <columnOrdenacaoSelect name="num_contrato_frete" label="Nº Contrato Frete" ordem="10"/>
+    <columnOrdenacaoSelect name="status" label="Status" ordem="11"/>
+    <columnOrdenacaoSelect name="numeros_carga" label="Nº da Carga do CT-e" ordem="12"/>
+    
+    
+</target>

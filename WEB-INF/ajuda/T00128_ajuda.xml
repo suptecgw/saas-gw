@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00128">
+    <permissao sigla="lancamentomovimentacaopallets" observacao=" "/>
+    <campo name="numero" label="Número" observacao="Número da movimentação de pallet gerado automaticamente ao incluir uma nova movimentação."/>
+    <campo name="data" label="Data" observacao="Data da movimentação"/>
+    <campo name="filial_id" label="Filial" observacao="Filial onde houve a movimentação de pallets"/>    
+    <campo name="tipo_lancamento" label="Tipo de Lançamento" observacao="Tipo da movimentação, poderá ser Entrada ou Saída. O preenchimento correto desse campo é de fundamental importância para que o controle de estoque dos pallets seja efetivo."/>
+    <campo name="quantidade" label="Quantidade" observacao="Quantidade de pallets"/>
+    <campo name="cliente_id" label="Cliente" observacao="Cliente ao qual os pallets pertencem"/>
+    <campo name="tipo_pallet_id" label="Tipo de Pallet " observacao="Tipo dos pallets"/>
+    <campo name="numero_nota" label="Nº Nota" observacao="Número da nota que acompanhou o transporte dos pallets"/>
+    <campo name="numero_manifesto" label="Nº Manifesto " observacao="Nº do manifesto que houve a movimentação dos pallets. Esse campo será preenchido apenas se a movimentação for realizada pelo lançamento de manifestos."/>
+    <campo name="numero_coleta" label="Nº Coleta" observacao="Nº da coleta que houve a movimentação dos pallets. Esse campo será preenchido apenas se a movimentação for realizadas pelo lançamento de coletas"/>
+    <campo name="confirmado" label="Confirmada " observacao="Esse campo serve para informar se a movimentação já foi finalizada."/>
+</tela>

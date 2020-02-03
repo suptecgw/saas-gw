@@ -1,0 +1,106 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/02/2017, 13:54:01
+    Author     : estagiario_manha
+*/
+
+
+body {
+    overflow: hidden; 
+}
+
+.columnLeft::-webkit-scrollbar{display: none;-ms-overflow-style: none;overflow: auto;}
+.columnLeft{-ms-overflow-style: none;};
+
+.label-pesquisas-salvas {
+    padding-bottom: 5px !important;
+}
+
+.filtro-pesquisa {
+    margin-bottom: 5px;
+}
+
+.container-campos-select {
+    margin-bottom: 5px;
+}
+
+.input-boxes {
+    margin-bottom: 0;
+}
+
+.input-escondido {
+    display: none;
+}
+
+.container-data {
+    margin-bottom: 5px;
+}
+
+.div-ordenacao {
+    margin-top: 5px;
+}
+
+.check-box-feitos-por-mim {
+    margin-bottom: 10px;
+}
+
+.div-ajuda {
+    margin-bottom: 5px;margin-top: 30px;display: none;
+}
+
+.campo-helper {
+    margin-left: 5px;
+}
+
+.coluna-ajuda {
+
+}
+
+.h3-permissoes {
+
+}
+
+.hr-margin {
+    margin:5px;padding:0;
+}
+
+.div-lb-videos-ajuda {
+
+}
+
+.div-videos {
+    margin-bottom: 0px;
+}
+
+.hr-final {
+    margin:0;padding:0;margin-bottom: 100px;
+}
+
+#map {
+    overflow-y: hidden;
+}
+
+#footerTable {
+    width: 50%;
+}
+
+.footerTable {
+    width: 70%
+}
+
+#columnLeft {
+    z-index: 999 !important;position: absolute !important;max-width: 25% !important;display: block !important;
+}
+
+.cobre-left {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 999999999;
+    position: absolute;
+    display: none;
+}

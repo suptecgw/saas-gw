@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tela name="XmlAjuda" codigo="T00007">
+    <campo name="nomeLabel" label="Nome" observacao="Nome do usuário. Esse campo irá aparecer nas rotinas de auditoria do sistema." />
+    <campo name="loginLabel" label="Login" observacao="Login do usuário para acessar o sistema." />
+    <campo name="emailLabel" label="Email" observacao="Email do usuário." />
+    <campo name="filialLabel" label="Filial" observacao="Filial que o usuário está cadastrado. Geralmente ao incluir um lançamento o sistema já carrega por padrão a filial do usuário." />
+</tela>
+

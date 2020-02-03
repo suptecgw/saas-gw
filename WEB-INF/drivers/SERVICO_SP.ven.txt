@@ -1,0 +1,24 @@
+# Kenneth F. Reis
+# Modelo de driver para CTRC com folha continua
+#
+#   Usando este driver:
+#[COLUNA,LINHA,<CONDENSADO>]=<Texto para impressao>
+
+
+MSG_BEFORE_PRINT=LSA TRANSPORTES<=N><=N>Confirme a Impressão das Notas abaixo:<=N>@F(array_notas)<=N><=N>Caminho da impressora:
+
+LISTS[services]
+[100,10,COND]=@F(cfop,5,LEFT)-@F(desc_cfop,20,LEFT)
+[100,12,COND]=@F(dtemissao,10,LEFT)
+[15,16,COND]=@F(con_rzs,50,LEFT)
+[19,17,COND]=@F(con_endereco,50,LEFT)
+[19,18,COND]=@F(con_cidade,50,LEFT)
+[104,18,COND]=@F(con_uf,2,LEFT)
+[122,18,COND]=@F(con_cep,10,LEFT)
+[24,19,COND]=@F(con_cnpj,20,LEFT)
+[67,19,COND]=@F(con_inscest,50,LEFT)
+
+[20,25,COND,1/8,services<4]=@F(quantidade,10,RIGHT)      @F(servico,50,LEFT)           @F(valor,10,RIGHT)            @F(total_servico,12,RIGHT)
+
+[90,43,COND]=5    @F(total_iss,12,RIGHT)            @F(total_geral,12,RIGHT)
+

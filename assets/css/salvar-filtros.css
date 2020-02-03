@@ -1,0 +1,124 @@
+/* 
+    Created on : 17/10/2018, 14:16:51
+    Author     : diego
+*/
+
+:root{
+    --tonalidade12:#133b5c;
+}
+
+body,html{
+    padding: 0;
+    margin: 0;
+    overflow: hidden !important;
+}
+
+.topo-re-login{
+    width: 100%;
+    background: var(--tonalidade12);
+    float: left;
+    border-radius: 5px 5px 0 0;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+.question{
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+}
+
+.logo{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 15px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.perfil{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container-re-login{
+    width: 400px;
+    height: 315px;
+}
+
+input:-webkit-autofill 
+{    
+    -webkit-box-shadow: 0 0 0px 1000px #f9fbfd inset !important;
+    -webkit-text-fill-color: var(--tonalidade12) !important;
+}
+
+.input{
+    float: left;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    font-size: 14px;
+    color: var(--tonalidade12);
+    border: 0;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 10px;
+    border:1px solid rgba(19,56,92,0.4);
+}
+
+.radio-label{
+    font-size: 14px;
+    color: var(--tonalidade12);
+}
+
+.text-label{
+    color: var(--tonalidade12);
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#tipo{
+    float: left;
+    color: var(--tonalidade12);
+    margin-top: 1px;
+    width: 31%;
+    text-align: left;
+}
+
+#acao-salvar{
+    float: left;
+    color: var(--tonalidade12);
+    margin-top: 1px;
+    width: 31%;
+    text-align: left;
+}
+
+#salvar{
+    background: var(--tonalidade12);
+    font-size: 11px !important;
+}
+
+#cancelar{
+    background: var(--tonalidade12);
+    font-size: 11px !important;
+}
+
+#nomePesquisa{
+    color: var(--tonalidade12);
+}
+
+#nomePesquisa{
+   color:var(--tonalidade12);
+}
+

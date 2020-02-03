@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub_dacte_AGM" columnCount="3" printOrder="Horizontal" pageWidth="538" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="179" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="3e19aaaf-018e-472d-b569-f0016507fb09">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="2.0000000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<import value="java.util.*"/>
+	<parameter name="DIR_HOME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ID_CTE" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new Integer(5052)]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT --vcte.*,
+nf.chave_acesso as chave_acesso,
+nf.numero AS numero_nota, nf.serie AS serie_nota, c.cnpj as emitente_cnpj_nota,
+st_utilizacao_cte, vcte.tipo_transporte, vcte.numero_carga, vcte.numero_orcamento,
+vcte.id, vcte.is_added_icms, vcte.modal_rodoviario_cte,vcte.uf_proprietario_veiculo,vcte.placa_veiculo, vcte.rntrc_proprietario_veiculo,vcte.observacao, vcte.lancado_por,
+vcte.uf_proprietario_carreta, vcte.placa_carreta, vcte.rntrc_proprietario_carreta,vcte.placa_bitrem, vcte.rntrc_proprietario_bitrem,
+vcte.uf_proprietario_bitrem, vcte.nome_motorista,vcte.cpf_motorista,vcte.observacao, vcte.chave_acesso_cte,vcte.modal, vcte.numero_ordem_coleta_varias,
+CASE WHEN vcte.numero_container_coleta = '' THEN vcte.numero_container ELSE vcte.numero_container_coleta END AS numero_container,
+vcte.numero_container,
+vcte.numero_booking,
+vcte.numero_genset,
+CASE WHEN vcte.valor_container_coleta = 0 THEN vcte.valor_container ELSE vcte.valor_container_coleta END::numeric(10,2) AS valor_container,
+vcte.valor_genset::numeric(10,2),
+--filial
+vcte.log_emitente, vcte.numero_emitente, vcte.bairro_emitente, vcte.mun_emitente, vcte.uf_emitente, vcte.cep_emitente, vcte.cnpj_emitente,
+vcte.inscricao_emitente, vcte.fone_emitente,
+fill_zero(vcte.rntrc_emitente::varchar,8) as rntrc_emitente, vcte.st_utilizacao_cte, vcte.razao_social_emitente, vcte.numero_pedido_carga,
+
+--sales
+vcte.serie,vcte.numero,vcte.modal,vcte.emissao_em,vcte.emissao_as,vcte.tipo_conhecimento,
+vcte.remetente_id,vcte.destinatario_id,vcte.consignatario_id,vcte.redespacho_id, vcte.cod_st_icms, vcte.st_desc,
+vcte.razao_social_remetente,vcte.razao_social_destinatario, vcte.tipo_fpag,vcte.protocolo_autorizacao, vcte.previsao_entrega_em, vcte.cidade_origem, vcte.uf_origem, vcte.cidade_destino, vcte.uf_destino, vcte.is_cancelado,vcte.cubagem_metro,vcte.tipo_servico,vcte.tipo_cte,
+
+--valores
+vcte.valor_taxa_fixa, vcte.valor_itr,vcte.valor_peso,
+vcte.valor_frete, vcte.valor_despacho, vcte.valor_ademe,
+vcte.valor_outros, vcte.valor_gris, vcte.valor_sec_cat, vcte.valor_pedagio, vcte.valor_desconto,
+vcte.aliquota, vcte.base_calculo, vcte.total_receita, vcte.reducao_base_icms, vcte.valor_tde,
+
+
+--remetente
+vcte.razao_social_emitente,vcte.log_remetente||' '||vcte.numero_remetente as log_remetente,vcte.bairro_remetente,vcte.mun_remetente,vcte.uf_remetente,vcte.cep_remetente, vcte.fone_remetente,
+vcte.cnpj_remetente,vcte.inscricao_remetente,vcte.pais_remetente, vcte.complemento_remetente,
+--EXPEDIDOR
+vcte.razao_social_expedidor,vcte.log_expedidor||' '||vcte.numero_expedidor as log_expedidor,vcte.bairro_expedidor,vcte.mun_expedidor,vcte.uf_expedidor,vcte.cep_expedidor, vcte.fone_expedidor,
+vcte.cnpj_expedidor,vcte.inscricao_expedidor,vcte.pais_expedidor, vcte.complemento_expedidor,
+--destinatario
+vcte.razao_social_destinatario,vcte.log_destinatario||' '||vcte.numero_destinatario as log_destinatario,vcte.bairro_destinatario,vcte.mun_destinatario, vcte.fone_destinatario,  vcte.complemento_destinatario,
+vcte.uf_destinatario,vcte.cep_destinatario,vcte.cnpj_destinatario,vcte.inscricao_destinatario,vcte.pais_destinatario,
+--recebedor
+vcte.razao_social_recebedor,vcte.log_recebedor||' '||vcte.numero_recebedor as log_recebedor,vcte.bairro_recebedor,vcte.mun_recebedor, vcte.fone_recebedor,  vcte.complemento_recebedor,
+vcte.uf_recebedor,vcte.cep_recebedor,vcte.cnpj_recebedor,vcte.inscricao_recebedor,vcte.pais_recebedor,
+
+--consignatario
+vcte.razao_social_consignatario,vcte.log_consignatario,vcte.bairro_consignatario,vcte.mun_consignatario,
+vcte.uf_consignatario,vcte.cep_consignatario,vcte.cnpj_consignatario,vcte.inscricao_consignatario,
+vcte.fone_consignatario,vcte.pais_consignatario, vcte.toma,
+
+--cfop
+vcte.cfop,vcte.nat_op,
+--destino
+vcte.uf_destinatario,vcte.mun_fim,
+--origem
+vcte.uf_remetente,vcte.mun_emitente,
+
+
+
+vcte.xseg, vcte.responsabilidade_seguro_carga,vcte.nApol,
+
+
+
+-----------------
+array_to_string(array(SELECT distinct nf4.conteudo FROM nota_fiscal nf4 WHERE nf4.idconhecimento = vcte.id),',') AS totnf_conteudo,
+(SELECT sum(nf3.valor) FROM nota_fiscal nf3 WHERE nf3.idconhecimento = vcte.id)::numeric AS totnf_valor,
+(SELECT sum(nf6.volume) FROM nota_fiscal nf6 WHERE nf6.idconhecimento = vcte.id)::integer AS totnf_volume,
+(SELECT sum(nf9.peso) FROM nota_fiscal nf9 WHERE nf9.idconhecimento = vcte.id)::numeric(10,3) AS totnf_peso,
+(SELECT distinct nf5.embalagem FROM nota_fiscal nf5 WHERE nf5.idconhecimento = vcte.id limit 1) AS totnf_embalagem,
+array_to_string(array(SELECT distinct nf4.pedido FROM nota_fiscal nf4 WHERE nf4.idconhecimento = vcte.id),',') AS pedido_cliente_nota,
+array_to_string(array(SELECT distinct s.tipo FROM sales s WHERE s.id = vcte.id),',') AS descricao_tipo_conhecimento,
+CASE WHEN vcte.is_added_icms THEN
+   CASE WHEN vcte.is_substituicao_tributaria_minas_gerais_consignatario AND vcte.uf_emitente = 'MG' AND vcte.uf_remetente = 'MG' AND vcte.consignatario_id = vcte.remetente_id THEN
+        ((vcte.base_calculo * vcte.aliquota / 100) * 80 / 100)
+   ELSE (vcte.base_calculo * vcte.aliquota / 100) END
+ELSE 0 END::float AS valor_icms_embutido, vcte.valor_icms,p_remetente.pais as remetente_pais,p_destinatario.pais as destinatario_pais, total_tributos, numero_ordem_coleta
+
+
+
+/*nf.chave_acesso, nf.numero AS numero_nota, nf.serie AS serie_nota, c.cnpj as emitente_cnpj_nota*/
+,vcte.responsavel, vcte.impostorenda, vcte.cssl, vcte.pis, vcte.cofins,vcte.tributos_lei_transparencia,
+ceil((row_number() OVER ()-1)/ 21) as rnum
+
+FROM vcte
+left join pais p_destinatario on (p_destinatario.cod_bacen = vcte.cod_pais_destinatario)
+left join pais p_remetente on (p_remetente.cod_bacen = vcte.cod_pais_remetente)
+
+
+	left JOIN nota_fiscal nf on vcte.id = nf.idconhecimento
+	left join cliente c on nf.idremetente = c.idcliente
+--        join ctrcs ct on vcte.id = ct.sale_id
+WHERE vcte.id in ($P!{ID_CTE})
+
+order by vcte.id]]>
+	</queryString>
+	<field name="chave_acesso" class="java.lang.String"/>
+	<field name="numero_nota" class="java.lang.String"/>
+	<field name="serie_nota" class="java.lang.String"/>
+	<field name="emitente_cnpj_nota" class="java.lang.String"/>
+	<field name="st_utilizacao_cte" class="java.lang.String"/>
+	<field name="tipo_transporte" class="java.lang.String"/>
+	<field name="numero_carga" class="java.lang.String"/>
+	<field name="numero_orcamento" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="is_added_icms" class="java.lang.Boolean"/>
+	<field name="modal_rodoviario_cte" class="java.lang.String"/>
+	<field name="uf_proprietario_veiculo" class="java.lang.String"/>
+	<field name="placa_veiculo" class="java.lang.String"/>
+	<field name="rntrc_proprietario_veiculo" class="java.lang.Long"/>
+	<field name="observacao" class="java.lang.String"/>
+	<field name="lancado_por" class="java.lang.String"/>
+	<field name="uf_proprietario_carreta" class="java.lang.String"/>
+	<field name="placa_carreta" class="java.lang.String"/>
+	<field name="rntrc_proprietario_carreta" class="java.lang.Long"/>
+	<field name="placa_bitrem" class="java.lang.String"/>
+	<field name="rntrc_proprietario_bitrem" class="java.lang.Long"/>
+	<field name="uf_proprietario_bitrem" class="java.lang.String"/>
+	<field name="nome_motorista" class="java.lang.String"/>
+	<field name="cpf_motorista" class="java.lang.String"/>
+	<field name="chave_acesso_cte" class="java.lang.String"/>
+	<field name="modal" class="java.lang.String"/>
+	<field name="numero_ordem_coleta_varias" class="java.lang.String"/>
+	<field name="numero_container" class="java.lang.String"/>
+	<field name="numero_booking" class="java.lang.String"/>
+	<field name="numero_genset" class="java.lang.String"/>
+	<field name="valor_container" class="java.math.BigDecimal"/>
+	<field name="valor_genset" class="java.math.BigDecimal"/>
+	<field name="log_emitente" class="java.lang.String"/>
+	<field name="numero_emitente" class="java.lang.String"/>
+	<field name="bairro_emitente" class="java.lang.String"/>
+	<field name="mun_emitente" class="java.lang.String"/>
+	<field name="uf_emitente" class="java.lang.String"/>
+	<field name="cep_emitente" class="java.lang.String"/>
+	<field name="cnpj_emitente" class="java.lang.String"/>
+	<field name="inscricao_emitente" class="java.lang.String"/>
+	<field name="fone_emitente" class="java.lang.String"/>
+	<field name="rntrc_emitente" class="java.lang.String"/>
+	<field name="razao_social_emitente" class="java.lang.String"/>
+	<field name="numero_pedido_carga" class="java.lang.String"/>
+	<field name="serie" class="java.lang.String"/>
+	<field name="numero" class="java.lang.String"/>
+	<field name="emissao_em" class="java.sql.Date"/>
+	<field name="emissao_as" class="java.sql.Time"/>
+	<field name="tipo_conhecimento" class="java.lang.String"/>
+	<field name="remetente_id" class="java.lang.Integer"/>
+	<field name="destinatario_id" class="java.lang.Integer"/>
+	<field name="consignatario_id" class="java.lang.Integer"/>
+	<field name="redespacho_id" class="java.lang.Integer"/>
+	<field name="cod_st_icms" class="java.lang.String"/>
+	<field name="st_desc" class="java.lang.String"/>
+	<field name="razao_social_remetente" class="java.lang.String"/>
+	<field name="razao_social_destinatario" class="java.lang.String"/>
+	<field name="tipo_fpag" class="java.lang.String"/>
+	<field name="protocolo_autorizacao" class="java.lang.Long"/>
+	<field name="previsao_entrega_em" class="java.sql.Date"/>
+	<field name="cidade_origem" class="java.lang.String"/>
+	<field name="uf_origem" class="java.lang.String"/>
+	<field name="cidade_destino" class="java.lang.String"/>
+	<field name="uf_destino" class="java.lang.String"/>
+	<field name="is_cancelado" class="java.lang.Boolean"/>
+	<field name="cubagem_metro" class="java.math.BigDecimal"/>
+	<field name="tipo_servico" class="java.lang.String"/>
+	<field name="tipo_cte" class="java.lang.String"/>
+	<field name="valor_taxa_fixa" class="java.math.BigDecimal"/>
+	<field name="valor_itr" class="java.math.BigDecimal"/>
+	<field name="valor_peso" class="java.math.BigDecimal"/>
+	<field name="valor_frete" class="java.math.BigDecimal"/>
+	<field name="valor_despacho" class="java.math.BigDecimal"/>
+	<field name="valor_ademe" class="java.math.BigDecimal"/>
+	<field name="valor_outros" class="java.math.BigDecimal"/>
+	<field name="valor_gris" class="java.math.BigDecimal"/>
+	<field name="valor_sec_cat" class="java.math.BigDecimal"/>
+	<field name="valor_pedagio" class="java.math.BigDecimal"/>
+	<field name="valor_desconto" class="java.math.BigDecimal"/>
+	<field name="aliquota" class="java.math.BigDecimal"/>
+	<field name="base_calculo" class="java.math.BigDecimal"/>
+	<field name="total_receita" class="java.math.BigDecimal"/>
+	<field name="reducao_base_icms" class="java.math.BigDecimal"/>
+	<field name="valor_tde" class="java.math.BigDecimal"/>
+	<field name="log_remetente" class="java.lang.String"/>
+	<field name="bairro_remetente" class="java.lang.String"/>
+	<field name="mun_remetente" class="java.lang.String"/>
+	<field name="uf_remetente" class="java.lang.String"/>
+	<field name="cep_remetente" class="java.lang.String"/>
+	<field name="fone_remetente" class="java.lang.String"/>
+	<field name="cnpj_remetente" class="java.lang.String"/>
+	<field name="inscricao_remetente" class="java.lang.String"/>
+	<field name="pais_remetente" class="java.lang.String"/>
+	<field name="complemento_remetente" class="java.lang.String"/>
+	<field name="razao_social_expedidor" class="java.lang.String"/>
+	<field name="log_expedidor" class="java.lang.String"/>
+	<field name="bairro_expedidor" class="java.lang.String"/>
+	<field name="mun_expedidor" class="java.lang.String"/>
+	<field name="uf_expedidor" class="java.lang.String"/>
+	<field name="cep_expedidor" class="java.lang.String"/>
+	<field name="fone_expedidor" class="java.lang.String"/>
+	<field name="cnpj_expedidor" class="java.lang.String"/>
+	<field name="inscricao_expedidor" class="java.lang.String"/>
+	<field name="pais_expedidor" class="java.lang.String"/>
+	<field name="complemento_expedidor" class="java.lang.String"/>
+	<field name="log_destinatario" class="java.lang.String"/>
+	<field name="bairro_destinatario" class="java.lang.String"/>
+	<field name="mun_destinatario" class="java.lang.String"/>
+	<field name="fone_destinatario" class="java.lang.String"/>
+	<field name="complemento_destinatario" class="java.lang.String"/>
+	<field name="uf_destinatario" class="java.lang.String"/>
+	<field name="cep_destinatario" class="java.lang.String"/>
+	<field name="cnpj_destinatario" class="java.lang.String"/>
+	<field name="inscricao_destinatario" class="java.lang.String"/>
+	<field name="pais_destinatario" class="java.lang.String"/>
+	<field name="razao_social_recebedor" class="java.lang.String"/>
+	<field name="log_recebedor" class="java.lang.String"/>
+	<field name="bairro_recebedor" class="java.lang.String"/>
+	<field name="mun_recebedor" class="java.lang.String"/>
+	<field name="fone_recebedor" class="java.lang.String"/>
+	<field name="complemento_recebedor" class="java.lang.String"/>
+	<field name="uf_recebedor" class="java.lang.String"/>
+	<field name="cep_recebedor" class="java.lang.String"/>
+	<field name="cnpj_recebedor" class="java.lang.String"/>
+	<field name="inscricao_recebedor" class="java.lang.String"/>
+	<field name="pais_recebedor" class="java.lang.String"/>
+	<field name="razao_social_consignatario" class="java.lang.String"/>
+	<field name="log_consignatario" class="java.lang.String"/>
+	<field name="bairro_consignatario" class="java.lang.String"/>
+	<field name="mun_consignatario" class="java.lang.String"/>
+	<field name="uf_consignatario" class="java.lang.String"/>
+	<field name="cep_consignatario" class="java.lang.String"/>
+	<field name="cnpj_consignatario" class="java.lang.String"/>
+	<field name="inscricao_consignatario" class="java.lang.String"/>
+	<field name="fone_consignatario" class="java.lang.String"/>
+	<field name="pais_consignatario" class="java.lang.String"/>
+	<field name="toma" class="java.lang.Integer"/>
+	<field name="cfop" class="java.lang.String"/>
+	<field name="nat_op" class="java.lang.String"/>
+	<field name="mun_fim" class="java.lang.String"/>
+	<field name="xseg" class="java.lang.String"/>
+	<field name="responsabilidade_seguro_carga" class="java.lang.Integer"/>
+	<field name="napol" class="java.lang.String"/>
+	<field name="totnf_conteudo" class="java.lang.String"/>
+	<field name="totnf_valor" class="java.math.BigDecimal"/>
+	<field name="totnf_volume" class="java.lang.Integer"/>
+	<field name="totnf_peso" class="java.math.BigDecimal"/>
+	<field name="totnf_embalagem" class="java.lang.String"/>
+	<field name="pedido_cliente_nota" class="java.lang.String"/>
+	<field name="descricao_tipo_conhecimento" class="java.lang.String"/>
+	<field name="valor_icms_embutido" class="java.lang.Double"/>
+	<field name="valor_icms" class="java.math.BigDecimal"/>
+	<field name="remetente_pais" class="java.lang.String"/>
+	<field name="destinatario_pais" class="java.lang.String"/>
+	<field name="total_tributos" class="java.math.BigDecimal"/>
+	<field name="numero_ordem_coleta" class="java.lang.String"/>
+	<field name="responsavel" class="java.lang.String"/>
+	<field name="impostorenda" class="java.math.BigDecimal"/>
+	<field name="cssl" class="java.math.BigDecimal"/>
+	<field name="pis" class="java.math.BigDecimal"/>
+	<field name="cofins" class="java.math.BigDecimal"/>
+	<field name="tributos_lei_transparencia" class="java.math.BigDecimal"/>
+	<field name="rnum" class="java.lang.Double"/>
+	<variable name="DATA_ATUAL" class="java.lang.String">
+		<variableExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy' às 'HH:mm").format(new Date())]]></variableExpression>
+	</variable>
+	<group name="PAGINACAO" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{rnum}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="RODOVIARIO_FRACIONADO">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="84">
+				<printWhenExpression><![CDATA[new Boolean($F{modal_rodoviario_cte}.equals("f"))]]></printWhenExpression>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="188" y="74" width="71" height="7" uuid="01af66ea-34c0-4d6d-af67-dbb6532f3781"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="6" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{previsao_entrega_em}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="145" y="74" width="40" height="7" uuid="d76d2ab1-f689-4efd-aed5-8245273f7253"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="6" isBold="false"/>
+					</textElement>
+					<text><![CDATA[NÃO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="263" y="72" width="265" height="7" uuid="f3fb1e52-a815-4ac0-9296-833440e8fcc5"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="4" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ESSE CONHECIMENTO DE TRANSPORTE ATENDE À LEGISLAÇÃO DE TRANSPORTE RODOVIÁRIO EM VIGOR]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Transparent" x="305" y="42" width="40" height="11" uuid="88f0d132-2986-4f02-8ced-3607d1527950"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="5" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="188" y="67" width="71" height="7" uuid="96de5a99-8b38-4ee4-af16-c7b108a8e0c9"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[DATA PREVISTA ENTREGA]]></text>
+				</staticText>
+				<line>
+					<reportElement x="266" y="40" width="265" height="1" uuid="0e9bcb61-b203-48c3-9faa-38653769ddbd"/>
+				</line>
+				<staticText>
+					<reportElement x="210" y="4" width="111" height="7" uuid="ec7ef346-c5f3-4dad-a250-eb67e33ccaf9"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[OBSERVAÇÕES]]></text>
+				</staticText>
+				<rectangle radius="4">
+					<reportElement mode="Transparent" x="2" y="2" width="529" height="54" uuid="8fdd1b20-d6a4-40f6-89a6-bef8d7395a3c"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="5" y="71" width="56" height="7" uuid="269ee56c-999b-456b-9bb7-9e3ffad9be51"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[RNTRC DA EMPRESA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="145" y="67" width="40" height="7" uuid="826c1e76-2f14-4d3c-a2c4-6f3cc3d38f12"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[LOTAÇÃO]]></text>
+				</staticText>
+				<line>
+					<reportElement x="2" y="65" width="529" height="1" uuid="e0a3eb39-e74b-47a9-ae7f-5d7212ba8fb5"/>
+				</line>
+				<line>
+					<reportElement x="186" y="66" width="1" height="16" uuid="da282826-08a9-4d84-9c1b-05df694c4633"/>
+				</line>
+				<textField>
+					<reportElement x="63" y="71" width="79" height="7" uuid="9de9561a-53a1-4daa-9200-a0546fbb392f"/>
+					<textElement markup="none">
+						<font fontName="Arial" size="6" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rntrc_emitente}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="346" y="41" width="1" height="15" uuid="9c543676-2588-463d-b916-06d1e4e34e19"/>
+				</line>
+				<line>
+					<reportElement x="266" y="24" width="265" height="1" uuid="e602fd28-a1d6-4024-bba7-17d8ffa69b60"/>
+				</line>
+				<staticText>
+					<reportElement mode="Transparent" x="349" y="27" width="79" height="11" uuid="4d2d8166-bfcc-4aa0-aa64-93bb8c51ac53"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[BANCÁRIA]]></text>
+				</staticText>
+				<line>
+					<reportElement x="265" y="11" width="1" height="45" uuid="cf3522de-8ccd-4e63-95c2-2ef28f189a2f"/>
+				</line>
+				<staticText>
+					<reportElement x="-2" y="58" width="535" height="7" uuid="c9db5dcb-0f9e-4dce-a485-d4ce1f72f1a9"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[INFORMAÇÕES ESPECÍFICAS DO MODAL RODOVIÁRIO - CARGA FRACIONADA]]></text>
+				</staticText>
+				<line>
+					<reportElement x="260" y="66" width="1" height="18" uuid="5bd97bf1-9a68-4458-ad1e-715fbc82ea49"/>
+				</line>
+				<staticText>
+					<reportElement mode="Transparent" x="268" y="27" width="79" height="11" uuid="01f47429-37b6-4a81-a78d-ad2b0fbb99a4"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[COBRANÇA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="268" y="13" width="79" height="11" uuid="fa5a5253-7118-4817-ac2c-65f6cac051e6"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PRAZO PAGAMENTO]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="5" y="13" width="256" height="31" uuid="cb45a83b-56af-458c-9a35-6dc10419cc9a"/>
+					<textElement markup="none">
+						<font fontName="Arial" size="6" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{observacao}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="2" y="11" width="529" height="1" uuid="40c81eb2-5cf1-4568-ba3c-1fa16888d634"/>
+				</line>
+				<rectangle radius="4">
+					<reportElement mode="Transparent" x="2" y="56" width="529" height="27" uuid="9d3b0d95-777e-4e51-a82a-5960f94eabdd"/>
+				</rectangle>
+				<staticText>
+					<reportElement mode="Transparent" x="268" y="42" width="34" height="11" uuid="044f5518-4862-41b4-85bf-c2dac738facf"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CUBAGEM:]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Transparent" x="348" y="13" width="181" height="11" uuid="fd1b3a0e-dab3-4794-b029-e1bb27929586"/>
+					<textElement verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="142" y="66" width="1" height="18" uuid="570087e8-146a-4779-82a4-9295a2d7d66b"/>
+				</line>
+				<line>
+					<reportElement x="1" y="1" width="530" height="1" uuid="93ac39b3-7c25-44f3-b2b9-bae347b88a08"/>
+				</line>
+				<staticText>
+					<reportElement x="6" y="44" width="183" height="10" uuid="9ea10bb8-9127-4cc2-acd2-5375ec02c0a6"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[O não recebimento do boleto não isenta o pagamento]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="RODOVIARIO_LOTACAO">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="235">
+				<printWhenExpression><![CDATA[new Boolean($F{modal_rodoviario_cte}.equals("l"))]]></printWhenExpression>
+				<line>
+					<reportElement x="4" y="14" width="529" height="1" uuid="a714353b-6010-4503-86a1-ac1334ad65d8"/>
+				</line>
+				<textField>
+					<reportElement mode="Transparent" x="275" y="16" width="257" height="43" uuid="6a381d38-52be-4367-9dfd-b8b2851acf3a"/>
+					<textElement markup="none">
+						<font fontName="Arial" size="6" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{numero_ordem_coleta} != null && !$F{numero_ordem_coleta}.equals("") ?"Coleta:"+ $F{numero_ordem_coleta}+"\n": "")+
+($F{numero_orcamento} != null && !$F{numero_orcamento}.equals("") ?"Orçamento:"+ $F{numero_orcamento}+"\n": "")+
+($F{numero_carga} != null && !$F{numero_carga}.equals("") ?"Número do Pedido/Carga:"+ $F{numero_carga}+"\n": "")+
+($F{numero_container} != null && !$F{numero_container}.equals("") ?"Container:"+  $F{numero_container}+"\n": "")+
+($F{numero_container} != null && !$F{numero_container}.equals("") ?"Valor Container:"+ new DecimalFormat("#,##0.00").format($F{valor_container})+"\n" : "") +
+($F{numero_booking} != null && !$F{numero_booking}.equals("") ?"Booking:"+  $F{numero_booking}+"\n": "") +
+($F{numero_genset} != null && !$F{numero_genset}.equals("") ?"Genset:"+  $F{numero_genset}+"\n": "") +
+($F{numero_genset} != null && !$F{numero_genset}.equals("") ?"Valor Genset:"+ new DecimalFormat("#,##0.00").format($F{valor_genset}) : "")]]></textFieldExpression>
+				</textField>
+				<rectangle radius="4">
+					<reportElement mode="Transparent" x="4" y="5" width="529" height="54" uuid="9bb7c160-3446-4ffe-86ab-bf86fe48e2c1"/>
+				</rectangle>
+				<textField>
+					<reportElement mode="Transparent" x="10" y="15" width="258" height="43" uuid="3f418b93-1df9-45c5-80d9-b7d8166fa2d9"/>
+					<textElement markup="none">
+						<font fontName="Arial" size="6" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{observacao}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="273" y="19" width="1" height="45" uuid="8db42f37-74df-405f-aab5-85490f9a12ab"/>
+				</line>
+				<staticText>
+					<reportElement x="218" y="7" width="111" height="7" uuid="d347f437-f3d2-4e3f-ac6c-bca1621a13d5"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[OBSERVAÇÕES]]></text>
+				</staticText>
+				<line>
+					<reportElement x="188" y="70" width="1" height="17" uuid="ba581b5f-5de7-4a30-836a-7aea12c83f3c"/>
+				</line>
+				<staticText>
+					<reportElement x="8" y="132" width="30" height="7" uuid="a310e505-ba3d-4c40-8cf4-cc27047468a7"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="8" y="116" width="30" height="7" uuid="d39fb86b-6c97-44a0-b41a-1c4849c6c829"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[S.REB. 1]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="46" y="109" width="30" height="7" uuid="936e9735-53b0-4410-983d-6e8eb299c6cf"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{placa_veiculo}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="4" y="86" width="529" height="1" uuid="0901e684-d5a7-416a-8fcc-53196529de62"/>
+				</line>
+				<staticText>
+					<reportElement x="7" y="142" width="152" height="7" uuid="00c5f32b-46da-4433-a79e-7dda26b770f4"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[NOME MOTORISTA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="8" y="124" width="30" height="7" uuid="d8e1771b-61e7-4c09-acd0-f1ad84666ed3"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[S.REB. 2]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="204" y="99" width="51" height="7" uuid="4a17c080-a5c3-4a9a-a203-c6db021feca7"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<line>
+					<reportElement x="4" y="140" width="529" height="1" uuid="24a73d19-4ca1-4f45-8cef-d883f7df977b"/>
+				</line>
+				<staticText>
+					<reportElement x="436" y="109" width="94" height="7" uuid="d3cccca4-d2fb-4759-8014-5b8aaa722d84"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[CÓDIGO DA TRANSIÇÃO]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="0" y="62" width="535" height="7" uuid="217619da-7862-43c7-96a6-f71ffbc42210"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["INFORMAÇÕES ESPECÍFICAS DO MODAL RODOVIÁRIO - LOTAÇÃO"]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="434" y="107" width="1" height="34" uuid="fdb646a6-d593-4ee4-ab43-efb9bffea0ec"/>
+				</line>
+				<staticText>
+					<reportElement x="8" y="109" width="30" height="7" uuid="7632c855-8df4-480e-b913-808b949cc72c"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[CAVALO]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="100" y="109" width="60" height="7" uuid="133eccd8-e23f-4616-9d9d-c21f22831873"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rntrc_proprietario_veiculo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="83" y="132" width="17" height="7" uuid="aaf5184b-48b2-4979-be63-1d898c373316"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="46" y="116" width="30" height="7" uuid="bd0f08e3-b259-4815-bb1c-85c547990c7e"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{placa_carreta}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="4" y="69" width="529" height="1" uuid="58bd0186-f5fb-49de-b092-7e3a3d92ac7b"/>
+				</line>
+				<textField>
+					<reportElement x="7" y="149" width="152" height="7" uuid="8f51337a-0490-4457-9ca8-ae24c783c888"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nome_motorista}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="39" y="97" width="1" height="45" uuid="81ba67ab-0dc4-470e-be44-872593b40e49"/>
+				</line>
+				<staticText>
+					<reportElement x="7" y="76" width="56" height="7" uuid="607b97ef-00e3-4f85-b40a-af660201f916"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[RNTRC DA EMPRESA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="46" y="132" width="30" height="7" uuid="bfd97dda-b2a5-4284-9a90-70a2befcada6"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="162" y="99" width="41" height="7" uuid="75081103-4aef-4255-889f-fa291d34d47c"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[NRO.REG.ESP.]]></text>
+				</staticText>
+				<line>
+					<reportElement x="4" y="96" width="529" height="1" uuid="03cbaf6c-92a2-41ea-8d4a-26194126e3c6"/>
+				</line>
+				<staticText>
+					<reportElement x="100" y="132" width="60" height="7" uuid="42b4d29e-82d5-45ad-aae9-ef73225021b2"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="160" y="89" width="372" height="7" uuid="05e9d4cd-d7d7-4f83-9300-bf4d6b4e27ab"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[INFORMAÇÕES REFERENTES AO VALE-PEDÁGIO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="265" y="76" width="265" height="7" uuid="717456f0-acef-4705-989d-2f52b4db907b"/>
+					<textElement>
+						<font fontName="SansSerif" size="3" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ESSE CONHECIMENTO DE TRANSPORTE ATENDE À LEGISLAÇÃO DE TRANSPORTE RODOVIÁRIO EM VIGOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="46" y="99" width="30" height="7" uuid="1ae96977-0da4-4ba3-8d12-9afa8368747f"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[PLACA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="278" y="109" width="51" height="7" uuid="5eb328aa-93b0-4f8a-954c-f5bc3fd19eb1"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[VIGÊNCIA]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="100" y="116" width="60" height="7" uuid="f024575a-9544-4ebd-8e01-4a83645833d7"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rntrc_proprietario_carreta}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="162" y="109" width="107" height="7" uuid="c42d5c95-d785-471b-83e0-9909f8f08e6d"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[EMPRESA CREDENCIADA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="8" y="99" width="30" height="7" uuid="5149a604-eaff-470e-9125-4e7589b7d571"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[TIPO]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="100" y="124" width="60" height="7" uuid="48b99c6e-0d65-4c3c-9c51-662d6fa7358c"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rntrc_proprietario_veiculo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="83" y="109" width="17" height="7" uuid="9b4711dc-dcac-4d96-87f8-568b8af8a200"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{uf_proprietario_veiculo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="83" y="99" width="17" height="7" uuid="2d8859f8-3dcc-4b77-86ce-26c9634d6c4b"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[UF]]></text>
+				</staticText>
+				<line>
+					<reportElement x="399" y="97" width="1" height="9" uuid="edea3e6e-3e00-43b0-a7b8-c636ad009a5b"/>
+				</line>
+				<textField>
+					<reportElement x="65" y="75" width="79" height="7" uuid="0cd32bb4-c0b6-4a78-8f08-b808e1ff1989"/>
+					<textElement markup="none">
+						<font fontName="Arial" size="6" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rntrc_emitente}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="89" width="159" height="7" uuid="b6fc14a6-1dca-497f-ad38-f9c7a88f2fa0"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[IDENTIFICAÇÃO DO CONJUNTO TRANSPORTADOR]]></text>
+				</staticText>
+				<line>
+					<reportElement x="159" y="87" width="1" height="69" uuid="0c0224c6-9cbc-49c2-a30e-a005cbb2eb5a"/>
+				</line>
+				<line>
+					<reportElement x="334" y="107" width="1" height="34" uuid="b299ce9b-5ce8-423e-b348-16ce2c48196d"/>
+				</line>
+				<line>
+					<reportElement x="144" y="70" width="1" height="17" uuid="be98f5bd-21f9-4ef0-83aa-a94da10703af"/>
+				</line>
+				<textField>
+					<reportElement x="46" y="124" width="30" height="7" uuid="9a33dad0-76e6-4d5f-8c03-0ea56a61cb3a"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{placa_bitrem}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="262" y="70" width="1" height="17" uuid="11d8985a-aff7-48b5-aad7-014b9957487d"/>
+				</line>
+				<staticText>
+					<reportElement x="338" y="109" width="94" height="7" uuid="154bcb93-128f-42c8-b6b2-321315869d2e"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[NUMERO DO DISPOSITIVO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="164" y="142" width="84" height="7" uuid="9f115ea4-a059-4cf8-b4af-a095d0acea6c"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[CPF DO MOTORISTA]]></text>
+				</staticText>
+				<line>
+					<reportElement x="99" y="97" width="1" height="45" uuid="e76e492b-b704-42aa-9c52-ca9616682a29"/>
+				</line>
+				<staticText>
+					<reportElement x="304" y="99" width="92" height="7" uuid="9b82c43f-d681-4649-8c55-f95aa0f20b6c"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="444" y="99" width="88" height="7" uuid="ac170e86-9005-4f9a-9c78-0b26f25ebbee"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<line>
+					<reportElement x="79" y="97" width="1" height="45" uuid="b8d98e5a-df56-4864-886e-8e2be39cb18a"/>
+				</line>
+				<staticText>
+					<reportElement x="402" y="99" width="42" height="7" uuid="dc6d4b97-f683-4946-9276-811516a44891"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[VALOR TOTAL]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="147" y="78" width="40" height="7" uuid="e412dde8-520d-4245-9dba-add0711ef9af"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="6" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["SIM"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="262" y="99" width="42" height="7" uuid="3182aa3d-6071-4698-8197-4b502ddec969"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[RESPONSÁVEL.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="255" y="142" width="277" height="7" uuid="70e26679-8cd6-41e9-bfc6-c11354c920ca"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[IDENTIFICAÇÃO DOS LACRES EM TRÂNSITO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="147" y="71" width="40" height="7" uuid="5fe00e38-d285-48bd-b5cb-7553a2bffa4d"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[LOTAÇÃO]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="255" y="149" width="277" height="7" uuid="54c31fc1-082f-4635-ad9a-235f669a3c5e"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="272" y="107" width="1" height="34" uuid="700308a7-0f24-48d2-af60-468b1c2003f2"/>
+				</line>
+				<staticText>
+					<reportElement x="103" y="99" width="57" height="7" uuid="cb944372-6860-4f70-ae5e-6abad746a3a7"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[RNTRC]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="83" y="116" width="17" height="7" uuid="0acad5e2-69b3-4c80-ba1f-53bd26028b98"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{uf_proprietario_carreta}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="160" y="116" width="373" height="1" uuid="16db53b4-5a69-474b-9ce1-1f97891b4565"/>
+				</line>
+				<line>
+					<reportElement x="259" y="97" width="1" height="10" uuid="7629208b-e051-4ebc-b5b2-f4e12d7f55ce"/>
+				</line>
+				<line>
+					<reportElement x="4" y="106" width="529" height="1" uuid="c32519ed-5104-42bc-ae7a-46c3f275dcb7"/>
+				</line>
+				<textField>
+					<reportElement x="83" y="124" width="17" height="7" uuid="8f262f38-5ec6-46e7-be64-94280d428a17"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{uf_proprietario_bitrem}]]></textFieldExpression>
+				</textField>
+				<rectangle radius="4">
+					<reportElement mode="Transparent" x="4" y="60" width="529" height="96" uuid="04c9aba2-9a70-4b12-b4a2-8ff52d953100"/>
+				</rectangle>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="190" y="78" width="71" height="7" uuid="11212ac0-7a2a-415d-ba43-c49085dc1bdf"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Arial" size="6" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{previsao_entrega_em}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="190" y="71" width="71" height="7" uuid="4a482c48-9648-49aa-8700-f30f112acaf2"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[DATA PREVISTA ENTREGA]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="164" y="149" width="84" height="7" uuid="3e5888f2-c5e5-49f4-a183-2ec32a65d4b6"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cpf_motorista}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="249" y="141" width="1" height="15" uuid="d0a764d4-7de9-471a-8610-91425dad841c"/>
+				</line>
+				<staticText>
+					<reportElement x="374" y="170" width="156" height="7" uuid="31c96a1b-39f1-48cf-8c18-38be16583562"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[CHEGADA DATA/HORA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="196" y="169" width="28" height="7" uuid="5ba02fb2-0635-4e3d-8870-1dcfc49fe497"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Nº CTRC:]]></text>
+				</staticText>
+				<line>
+					<reportElement x="189" y="167" width="1" height="66" uuid="46449262-3160-4a65-8c3f-af56cb5c6049"/>
+				</line>
+				<line>
+					<reportElement x="4" y="198" width="185" height="1" uuid="ba78f0a8-1a59-4c4a-a8b7-0110c2609c22"/>
+				</line>
+				<staticText>
+					<reportElement x="189" y="221" width="179" height="7" uuid="c026fc76-84de-447d-8ec8-15fd8720c4b0"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[ASSINATURA/CARIMBO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="9" y="159" width="521" height="7" uuid="d3b1737e-6de6-4c82-824d-48756b8331fe"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DECLARO QUE RECEBI OS VOLUMES DESTE CONHECIMENTO EM PERFEITO ESTADO PELO QUE DOU POR CUMPRIDO O PRESENTE CONTRATO DE TRANSPORTE]]></text>
+				</staticText>
+				<line>
+					<reportElement x="4" y="166" width="529" height="1" uuid="7dafd50d-bb57-42e9-b356-ce3999beb7ac"/>
+				</line>
+				<line>
+					<reportElement x="369" y="167" width="1" height="66" uuid="af472cf3-06b5-4fa9-a533-e0cbefefab45"/>
+				</line>
+				<textField>
+					<reportElement x="226" y="169" width="39" height="7" uuid="f5a7c96a-ff99-4e87-b338-073da2128a8c"/>
+					<textElement markup="none">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+				</textField>
+				<rectangle radius="4">
+					<reportElement mode="Transparent" x="4" y="156" width="529" height="77" uuid="b36a7fca-9997-4352-9c9e-86884561e415"/>
+				</rectangle>
+				<line>
+					<reportElement x="4" y="165" width="529" height="1" uuid="048a901a-598f-4a60-b40a-2b7ca2fce65d"/>
+				</line>
+				<staticText>
+					<reportElement x="374" y="200" width="156" height="7" uuid="898cea2b-81aa-4a27-a920-72945323ae3a"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[SAÍDA DATA/HORA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="7" y="170" width="56" height="7" uuid="7ca52e07-e86a-491a-8e4d-54f5f21b7391"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[NOME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="7" y="200" width="56" height="7" uuid="abe39eb4-eb02-49e9-9f22-878a59f9d217"/>
+					<textElement>
+						<font fontName="SansSerif" size="5" isBold="false"/>
+					</textElement>
+					<text><![CDATA[RG]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="7">
+			<textField>
+				<reportElement x="112" y="0" width="61" height="7" uuid="cb8bf10d-4c8b-45af-98ce-dfe3d07ec4db"/>
+				<textElement markup="none">
+					<font fontName="Arial" size="5" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[( $F{chave_acesso}.equals("0") || $F{chave_acesso}.equals("") ? $F{serie_nota} + "/" + $F{numero_nota}: "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="14" height="7" isPrintWhenDetailOverflows="true" uuid="7c7d91a3-6460-4c91-8394-b94bc92e310d"/>
+				<textElement markup="none">
+					<font fontName="Arial" size="5" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[( $F{chave_acesso}.equals("0") || $F{chave_acesso}.equals("") ? "NF":
+    "NF-E"
+)]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="14" y="0" width="164" height="7" uuid="6736e009-6920-4beb-8b2e-cda677e29883"/>
+				<textElement markup="none">
+					<font fontName="Arial" size="5" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{chave_acesso}.equals("0") || $F{chave_acesso}.equals("") ? $F{emitente_cnpj_nota}: " N:"+$F{numero_nota}+"/"+$F{serie_nota}+" C:" + $F{chave_acesso})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

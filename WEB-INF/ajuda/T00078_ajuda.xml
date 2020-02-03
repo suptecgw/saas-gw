@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tela name="XmlAjuda" codigo="T00078">
+    <permissao sigla="cadtabelacliente" observacao=" "/>
+    <campo name="descricao" label="Descrição" observacao="Descrição da tabela adicional. Esse campo irá aparecer no cadastro de clientes caso o usuário queira vincular a tabela ao cliente." />
+    <campo name="grupo-cli-dest" label="Grupo de Clientes / Destinatário" observacao="Informar se a regra de TDE adicional será para um grupo de clientes ou para um destinatário específico." />
+    <campo name="valorTDE" label="Valor TDE" observacao="Valor do TDE que será utilizado." />
+    <campo name="formula" label="Fórmula" observacao="Fórmula pra cálculo do TDE. Essa rotina deverá ser utilizado apenas por usuário avançados que tenham conhecimento de javascript, nessa rotina poderá ser utilizado algumas variáveis que serão substituídas na hora do cálculo do frete no CT-e/Orçamento." />
+</tela>

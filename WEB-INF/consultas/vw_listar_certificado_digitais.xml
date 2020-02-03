@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_certificado_digitais" modulo="0,1,2,3,4" codTela="129">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id"/>
+    <column name='descricao' width="200px" visivel="true" format="" type="varchar" label="Descrição"/>
+    <column name='razaosocial' width="200px" visivel="true" format="" type="varchar" label="Razão Social"/>
+    <column name='cnpj' width="50px" visivel="true" format="" type="varchar" label="CNPJ"/>
+    <column name='dt_validade' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Validade"/>
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criados por mim"/>
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Atualizado em"/>
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Criado em"/>
+
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="razaosocial" label="Razão Social" ordem="2"/>
+    <columnFiltroSelect name="cnpj" label="CNPJ" ordem="3"/>
+    <columnFiltroSelect name="dt_validade" label="Validade" ordem="4"/>
+
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnOrdenacaoSelect name="razaosocial" label="Razão Social" ordem="2"/>
+    <columnOrdenacaoSelect name="cnpj" label="CNPJ" ordem="3"/>
+    <columnOrdenacaoSelect name="dt_validade" label="Validade" ordem="4"/>
+
+</target>

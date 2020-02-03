@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_notas_servicos" modulo="0,1,2,3,4" codTela="75">
+    <column name='id' width="" visivel="false" format="" type="int" label="ID" />
+    <column name='num_nfs' width="" visivel="true" format="" type="varchar" label="Número NFS" />
+    <column name='serie' width="" visivel="true" format="" type="varchar" label="Série" />
+    <column name='numero_rps' width="" visivel="true" format="" type="varchar" label="Número RPS" />
+    <column name='emissao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de Emissão" />
+    <column name='filial_id' width="" visivel="false" format="" type="int" label="ID Filial" />  
+    <column name='filial' width="" visivel="true" format="" type="varchar" label="Filial" />  
+    <column name='consignatario_id' width="" visivel="false" format="" type="int" label="ID Consignatário" />  
+    <column name='cliente' width="" visivel="true" format="" type="varchar" label="Cliente" />  
+    <column name='valor' width="" visivel="true" format="" type="int" label="Valor" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de criação" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data da ultima alteração" />
+    <column name='notas_fiscais' width="" visivel="true" format="" type="varchar" label="Notas Fiscais (Distrib. local)" />  
+    <column name='servico' width="" visivel="true" format="" type="varchar" label="Serviço" />  
+    <column name='cfop' width="" visivel="true" format="" type="varchar" label="CFOP" />  
+    <column name='especie' width="" visivel="true" format="" type="varchar" label="Espécie" />  
+    <column name='num_pedido_cliente' width="" visivel="true" format="" type="varchar" label="Nº Pedido cliente" />  
+    <column name='tipo' width="" visivel="true" format="" type="varchar" label="Tipo" />  
+    <column name='cancelado' width="" visivel="true" format="" type="varchar" label="Cancelado" />  
+    <column name='vendedor_id' width="" visivel="false" format="" type="int" label="ID Vendedor" />  
+    <column name='vendedor' width="" visivel="true" format="" type="varchar" label="Vendedor" />  
+    <column name='num_coleta' width="" visivel="true" format="" type="varchar" label="Nº Coleta" />  
+    <column name='num_carga' width="" visivel="true" format="" type="varchar" label="Nº Carga" />  
+    <column name='tipo_produto' width="" visivel="true" format="" type="varchar" label="Tipo produto" />  
+    <column name='motorista' width="" visivel="true" format="" type="varchar" label="Motorista" />  
+    <column name='remetente' width="" visivel="true" format="" type="varchar" label="Remetente" />  
+    <column name='destinatario' width="" visivel="true" format="" type="varchar" label="Destinatário" />  
+    <column name='is_impresso' width="" visivel="false" format="" type="varchar" label="Impresso" />  
+    <column name='criado_por' width="" visivel="false" format="" type="varchar" label="Criado Por" />  
+    
+    <columnFiltroSelect name="emissao" label="Data de Emissão" ordem="1"/>
+    <columnFiltroSelect name="num_nfs" label="Número NFS" ordem="2"/>
+    <columnFiltroSelect name="numero_rps" label="Número RPS" ordem="3"/>
+    <columnFiltroSelect name="num_pedido_cliente" label="Nº Pedido do Cliente" ordem="4"/>
+    <columnFiltroSelect name="notas_fiscais" label="Notas Fiscais (Distrib. local)" ordem="5"/>
+    <columnFiltroSelect name="valor" label="Valor" ordem="6"/>
+    
+    <columnOrdenacaoSelect name="emissao" label="Data de Emissão" ordem="1"/>
+    <columnOrdenacaoSelect name="num_nfs" label="Número NSF" ordem="2"/>
+    <columnOrdenacaoSelect name="numero_rps" label="Número RPS" ordem="3"/>
+    <columnOrdenacaoSelect name="num_pedido_cliente" label="Nº Pedido do Cliente" ordem="4"/>
+    <columnOrdenacaoSelect name="notas_fiscais" label="Notas Fiscais (Distrib. local)" ordem="5"/>
+    <columnOrdenacaoSelect name="valor" label="Valor" ordem="6"/>
+    
+    
+</target>

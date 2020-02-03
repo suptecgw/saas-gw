@@ -1,0 +1,30 @@
+# Glauco Diogo
+# Modelo de driver para CTRC com folha continua
+# Usando este driver:
+# [COLUNA,LINHA,<CONDENSADO>]=<Texto para impressao>
+
+
+MSG_BEFORE_PRINT=TRANSWINTER TRANSPORTES LTDA<=N><=N>Confirme a Impressao das Etiquetas<=N>Caminho da impressora:
+
+#DADOS DA TRANSPORTADORA
+#[1,2,1/10]=CONFERENTE: @F(usuario,25,LEFT)
+#[1,4,1/10]=REMETENTE: @F(remetente,25,LEFT)
+#[1,6,1/10]=DESTINATARIO: @F(destinatario,25,LEFT)
+#[1,8,1/10]=VOLUMES: @F(etiqueta_atual,4,NOALIGN)/@F(volume,8,LEFT)
+#[1,10,1/10]=PESO REAL: @F(peso,12,LEFT) KG
+#[1,12,1/10]=DESTINO: @F(cidade_destinatario,23,NOALIGN)-@F(uf_destinatario,2,LEFT)
+#[1,14,1/10]=NOTA FISCAL: @F(numero,6,LEFT)/@F(numero,6,LEFT)
+#[1,16,1/10]=CONTROLE: @F(ctrc,6,LEFT)- @F(emissao,10,LEFT)
+
+#[01,17,1/10]=<=N><=N>
+
+[1,2,1/8]=CONFERENTE: @F(usuario,25,LEFT)
+[1,3,1/8]=REMETENTE: @F(remetente,25,LEFT)
+[1,4,1/8]=DESTINATARIO: @F(destinatario,25,LEFT)
+[1,5,1/8]=VOLUMES: @F(etiqueta_atual,4,NOALIGN)/@F(volume,8,LEFT)
+[1,6,1/8]=PESO REAL: @F(peso,12,LEFT) KG
+[1,7,1/8]=DESTINO: @F(cidade_destinatario,23,NOALIGN)-@F(uf_destinatario,2,LEFT)
+[1,8,1/8]=NOTA FISCAL: @F(numero,6,LEFT)/@F(numero,6,LEFT)
+[1,9,1/8]=CONTROLE: @F(ctrc,6,LEFT)- @F(emissao,10,LEFT)
+
+[01,13,1/8]=<=N><=N>

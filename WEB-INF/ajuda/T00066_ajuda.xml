@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tela name="XmlAjuda" codigo="T00066">
+    <permissao sigla="cadRelatorioPersonalizado" observacao=" "/>
+</tela>

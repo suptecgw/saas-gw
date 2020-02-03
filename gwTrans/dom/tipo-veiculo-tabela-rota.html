@@ -1,0 +1,130 @@
+<div class="container-nova-linha" data-gw-grupo-serializado="dom-tabela-rota" data-gw-grupo-name="tabela_rota">
+    <div class="filho" style="text-align: center;">
+        <label data-tipo="tipoVeiculo" class="negrito"></label>
+    </div>
+    <div class="filho" style="text-align: center;">
+        <label data-tipo="cliente" class="negrito"></label>
+    </div>
+    <div class="filho" style="text-align: center;">
+        <label data-tipo="tipoProduto" class="negrito"></label>
+    </div>
+    <div class="filho">
+        <div>
+            <select class="fieldMin" name="tipoValor" data-gw-campo-grupo-serializado="dom-tabela-rota">
+                <option value="p">Peso/TON</option>
+                <option value="f">Valor Fixo</option>
+                <option value="c">% CT-e</option>
+                <option value="n">% NF-e</option>
+                <option value="k">R$/KM</option>
+            </select>
+        </div>
+        <div data-valor-tipo="c">
+            <select class="fieldMin" name="considerarCampoCte" data-gw-campo-grupo-serializado="dom-tabela-rota">
+                <option value="tp">Pelo total da prestação</option>
+                <option value="fp">Pelo frete peso</option>
+                <option value="fv">Pelo frete valor</option>
+            </select>
+        </div>
+    </div>
+    <div class="filho">
+        <div>
+            <input type="text" value="0.00" size="6" class="fieldMin" name="valorTabela"
+                   data-gw-campo-grupo-serializado="dom-tabela-rota" onkeypress="mascara(this, reais)">
+            <!-- Valor Fixo -->
+            <span data-valor-tipo="f">
+                <label>máximo: </label>
+                <input type="text" value="0.00" size="6" class="fieldMin" name="valorMaximo"
+                       data-gw-campo-grupo-serializado="dom-tabela-rota" onkeypress="mascara(this, reais)">
+            </span>
+            <!-- % CT-e -->
+            <span data-valor-tipo="c">
+                <label>%</label>
+            </span>
+            <!-- % NF-e -->
+            <span data-valor-tipo="n">
+                <label>%</label>
+            </span>
+        </div>
+        <div>
+            <label>Exced./Kg:</label>
+            <input type="text" value="0.00" size="5" class="fieldMin" name="valorExcedenteKG"
+                   data-gw-campo-grupo-serializado="dom-tabela-rota" onkeypress="mascara(this, reais)">
+        </div>
+    </div>
+    <div class="filho" style="text-align: center;">
+        <input type="text" value="0.00" size="6" class="fieldMin" name="valorSegundaViagem"
+               data-gw-campo-grupo-serializado="dom-tabela-rota" onkeypress="mascara(this, reais)">
+    </div>
+    <div class="filho" style="text-align: center;">
+        <input type="text" value="0.00" size="6" class="fieldMin" name="valorPedagio"
+               data-gw-campo-grupo-serializado="dom-tabela-rota" onkeypress="mascara(this, reais)">
+    </div>
+    <div class="filho">
+        <input type="text" value="0.00" size="6" class="fieldMin" name="valorTaxaEntrega"
+               data-gw-campo-grupo-serializado="dom-tabela-rota" onkeypress="mascara(this, reais)">
+        <label>a partir da</label>
+        <input type="text" value="0.00" size="2" class="fieldMin" name="taxaEntregaPartirDe"
+               data-gw-campo-grupo-serializado="dom-tabela-rota">
+    </div>
+    <div class="filho" style="text-align: center;">
+        <input type="text" value="0.00" size="6" class="fieldMin" name="valorDiaria"
+               data-gw-campo-grupo-serializado="dom-tabela-rota" onkeypress="mascara(this, reais)">
+    </div>
+    <div class="filho" style="text-align: center;">
+        <input type="text" value="0.00" size="6" class="fieldMin" name="valorTaxaFixa"
+               data-gw-campo-grupo-serializado="dom-tabela-rota" onkeypress="mascara(this, reais)">
+    </div>
+    <div class="filho filhoPedagio">
+        <div>
+            <label><input type="checkbox" name="deduzirPedagioFrete" data-gw-campo-grupo-serializado="dom-tabela-rota">
+                Deduzir pedágio do valor do frete.</label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="carregarValorPedagioCte"
+                          data-gw-campo-grupo-serializado="dom-tabela-rota">
+                Carregar valor do pedágio dos CT-es vinculados aos manifestos.</label>
+        </div>
+    </div>
+
+    <input type="hidden" name="tabelaRotaVeiculoId" data-gw-campo-grupo-serializado="dom-tabela-rota">
+</div>
+
+<script>
+    var json = dadosTabela[contador++];
+    var qtdDom = json['qtdDom'];
+
+    jQuery('[data-gw-grupo-serializado="dom-tabela-rota"]').attr('data-gw-grupo-serializado', 'dom-tabela-rota' + qtdDom);
+    jQuery('[data-gw-campo-grupo-serializado="dom-tabela-rota"]').attr('data-gw-campo-grupo-serializado', 'dom-tabela-rota' + qtdDom).each(function (index, valor) {
+        var elemento = jQuery(valor);
+        var name = elemento.attr('name');
+
+        if (json.hasOwnProperty(name)) {
+            if (elemento.is(':checkbox')) {
+                elemento.prop('checked', json[name]);
+            } else {
+                elemento.val(json[name]);
+            }
+            elemento.trigger('change');
+        } else {
+            console.log('Nao foi encontrado parametro de nome: ' + name);
+        }
+    });
+
+    jQuery('label[data-tipo]:empty').each(function (index, valor) {
+        var elemento = jQuery(valor);
+        var tipo = elemento.attr('data-tipo');
+
+        if (json.hasOwnProperty(tipo)) {
+            elemento.text(json[tipo]);
+        } else {
+            console.log('Nao foi encontrado parametro de tipo: ' + tipo);
+        }
+    });
+
+    if (contador >= dadosTabela.size()) {
+        jQuery(".gif-bloq-tela,.bloqueio-tela").css("display", "none");
+
+        // Limpa a array para liberar memória presa.
+        dadosTabela = [];
+    }
+</script>

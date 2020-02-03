@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_ctrc_personalizado_controle_de_estadia" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="template.type" value="columnar"/>
+	<style name="Title" isDefault="false" forecolor="#000000" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" isDefault="false" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" isDefault="false" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" isDefault="false" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" isDefault="false" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style isDefault="false" style="Row" mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Origem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="63" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Destino]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="0" width="87" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Cidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="39" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[INCOTERM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="39" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Veículo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="39" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[CT-e]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="0" width="39" height="30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Peso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="0" width="42" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Chegada na Fabrica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="0" width="42" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Saída na Fabrica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="36" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Tempo Espera Fabrica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="42" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Chegada no Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="518" y="0" width="42" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Dia da Semana]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="0" width="50" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[ Chegada fora do horario acordado Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="0" width="66" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Inicio Descarregamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="676" y="0" width="54" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Período Carregamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="730" y="0" width="38" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Período Descarga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="768" y="0" width="44" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Tempo em Minuto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="812" y="0" width="44" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Tolerancia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="856" y="0" width="44" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Valor por Minuto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="900" y="0" width="38" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Valor X Peso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="938" y="0" width="38" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Valor Liquido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="976" y="0" width="52" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Valor Final com Imposto]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="1028" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<textField>
+				<reportElement x="278" y="0" width="39" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["CT-e"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="0" width="39" height="10"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Peso"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="50" height="10"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Origem"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="900" y="0" width="38" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Valor X Peso"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="42" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Chegada no Cliente"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="0" width="42" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Chegada na Fabrica"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="36" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tempo Espera Fabrica"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="518" y="0" width="42" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Dia da Semana"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="0" width="39" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Veículo"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="730" y="0" width="38" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Período Descarga"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="0" width="50" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" Chegada fora do horario acordado Cliente"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="976" y="0" width="52" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Valor Final com Imposto"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="676" y="0" width="54" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Período Carregamento"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="0" width="87" height="10"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Cidade"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="39" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["INCOTERM"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="938" y="0" width="38" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Valor Final com Imposto"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="63" height="10"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Destino"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="0" width="42" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Saída na Fabrica"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="610" y="0" width="66" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Inicio Descarregamento"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="768" y="0" width="44" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tempo em Minuto"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="812" y="0" width="44" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tempo em Minuto"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="856" y="0" width="44" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tempo em Minuto"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

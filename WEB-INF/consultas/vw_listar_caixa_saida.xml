@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_caixa_saida" modulo="0,1,2,3,4" codTela="119">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='data_envio' width="" visivel="true" format="dd/MM/yyyy |às| HH:mm:ss" type="varchar" label="Data Envio" />
+    <column name='remetente' width="" visivel="true" format="" type="int" label="E-mail Remetente" />  
+    <column name='destinatario' width="" visivel="true" format="" type="varchar" label="E-mail Destinatário" />
+    <column name='assunto' width="" visivel="true" format="" type="varchar" label="Assunto" />
+    <column name='status' width="" visivel="true" format="" type="varchar" label="Status" />
+    <column name='menssagem' width="" visivel="false" format="" type="varchar" label="Menssagem" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado Por" />
+    <column name='mensagem_erro' width="" visivel="true" format="" type="varchar" label="Mensagem Erro" />
+    
+    <columnFiltroSelect name="data_criacao" label="Data Criação" ordem="1"/>
+    <columnFiltroSelect name="data_envio" label="Data Envio" ordem="2"/>
+    <columnFiltroSelect name="remetente" label="E-mail Remetente" ordem="3"/>
+    <columnFiltroSelect name="destinatario" label="E-mail Destinatário" ordem="4"/>
+    <columnFiltroSelect name="assunto" label="Assunto" ordem="5"/>
+    <columnFiltroSelect name="menssagem" label="Menssagem" ordem="6"/>
+    
+    <columnOrdenacaoSelect name="data_criacao" label="Data Criação" ordem="1"/>
+    <columnOrdenacaoSelect name="data_envio" label="Data Envio" ordem="2"/>
+    <columnOrdenacaoSelect name="remetente" label="E-mail Remetente" ordem="3"/>
+    <columnOrdenacaoSelect name="destinatario" label="E-mail Destinatário" ordem="4"/>
+    <columnOrdenacaoSelect name="assunto" label="Assunto" ordem="5"/>
+    <columnOrdenacaoSelect name="menssagem" label="Menssagem" ordem="6"/>
+    <columnOrdenacaoSelect name="status" label="Status" ordem="7"/>
+</target>

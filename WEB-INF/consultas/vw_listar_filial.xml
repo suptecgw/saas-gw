@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_filial" modulo="0,1,2,3,4" codTela="1">
+    <column name="idfilial" width="" format="" type="int" label="Filial ID"/> 
+    <column name="razaosocial" width="240px" visivel="true" format="" type="varchar" label="Razão Social"/> 
+    <column name="abreviatura" width="100px" visivel="true" format="" type="varchar" label="Filial"/> 
+    <column name="bairro" width="100px" visivel="true" format="" type="varchar" label="Bairro"/> 
+    <column name="cidade_id" width="" visivel="false" format="" type="int" label="Cidade Id"/> 
+    <column name="cidade" width="180px" visivel="true" format="" type="varchar" label="Cidade"/> 
+    <column name="endereco" width="100px" visivel="true" format="" type="varchar" label="Endereço"/> 
+    <column name="uf" width="30px" visivel="true" format="" type="varchar" label="UF"/> 
+    <column name="cep" width="" visivel="true" format="" type="varchar" label="CEP"/> 
+    <column name="fone" width="" visivel="true" format="" type="varchar" label="Telefone"/> 
+    <column name="cnpj" width="115px" visivel="true" format="##.###.###/####-##" type="varchar" label="CNPJ"/> 
+    <column name="inscest" width="80px" visivel="true" format="" type="varchar" label="Insc. Estadual"/> 
+    <column name="inscmun" width="" visivel="true" format="" type="varchar" label="Insc. Municipal"/> 
+    <column name="responsavel" width="" visivel="true" format="" type="varchar" label="Resp. Legal"/> 
+    <column name="numero" width="" visivel="true" format="" type="varchar" label="N° Logradouro"/> 
+    <column name="numero_rntrc" width="" visivel="true" format="" type="long" label="N° RNTRC"/> 
+    <column name="created_by" width="" visivel="false" format="" type="int" label="Usuario Inclusão ID"/> 
+    <column name="usuario_inclusao" width="" visivel="true" format="" type="varchar" label="Usuário Inclusão"/> 
+    <column name="created_at" width="" visivel="true" format="dd/MM/yyyy" type="date" label="Data Inclusão"/> 
+    <column name="updated_by" width="" visivel="false" format="" type="int" label="Usuario Alteração ID"/>
+    <column name="usuario_alteracao" visivel="true" width="" format="" type="varchar" label="Usuário Última Alteração"/>
+    <column name="updated_at" width="" visivel="true" format="dd/MM/yyyy" type="date" label="Data Última Alteração"/>
+
+    
+<!--        <column name="cnpj" width="115px" visivel="true" format="##.###.###/####-##" type="varchar" label="CNPJ"/> 
+    <column name="inscest" width="80px" visivel="true" format="" type="varchar" label="Insc. Estadual"/> 
+    <column name="inscmun" width="" visivel="true" format="" type="varchar" label="Insc. Municipal"/> 
+    <column name="responsavel" width="" visivel="true" format="" type="varchar" label="Resp. Legal"/> 
+    <column name="numero" width="" visivel="true" format="" type="varchar" label="Nº Logradouro"/> 
+    <column name="numero_rntrc" width="" visivel="true" format="" type="long" label="Nº RNTRC"/> 
+    <column name="created_by" width="" visivel="false" format="" type="int" label="Usuario Inclusão ID"/> -->
+    
+    <columnFiltroSelect name="abreviatura" label="Filial" ordem="1"/>
+    <columnFiltroSelect name="razaosocial" label="Razão Social" ordem="2"/>
+    <columnFiltroSelect name="cnpj" label="CNPJ" ordem="3"/>
+    <columnFiltroSelect name="bairro" label="Bairro" ordem="4"/>
+    <columnFiltroSelect name="endereco" label="Endereço" ordem="5"/>
+    <columnFiltroSelect name="cep" label="CEP" ordem="6"/>
+    <columnFiltroSelect name="fone" label="Telefone" ordem="7"/>
+    <columnFiltroSelect name="inscest" label="Insc. Estadual" ordem="8"/>
+    <columnFiltroSelect name="inscmun" label="Insc. Municipal" ordem="9"/>
+    <columnFiltroSelect name="responsavel" label="Resp. Legal" ordem="10"/>
+    <columnFiltroSelect name="numero_rntrc" label="Nº RNTRC" ordem="11"/>
+    <columnFiltroSelect name="created_at" label="Data Inclusão" ordem="12"/>
+    <columnFiltroSelect name="updated_at" label="Data Última Alteração" ordem="13"/>
+
+    <columnOrdenacaoSelect name="abreviatura" label="Filial" ordem="1" />
+    <columnOrdenacaoSelect name="razaosocial" label="Razão Social" ordem="2"/>
+    <columnOrdenacaoSelect name="cnpj" label="CNPJ" ordem="3"/>
+    <columnOrdenacaoSelect name="bairro" label="Bairro" ordem="4"/>
+    <columnOrdenacaoSelect name="endereco" label="Endereço" ordem="5"/>
+    <columnOrdenacaoSelect name="cep" label="CEP" ordem="6"/>
+    <columnOrdenacaoSelect name="fone" label="Telefone" ordem="7"/>
+    <columnOrdenacaoSelect name="inscest" label="Insc. Estadual" ordem="8"/>
+    <columnOrdenacaoSelect name="inscmun" label="Insc. Municipal" ordem="9"/>
+    <columnOrdenacaoSelect name="responsavel" label="Resp. Legal" ordem="10"/>
+    <columnOrdenacaoSelect name="numero_rntrc" label="Nº RNTRC" ordem="11"/>
+    <columnOrdenacaoSelect name="created_at" label="Data Inclusão" ordem="12"/>
+    <columnOrdenacaoSelect name="updated_at" label="Data Última Alteração" ordem="13"/>
+    
+</target>

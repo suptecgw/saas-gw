@@ -1,0 +1,9 @@
+LISTS[ctrcs_romaneio]
+
+MSG_BEFORE_PRINT=Webtrans<=N><=N>Confirme a Impressao?<=N><=N><=N>Caminho da impressora:
+
+[01,15,COND]=--------------------------------------------------------------------------------------------------------------------
+[01,16,COND,1/8]=   REMETENTE                  DESTINATARIO                  DESTINO        VOLUME      PESO       NATUREZA  CTRC
+[01,17,COND]=--------------------------------------------------------------------------------------------------------------------
+
+[01,19,COND,1/8,ctrcs_romaneio<5]= @F(ctrc,25,LEFT)

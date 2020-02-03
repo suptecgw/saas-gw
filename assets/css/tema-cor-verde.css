@@ -1,0 +1,61 @@
+/* 
+    Created on : 01/11/2018, 11:10:25
+    Author     : diego
+*/
+:root{
+    --tonalidade1:#054f12 !important; 
+    --tonalidade2:#0d5417 !important;
+    --tonalidade3:#15591b !important;
+    --tonalidade4:#1b5e20 !important;
+    --tonalidade5:#216325 !important;
+    --tonalidade6:#0d5417 !important;
+    --tonalidade7:#216325 !important;
+    --tonalidade8:#15591b !important;
+    --tonalidade9:#216325 !important;
+    --tonalidade10:#0d5417 !important;
+    --tonalidade11:#66db66 !important;
+    --tonalidade12:#0d5417 !important;
+    --tonalidade13:#054f12 !important;
+    --tonalidade14:#ffffff !important;
+    --tonalidade15:#054f12 !important;
+    --tonalidade16:#15591b !important;
+    --tonalidade17:#054f12 !important;
+    --tonalidade18:#1b5e20 !important;
+    --tonalidade19:#216325 !important;
+    --tonalidade20:#15591b !important; 
+    --tonalidade21:#15591b !important;
+    --tonalidade22:#2c6d2e !important;
+    --tonalidade23:#054f12 !important;
+    --tonalidade24:#15591b !important;
+    --tonalidade25:#054f12 !important;
+    --tonalidade26:#2c6d2e !important;
+    --tonalidade27:#216325 !important;
+    --tonalidade28:#15591b !important;
+    --tonalidade29:#054f12 !important;
+    --tonalidade30:#054f12 !important;
+    --tonalidade31:#0d5417 !important;
+    --tonalidade32:#9eccac !important;
+    --tonalidade33:#709d7e !important;
+    --tonalidade34:#6eaa5e !important;
+    --tonalidade35:#93bf85 !important;
+    --tonalidade36:#008000 !important;
+    --tonalidade37:#469536 !important;
+    --tonalidade38:#054f12 !important;
+    --tonalidade39:#216325 !important;
+    --tonalidade40:#15591b !important;
+    --tonalidade41:#0d5417 !important;
+    --tonalidade42:#054f12 !important;
+    --tonalidade43:#054f12 !important;
+    --tonalidade44:#0d5417 !important;
+    --tonalidade45:#709d7e !important;
+    --tonalidade46:#216325 !important;
+    --tonalidade47:#15591b !important;
+    --icon-tonalidade1:hue-rotate(290deg) !important;
+    --icon-tonalidade2: brightness(0) invert(1) !important;
+    --icon-seta-down: url('../img/icon-seta-ajuda2.png') !important;
+    --icon-seta: url('../img/icon-seta-ajuda.png') !important;
+    --icon-seta-caminhao: url(../img/icone_caminhao_branco.png) !important;
+    --icon-certo: url(../img/certo.png) !important;
+    --icon-certo-color: hue-rotate(290deg) !important;
+ }
+

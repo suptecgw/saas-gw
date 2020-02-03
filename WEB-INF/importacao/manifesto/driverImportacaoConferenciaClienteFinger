@@ -1,0 +1,37 @@
+<Driver>
+   <Codigo>1542857</Codigo>
+   <Descricao>Arquivo Cliente Conferencia</Descricao>
+   <Extensao>CSV</Extensao>
+   <Tipo>0</Tipo>
+   <Campo>
+      <Descricao>Codigo</Descricao>
+      <Formato>a</Formato>
+      <PosicaoInicial>1</PosicaoInicial>
+      <PosicaoFinal>6</PosicaoFinal>
+      <Indice>1</Indice>
+   </Campo>  
+   <Campo>
+      <Descricao>Descricao</Descricao>
+      <Formato>a</Formato>
+      <PosicaoInicial>8</PosicaoInicial>
+      <PosicaoFinal>16</PosicaoFinal>
+      <Indice>2</Indice>
+   </Campo>  
+   <Campo>
+      <Descricao>codBarras</Descricao>
+      <Formato>d</Formato>
+      <PosicaoInicial>24</PosicaoInicial>
+      <PosicaoFinal>49</PosicaoFinal>
+      <CasasDecimais>0</CasasDecimais>
+      <Indice>3</Indice>
+   </Campo>
+   <Campo>
+      <Descricao>CaixaMaster</Descricao>
+      <Formato>b</Formato>
+      <PosicaoInicial>51</PosicaoInicial>
+      <PosicaoFinal>51</PosicaoFinal>
+      <CasasDecimais>0</CasasDecimais>
+      <Volume>true</Volume>
+      <Indice>4</Indice>
+   </Campo>
+</Driver>

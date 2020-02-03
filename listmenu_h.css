@@ -1,0 +1,147 @@
+/* All <ul> tags in the menu including the first level */
+.menulist, .menulist  ul {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ cursor: default;
+}
+
+/* Submenus (<ul> tags) are hidden and absolutely positioned downwards from their parent */
+.menulist ul {
+ visibility: hidden;
+ position: absolute;
+ /* distancia do submenu para o menu pai*/
+ top: 2em; /* I'm using ems rather than px to allow people to zoom their font */
+ left: 0em;
+ width: 175px;
+
+}
+
+/* Second and third etc. level submenus - position across from parent instead */
+.menulist ul ul {
+ top: 4px;
+ left: 176px; /*148*/ 
+}
+
+/*
+ All menu items (<li> tags). 'float: left' lines them up horizontally, and they are
+ positioned relatively to correctly offset submenus. Also, they have overlapping borders.
+*/
+
+.bodyMenu{
+background: #F7F7F7 url(img/truck.gif) no-repeat; background-position: top center;
+
+}
+
+.menulist li {
+ float: left;
+ position: relative;
+ font: 11px/20px  sans-serif;
+ border: 1px solid #330;
+ margin-right: -1px;
+ border-left:   #000000 1px solid;
+ border-bottom: #000000 0px solid;
+ border-top:    #000000 0px solid;
+ border-right:    #000000 1px solid;
+ }
+
+/* Items in submenus - override float/border/margin from above, restoring default vertical style */
+.menulist ul li {
+ float: none;
+ margin-right: 0;
+ margin-bottom: -1px;
+ cursor: pointer;
+ color: #006699;
+ background: #006699;
+ border-bottom: #000000 1px solid;
+ border-top:    #000000 1px solid;
+ text-align: left;
+}
+
+.style1 {font-size: 10px}
+.divMenu {border-right:  #000000 1px solid;
+                      border-left:   #000000 1px solid;
+                      border-bottom: #000000 1px solid;
+                      border-top:    #000000 1px solid;
+                      background-color:#006699;
+                      height:22;
+                      margin-left: 0px;
+                      margin-right: 0px;
+            }
+.linkMenu {
+                color: #000000;
+                cursor: pointer;
+                text-decoration: underline;
+                font-size: 11px;
+                font-weight: bold;
+            }
+
+.menulist ul>li:last-child {
+ margin-bottom: 1px;
+}
+
+/* Links inside the menu */
+.menulist a {
+ display: block;
+ padding-bottom: 1px;
+ padding-left: 3px;
+ padding-right: 6px;
+ padding-top: 1px;
+ color: #ffffff;
+ 
+ text-decoration:  none;
+}
+
+/* Lit  items: 'hover' is mouseover, 'highlighted' are parent items to visible menus */
+.menulist a:hover, .menulist a.highlighted:hover, .menulist a:focus {
+ color: #FFF;
+ background-color: #006699;
+}
+
+.menulist  a.highlighted {
+ color: #FFF;
+ background-color: #006699;
+}
+
+/*
+ If you want per-item background images in your menu items, here's how to do it.
+ 1) Assign a unique ID tag to each link in your menu, like so: <a id="xyz" href="#">
+ 2) Copy and paste these next lines for each link you want to have an image:
+    .menulist a#xyz {
+      background-image: url(out.gif);
+    }
+    .menulist a#xyz:hover, .menulist a.highlighted#xyz, .menulist a:focus {
+     background-image: url(over.gif);
+    }
+*/
+
+/* Only style submenu indicators within submenus. */
+.menulist a .subind {
+ display:  none;
+}
+.menulist ul a .subind {
+ display:  block;
+ float: right;
+}
+
+/* 'Escaped Comment' hack for horizontal menubar width in IE5/Mac */
+.menulist a {
+ float: left;
+}
+.menulist ul a {
+ float: none;
+}
+/* \*/
+.menulist a {
+ float: none;
+}
+
+/* This semi-commented section exists to fix bugs in IE/Windows (the 'Holly Hack'). \*/
+* html .menulist  ul li {
+ float: left;
+ height: 11%;
+}
+* html .menulist  ul a {
+ height: 11%;
+}
+/* End Hack */

@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="ISO-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            .data{
+                float: left;
+                display: none;
+            }
+            
+            .button-calendario{
+                margin-left: 5px;
+                width: 25px;
+                height: 25px;
+                float: left;
+                background: url(img/calendar.png) left top no-repeat;
+                display: none;
+            }
+            .container{
+                margin-top: 20px;
+                width: 170px;
+                height: 320px;
+                -webkit-box-shadow: 4px 4px 10px -1px rgba(143,141,143,1);
+                -moz-box-shadow: 4px 4px 10px -1px rgba(143,141,143,1);
+                box-shadow: 4px 4px 10px -1px rgba(143,141,143,1);
+            }
+
+            .container-topo{
+                width: 100%;
+                height: 38%;
+                background: #13385c;
+            }
+
+            .container-mes{
+                width: 100%;
+                height: 10%;
+                background: #e8e8e8;
+            }
+
+            .container-dia-semana{
+                width: 100%;
+                height: 10%;
+
+            }
+
+            .container-dias{
+                width: 100%;
+                height: 42%;
+                background: white;
+            }
+
+            .dia-semana{
+                width: 20px;
+                padding: 2px;
+                height: 100%;
+                background: white;
+                color: #bababa;
+                font-family: sans-serif;
+                float: left;
+                font-size: 15px;
+                padding-top: 5px;
+                text-align: center;
+                display: block;
+            }
+
+            .dia-s{
+                width: 24px;
+                height: 24px;
+                float: left;
+                font-family: monospace;
+                font-size: 14px;
+                text-align: center;
+                display: block;
+                text-align: center;
+            }
+
+            .dia-s label{
+                width: 100%;
+                text-align: center;
+                padding-top: 3px;
+                float: left;
+            }
+
+            .dia-s:hover{
+                border-radius: 24px;
+                background: #e8e8e8;
+                color: black;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            .lb:hover{
+                cursor: pointer;
+            }
+            .dia{
+                padding-top: 12px;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 30px;
+                color: whitesmoke;
+                text-align: center;
+                display: block;
+            }
+
+            .mes{
+                font-family: sans-serif;
+                font-size: 25px;
+                color: whitesmoke;
+                text-align: center;
+                display: block;
+            }
+
+            .ano{
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 30px;
+                color: whitesmoke;
+                text-align: center;
+                display: block;
+            }
+
+            .mes-ant{
+                width: 15%;
+                height: 70%;
+                background: url(img/left-arrow.png) left top no-repeat;
+                background-position: 2px 7px;
+                float: left;
+            }
+
+            .mes-prox{
+                width: 15%;
+                height: 70%;
+                background: url(img/right-arrow.png) left top no-repeat;
+                background-position: 5px 7px;
+                float: right;
+            }
+
+            .mes-ant:hover , .mes-prox:hover{
+                cursor: pointer;
+            }
+
+            .mes-ano{
+                width: 70%;
+                float: left;
+                text-align: center;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 12px;
+                padding-bottom: 7px;
+                padding-top: 7px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <input  type="text" class="data">
+        <div class="button-calendario"></div>
+        <div class="container">
+            <div class="container-topo">
+                <label class="dia">7</label>
+                <label class="mes">Setembro</label>
+                <label class="ano">2017</label>
+            </div>
+            <div class="container-mes">
+                <div class="mes-ant"></div>
+                <label class="mes-ano">Setembro 2017</label>
+                <div class="mes-prox"></div>
+            </div>
+            <div class="container-dia-semana">
+                <div class="dia-semana">D</div>
+                <div class="dia-semana">S</div>
+                <div class="dia-semana">T</div>
+                <div class="dia-semana">Q</div>
+                <div class="dia-semana">Q</div>
+                <div class="dia-semana">S</div>
+                <div class="dia-semana">S</div>
+            </div>
+            <div class="container-dias">
+                <div class="dia-linha">
+                    <div class="dia-s"><label class="lb">1</label></div>
+                    <div class="dia-s"><label class="lb">2</label></div>
+                    <div class="dia-s"><label class="lb">3</label></div>
+                    <div class="dia-s"><label class="lb">4</label></div>
+                    <div class="dia-s"><label class="lb">5</label></div>
+                    <div class="dia-s"><label class="lb">6</label></div>
+                    <div class="dia-s"><label class="lb">7</label></div>
+                </div>
+                <div class="dia-linha">
+                    <div class="dia-s"><label class="lb">8</label></div>
+                    <div class="dia-s"><label class="lb">9</label></div>
+                    <div class="dia-s"><label class="lb">10</label></div>
+                    <div class="dia-s"><label class="lb">11</label></div>
+                    <div class="dia-s"><label class="lb">12</label></div>
+                    <div class="dia-s"><label class="lb">13</label></div>
+                    <div class="dia-s"><label class="lb">14</label></div>
+                </div>
+                <div class="dia-linha">
+                    <div class="dia-s"><label class="lb">15</label></div>
+                    <div class="dia-s"><label class="lb">16</label></div>
+                    <div class="dia-s"><label class="lb">17</label></div>
+                    <div class="dia-s"><label class="lb">18</label></div>
+                    <div class="dia-s"><label class="lb">19</label></div>
+                    <div class="dia-s"><label class="lb">20</label></div>
+                    <div class="dia-s"><label class="lb">21</label></div>
+                </div>
+                <div class="dia-linha">
+                    <div class="dia-s"><label class="lb">22</label></div>
+                    <div class="dia-s"><label class="lb">23</label></div>
+                    <div class="dia-s"><label class="lb">24</label></div>
+                    <div class="dia-s"><label class="lb">25</label></div>
+                    <div class="dia-s"><label class="lb">26</label></div>
+                    <div class="dia-s"><label class="lb">27</label></div>
+                    <div class="dia-s"><label class="lb">28</label></div>
+                </div>
+                <div class="dia-linha">
+                    <div class="dia-s"><label class="lb">29</label></div>
+                    <div class="dia-s"><label class="lb">30</label></div>
+                    <div class="dia-s"><label class="lb">31</label></div>
+                    <div class="dia-s"><label class="lb"></label></div>
+                    <div class="dia-s"><label class="lb"></label></div>
+                    <div class="dia-s"><label class="lb"></label></div>
+                    <div class="dia-s"><label class="lb"></label></div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

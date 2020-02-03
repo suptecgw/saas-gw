@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00088">
+    <permissao sigla="bxctrc" observacao=" "/>
+    <campo name="layout_ocoren_ajuda" label="Layout" observacao="Layouts disponíveis para importação do EDI."/>
+    <campo name="arquivo_ocoren_ajuda" label="Selecionar Arquivo" observacao="Campo para informar o arquivo que será importado."/>
+    <campo name="importar_edi_ajuda" label="Importar" observacao="Ao clicar no botão Importar o sistema irá processar o arquivo escolhido e mostrar na tela as notas existentes no arquivo."/>
+    <campo name="bt_salvar_ajuda" label="Salvar" observacao="Ao clicar no botão Salvar o sistema irá gravar as informações do EDI importado na tela."/>
+</tela>

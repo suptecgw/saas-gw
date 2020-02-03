@@ -1,0 +1,257 @@
+/* /web */
+BODY {
+    /*background: #FFFFFF url(img/bg_hpn.png) repeat-x;*/
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    MARGIN: 0px;
+
+    text-align: center; 
+    font: 11px/20px  sans-serif;
+    background-color: #F7F7F7;
+
+}
+.TextoCampos {
+    text-align: right;
+    font-size: 9pt;
+    background-color: #EADEC8;
+}
+
+.textoCampos {
+    text-align: right;
+    font-size: 9pt;
+    background-color: #EADEC8;
+}
+
+.TextoMenu {
+    font: normal 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.bordaFina{
+    border: 1px solid #003148;
+}
+
+.tabela {
+    background-color: #CCCCCC;
+    MARGIN: 0px;
+    border: 0.51px solid ;
+    font: bold 13px Arial, Helvetica, sans-serif;
+}
+
+.imagemLink {
+    cursor: pointer;
+    border: 0 solid #FFFFFF;
+}
+
+.celula{
+    color: #000000;
+    background-color: #E3D1B7;
+    text-align: left;
+    text-indent: 1px;
+    font: 14px "Courier New", Courier, mono;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+}
+.CelulaZebra1{
+    color: #000000;
+    background-color: #F4EEE3;
+    text-align: left;
+    font: 11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+}
+
+.celulaZebra1{
+    color: #000000;
+    background-color: #F4EEE3;
+    text-align: left;
+    font: 11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+}
+.CelulaZebra2{
+    color: #000000;
+    background-color: #EADEC8;
+    text-align: left;
+    font:  11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+}
+
+.celulaZebra2{
+    color: #000000;
+    background-color: #EADEC8;
+    text-align: left;
+    font:  11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+}
+
+INPUT, SELECT, TEXTAREA {
+    BORDER-LEFT:   #552B00 1px solid;
+    BORDER-RIGHT:  #552B00 1px solid;
+    BORDER-TOP:    #552B00 1px solid;
+    BORDER-BOTTOM: #552B00 2px solid;
+
+    COLOR: #000000;
+    BACKGROUND-COLOR: #FFFFFF
+}
+
+.botoes {
+    background-color: #FFFFE8;
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+
+    /*MARGIN: 0px 4px 0px 0px;*/
+    FONT: bold 10px/11px Verdana, Helvetica, sans-serif;
+
+    BORDER-RIGHT:  #552B00 8px solid;
+    BORDER-LEFT:   #552B00 1px solid;
+    BORDER-TOP:    #552B00 1px solid;
+    BORDER-BOTTOM: #552B00 1px solid;
+
+    WIDTH: bold 77px;
+}
+.inputBotao {
+    background-color: #FFFFE8;
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+
+    /*MARGIN: 0px 4px 0px 0px;*/
+    FONT: bold 10px/11px Verdana, Helvetica, sans-serif;
+
+    BORDER-RIGHT:  #552B00 8px solid;
+    BORDER-LEFT:   #552B00 1px solid;
+    BORDER-TOP:    #552B00 1px solid;
+    BORDER-BOTTOM: #552B00 1px solid;
+
+    WIDTH: bold 77px;
+}
+
+
+.linkEditar {
+    color: #CC3333;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.tabelaMenu{
+    width: 100%;
+    height: 100%;
+    font: 13px/20px sans-serif;
+    text-align: left;
+}
+
+.inputReadOnly{
+    background-color: #FFFFF1;
+    border: 1px solid #552B00;
+}
+
+.inputReadOnly8pt{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    FONT: normal 9px/10px Verdana, Helvetica, sans-serif;
+    border: 1px solid #552B00;
+    background-color: #FFFFF1;
+}
+
+
+.fieldMin{
+    FONT: normal 9px/10px Verdana, Helvetica, sans-serif;
+
+    BORDER-RIGHT:  #552B00 1px solid;
+    BORDER-LEFT:   #552B00 1px solid;
+    BORDER-TOP:    #552B00 1px solid;
+    BORDER-BOTTOM: #552B00 1px solid;
+}
+
+.inputtexto {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 1px solid #552B00;
+}
+
+
+.colorClear{
+    color: #000000;
+    background-color: #E2E2E2;
+    font:  normal 11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+}
+.vanish{
+    display:none;
+}
+.show{
+    display:"";
+}
+
+
+/*Menu*/
+/*
+body, table {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #000000;
+}*/
+
+.menu {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: #000033;
+    background-color: #FFFFFF;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 5px;
+    cursor: hand;
+}
+
+.menu-sel {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000033;
+    background-color: #CCCCCC;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+    padding: 5px;
+    cursor: hand;
+}
+
+.tb-conteudo {
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.conteudo {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: #000033;
+    background-color: #F7F7F7;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.limite{
+    height:166px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    /*background-color:#EADEC8;*/
+}
+
+.limiteMov{
+    height:34px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    /*background-color:#EADEC8;*/
+}

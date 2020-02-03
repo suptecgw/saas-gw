@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_tipos_pallets" modulo="0,1,2,3,4" codTela="35">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="150px" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='area' width="" visivel="true" format="" type="int" label="Área M²" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Ultima Alteração" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />
+    
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    
+    
+</target>

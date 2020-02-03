@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00123">
+    <permissao sigla="cadundcusto" observacao=" "/>
+    <campo name="sigla" label="Sigla" observacao="Sigla da unidade de custo."/>
+    <campo name="descricao" label="Descrição" observacao="Descrição da unidade de custo."/>
+    <campo name="ativo" label="Ativo" observacao="Se esse campo estiver desmarcado a unidade de custo não poderá ser utilizada nos lançamentos de despesas e receitas."/>
+    <campo name="visualizar_orcamentacao" label="Visualizar na Orçamentação" observacao="Se esse campo estiver marcado o sistema irá ativar o controle de orçamentação nos lançamentos de despesas. Para conseguir lançar uma orçamentação para unidade de custo esse campo deverá estar marcado."/>
+    <campo name="integra_contabil" label="Ativar integração contábil por unidade de custo" observacao="Campo para informar se a unidade de custo será destacada na integração contábil."/>
+    <campo name="codigo_contabil" label="código contábil" observacao="Código da unidade de custo na contabilidade."/>
+</tela>

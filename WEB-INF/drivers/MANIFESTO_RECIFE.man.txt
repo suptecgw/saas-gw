@@ -1,0 +1,48 @@
+LISTS[ctrcs_manifesto]
+
+MSG_BEFORE_PRINT=Webtrans<=N><=N>Confirme a Impressao?<=N><=N><=N>Caminho da impressora:
+
+ 
+[09,1,COND,1/8]= TRANSCOLINAS TRANSP. SETE COLINAS LTDA - filial 03
+[09,2,COND,1/8]= REGISTRO DNER - ETC Nr	
+[09,3,COND,1/8]= @F(endfilial,40,NOALIGN) , @F(bairrofilial,40,NOALIGN) @F(cidadefilial,20,NOALIGN)-@F(uffilial,2,NOALIGN)
+[09,4,COND,1/8]= TELEFONE: 
+[09,5,COND,1/8]= INSC.ESTADUAL @F(iefilial,25,NOALIGN)   CGC @F(cnpjfilial,22,NOALIGN) 
+  
+
+[09,07,COND]=---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[09,09,COND,1/8]= MOTORISTA.......: @F(motorista,30,NOALIGN)
+[09,10,COND,1/8]= ENDERECO........: @F(enderecomot,30,NOALIGN)
+[09,11,COND,1/8]= MUNICIPIO.......:   HAB...:@F(cnhmot,20,NOALIGN) CAT...:@F(categoria_cnh,01,NOALIGN) 
+[09,12,COND,1/8]= RG..............: CPF: @F(cpfmot,20,NOALIGN) FONE: @F(fonemot,20,NOALIGN)
+
+[09,15,COND]=---------------------------------------------------------------------------------------------------
+[09,16,COND,1/8]=   REMETENTE                  DESTINATARIO                  DESTINO        VOLUME      PESO    
+[09,17,COND]=---------------------------------------------------------------------------------------------------
+
+[09,19,COND,1/8,ctrcs_manifesto<20]= @F(rem_rzs,25,LEFT)   @F(dest_rzs,25,NOALIGN)       @F(dest_cidade,15,NOALIGN)  @F(nfiscal,06,NOALIGN)
+#[01,21,COND,1/8]=--------------------------------------------------------------------------------
+#[01,22,COND,1/8]=--------------------------------------------------------------------------------
+#[01,24,COND,1/8]=--------------------------------------------------------------------------------
+#[01,25,COND,1/8]=--------------------------------------------------------------------------------     
+
+[09,45,COND,1/8]= Qtd. de Ctrcs..:  @F(qtd_ctrcs,05,NOALIGN)   FRETE CIF:  @F(total_frete_cif,10,NOALIGN)   FRETE FOB:  @F(total_frete_fob,10,NOALIGN)   TOTAL NF VOLUME:  @F(volume_total_nf,12,NOALIGN)   TOTAL NF PESO:  @F(peso_total_nf,12,NOALIGN)   TOTAL FRETE:  @F(total_frete,12,NOALIGN)   VALOR TOTAL DAS MERCADORIAS:  @F(valor_total_nf,10,LEFT)
+[09,46,COND,1/8]= FRETE COMBINADO......: 	
+[09,47,COND,1/8]= OUTROS CREDITOS......: 	
+[09,48,COND,1/8]= ADIANTAMENTO.........: 
+[09,49,COND,1/8]= OUTROS DEBITOS.......: 
+[09,50,COND,1/8]= IR...................:
+[09,51,COND,1/8]= I.N.S.S..............:
+[09,52,COND,1/8]= SALDO A RECEBER......: 	
+[09,53,COND,1/8]= DATA DE IMPRESSAO....:
+
+
+[40,46,COND,1/8]= OBS:
+[40,49,COND,1/8]=@F(origem,40,NOALIGN) , @F(dtsaida,20,NOALIGN) / ASS.______________________________________________
+[40,51,COND,1/8]= EU, @F(motorista,30,NOALIGN), DECLARO TER RECEBIDO OS VALORES CONSTANTES
+[40,52,COND,1/8]= DESTE MANIFESTO, E ESTAR CIENTE DAS OBSERVACOES.
+
+
+[40,82,COND,1/8]=....

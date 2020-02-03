@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_conta_bancaria" modulo="0,1,2,3,4" codTela="19">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='numero' width="" visivel="true" format="" type="varchar" label="Número" />
+    <column name='agencia' width="" visivel="true" format="" type="varchar" label="Agência" />
+    <column name='banco' width="" visivel="true" format="" type="varchar" label="Banco" />
+    <column name='id_filial' width="" visivel="false" format="" type="int" label="idFilial" />
+    <column name='filial' width="" visivel="true" format="" type="varchar" label="Filial" />
+    <column name='tipo_conta' width="" visivel="true" format="" type="varchar" label="Tipo da Conta" />    
+    <column name='juros' width="" visivel="true" format="" type="int" label="Juros" />    
+    <column name='multa' width="" visivel="true" format="" type="int" label="Multa" />    
+    <column name='carteira' width="" visivel="true" format="" type="varchar" label="Carteira" />
+    <column name='num_convenio' width="" visivel="true" format="" type="int" label="Número do Convênio" /> 
+    <column name='ultimo_nosso_numero' width="" visivel="true" format="" type="int" label="Último nosso Nº" />     
+    <column name='conta_contabil_id' width="" visivel="false" format="" type="int" label="Conta contábil ID" />
+    <column name='conta_contabil_codigo' width="" visivel="true" format="" type="int" label="Conta contábil" />
+    <column name='criado_por' width="" visivel="true" format="" type="int" label="Criada por" />
+    <column name='data_inclusao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Criada em" />                
+    <column name='alterado_por' width="" visivel="true" format="" type="varchar" label="Alterada por" />                
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Alterada em" />  
+    <column name='conta_ativa' width="" visivel="true" format="" type="varchar" label="Conta Ativa" />              
+    
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="numero" label="Número" ordem="2"/>
+    <columnFiltroSelect name="agencia" label="Agência" ordem="3"/>
+    <columnFiltroSelect name="banco" label="Banco" ordem="4"/>
+    <columnFiltroSelect name="conta_contabil_codigo" label="Conta Contábil" ordem="5"/>
+    <columnFiltroSelect name="data_inclusao" label="Data Inclusão" ordem="6"/>
+    <columnFiltroSelect name="data_ultima_alteracao" label="Data Última Alteração" ordem="7"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnOrdenacaoSelect name="numero" label="Número" ordem="2"/>
+        <columnOrdenacaoSelect name="agencia" label="Agência" ordem="3"/>
+    <columnOrdenacaoSelect name="banco" label="Banco" ordem="4"/>
+    <columnOrdenacaoSelect name="filial" label="Filial" ordem="5"/>
+    
+    
+</target>

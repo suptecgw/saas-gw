@@ -1,0 +1,38 @@
+<Driver>
+   <Codigo>1542857</Codigo>
+   <Descricao>Arquivo Coletor Conferencia</Descricao>
+   <Extensao>CSV</Extensao>
+   <Configuracao>
+	<permitirDuplicacao>true</permitirDuplicacao>
+   </Configuracao>
+   <Campo>
+      <Descricao>Codigo</Descricao>
+      <Formato>a</Formato>
+      <PosicaoInicial>1</PosicaoInicial>
+      <PosicaoFinal>8</PosicaoFinal>
+      <Indice>1</Indice>
+   </Campo>  
+   <Campo>
+      <Descricao>Descricao</Descricao>
+      <Formato>a</Formato>
+      <PosicaoInicial>9</PosicaoInicial>
+      <PosicaoFinal>24</PosicaoFinal>
+      <Indice>2</Indice>
+   </Campo>  
+   <Campo>
+      <Descricao>codBarras</Descricao>
+      <Formato>d</Formato>
+      <PosicaoInicial>25</PosicaoInicial>
+      <PosicaoFinal>57</PosicaoFinal>
+      <CasasDecimais>0</CasasDecimais>
+      <Indice>3</Indice>
+   </Campo>
+   <Campo>
+      <Descricao>CaixaMaster</Descricao>
+      <Formato>d</Formato>
+      <PosicaoInicial>58</PosicaoInicial>
+      <PosicaoFinal>60</PosicaoFinal>
+      <CasasDecimais>0</CasasDecimais>
+      <Indice>4</Indice>
+   </Campo>
+</Driver>

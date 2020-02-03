@@ -1,0 +1,20 @@
+LISTS[ctrcs_manifesto]
+
+MSG_BEFORE_PRINT=Webtrans<=N><=N>Confirme a Impressao?<=N><=N><=N>Caminho da impressora:
+
+ 
+#[01,1]=
+[33,1]=MAFRA TRANSPORTES LTDA
+[01,2]=--------------------------------------------------------------------------------
+[15,3,COND]=@F(endfilial,40,NOALIGN), @F(bairrofilial,40,NOALIGN) - @F(cidadefilial,20,NOALIGN)-@F(uffilial,2,NOALIGN)  CNPJ:@F(cnpjfilial,18,NOALIGN)  INSC.EST.:@F(iefilial,20,NOALIGN)
+
+
+[01,16,COND]=CTRC   REMETENTE                       DESTINATARIO                    N. FISCAL             VOLUME      PESO      V.MERCADORIA
+[01,17]=--------------------------------------------------------------------------------
+
+[01,19,COND,1/8,ctrcs_manifesto<6]=@F(nfiscal,6,LEFT) @F(rem_rzs,30,LEFT)  @F(dest_rzs,30,LEFT)  @F(totnf_notas,20,LEFT) @F(totnf_volume,5,RIGHT)   @F(totnf_peso,10,RIGHT)   @F(totnf_valor,10,RIGHT)
+[01,58]=--------------------------------------------------------------------------------
+[01,59,COND]=TOTAL GERAL:
+[30,59,COND]=@F(qtd_ctrcs,3,LEFT) DOCUMENTO(S):
+[95,59,COND]=@F(volume_total_nf,10,RIGHT) @F(peso_total_nf,10,RIGHT) @F(total_frete,10,RIGHT)
+[01,60]=--------------------------------------------------------------------------------

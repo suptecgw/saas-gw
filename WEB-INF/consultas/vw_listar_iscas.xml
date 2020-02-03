@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_iscas" modulo="0,1,2,3,4" codTela="138">
+    <column name='id' width="" visivel="false" format="" type="int" label="id"/>
+    <column name='numero_isca' width="200px" visivel="true" format="" type="varchar" label="Numero da Isca"/>
+    <column name='status' width="200px" visivel="true" format="" type="varchar" label="Status"/>
+    <column name='motivo' width="600px" visivel="true" format="" type="varchar" label="Motivo"/>
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criados por mim"/>
+    <column name='alterado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Atualizado em"/>
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Criado em"/>
+    <column name='status_isca' width="" visivel="false" format="" type="varchar" label="Status da Isca"/>
+
+    <columnFiltroSelect name="numero_isca" label="Numero da Isca" ordem="1"/>
+
+    <columnOrdenacaoSelect name="numero_isca" label="Numero da Isca" ordem="1"/>
+</target>

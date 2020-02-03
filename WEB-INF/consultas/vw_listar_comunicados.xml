@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_comunicados" modulo="0,1,2,3,4" codTela="134">
+    <column name='id' width="" visivel="false" format="" type="int" label="ID"/>
+    <column name='codigo_tela' width="" visivel="false" format="" type="int" label="Código de tela"/>
+    <column name='descricao' width="200px" visivel="true" format="" type="varchar" label="Descrição"/>
+    <column name='data' width="200px" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data"/>
+    <column name='dt_inicio' width="200px" visivel="true" format="dd/MM/yyyy" type="varchar" label="Inicio"/>
+    <column name='dt_final' width="200px" visivel="true" format="dd/MM/yyyy" type="varchar" label="Fim"/>
+    <column name='local_arquivo_html' width="" visivel="false" format="" type="varchar" label="Link do anúncio"/>
+
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="data" label="Data" ordem="2"/>
+    <columnFiltroSelect name="dt_inicio" label="Inicio" ordem="3"/>
+    <columnFiltroSelect name="dt_final" label="Fim" ordem="4"/>
+
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnOrdenacaoSelect name="data" label="Data" ordem="2"/>
+    <columnOrdenacaoSelect name="dt_inicio" label="Inicio" ordem="3"/>
+    <columnOrdenacaoSelect name="dt_final" label="Fim" ordem="4"/>
+</target>

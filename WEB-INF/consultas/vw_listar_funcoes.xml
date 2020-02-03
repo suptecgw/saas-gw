@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_funcoes" modulo="0,1,2,3,4" codTela="36">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    
+    
+</target>

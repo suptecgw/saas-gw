@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_motoristas" modulo="0,1,2,3,4" codTela="60">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='nome' width="" visivel="true" format="" type="varchar" label="Nome" />
+    <column name='cpf' width="" visivel="true" format="" type="varchar" label="CPF" />
+    <column name='telefone' width="" visivel="true" format="" type="varchar" label="Telefone" />
+    <column name='cidade_id' width="" visivel="false" format="" type="int" label="Cidade ID" />
+    <column name='cidade' width="" visivel="true" format="" type="varchar" label="Cidade" url_cadastro="${homePath}/CadastroControlador?codTela=102&amp;modulo=editar&amp;id=${cidade_id}"/>
+    <column name='uf' width="" visivel="true" format="" type="varchar" label="UF" />
+    <column name='veiculo_id' width="" visivel="false" format="" type="int" label="Veículo ID" />
+    <column name='veiculo' width="" visivel="true" format="" type="varchar" label="Veículo" url_cadastro="${homePath}/cadveiculo?acao=editar&amp;id=${veiculo_id}"/>
+    <column name='tipo_veiculo_id' width="" visivel="false" format="" type="int" label="Tipo Veiculo ID" />
+    <column name='tipo_veiculo' width="" visivel="true" format="" type="varchar" label="Tipo Veículo" />
+    <column name='carreta_id' width="" visivel="false" format="" type="int" label="Carreta ID" />
+    <column name='carreta' width="" visivel="true" format="" type="varchar" label="Carreta" url_cadastro="${homePath}/cadveiculo?acao=editar&amp;id=${carreta_id}" />
+    <column name='tipo_veiculo_carreta_id' width="" visivel="false" format="" type="int" label="Tipo Carreta ID" />
+    <column name='bitrem_id' width="" visivel="false" format="" type="int" label="Bitrem ID" />
+    <column name='bitrem' width="" visivel="true" format="" type="varchar" label="Bitrem" />
+    <column name='tipo_veiculo_bitrem_id' width="" visivel="false" format="" type="int" label="Tipo Bitrem ID" />
+    <column name='carreta3_id' width="" visivel="false" format="" type="int" label="3º Reboque ID" />
+    <column name='carreta3' width="" visivel="true" format="" type="varchar" label="3º Reboque" />
+    <column name='tipo_veiculo_carreta3_id' width="" visivel="false" format="" type="int" label="Tipo 3º Reboque ID" />
+    <column name='tipo_motorista' width="" visivel="true" format="" type="varchar" label="Tipo Motorista" />
+    <column name='cnh' width="" visivel="true" format="" type="varchar" label="CNH" />
+    <column name='rg' width="" visivel="true" format="" type="varchar" label="RG" />
+    <column name='apelido' width="" visivel="true" format="" type="varchar" label="Apelido" />
+    <column name='prontuario_cnh' width="" visivel="true" format="" type="varchar" label="Prontuário CNH" />
+    <column name='celular' width="" visivel="true" format="" type="varchar" label="Celular" />
+    <column name='cep' width="" visivel="true" format="" type="varchar" label="CEP" />
+    <column name='endereco' width="" visivel="true" format="" type="varchar" label="Endereço" />
+    <column name='bairro' width="" visivel="true" format="" type="varchar" label="Bairro" />
+    <column name='sexo' width="" visivel="true" format="" type="varchar" label="Sexo" />
+    <column name='data_nascimento' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de nascimento" />
+    <column name='qtd_dependentes' width="" visivel="true" format="" type="int" label="Qtd Dependentes" />
+    <column name='pis_pasep' width="" visivel="true" format="" type="varchar" label="PIS/PASEP" />
+    <column name='validade_cnh' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Validade CNH" />
+    <column name='categoria_cnh' width="" visivel="true" format="" type="varchar" label="Categoria CNH" />
+    <column name='bloqueado' width="" visivel="true" format="" type="varchar" label="Bloqueado" />
+    <column name='desligado' width="" visivel="true" format="" type="varchar" label="Desligado" />
+    <column name='cliente_id' width="" visivel="false" format="" type="int" label="Cliente ID" />
+    <column name='cliente_alocacao' width="" visivel="true" format="" type="varchar" label="Cliente Alocação" />
+    <column name='liberacao_seguradora' width="" visivel="true" format="" type="varchar" label="Liberação Seguradora" />
+    <column name='validade_liberacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Validade Liberação" />
+    <column name='curso_mope' width="" visivel="true" format="" type="varchar" label="Curso MOPE" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Última Alteração" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado Por" />
+    
+    <columnFiltroSelect name="id" label="ID" ordem="1"/>
+    <columnFiltroSelect name="nome" label="Nome" ordem="2"/>
+    <columnFiltroSelect name="cpf" label="CPF" ordem="3"/>
+    <columnFiltroSelect name="telefone" label="Telefone" ordem="4"/>
+    <columnFiltroSelect name="cnh" label="CNH" ordem="5"/>
+    <columnFiltroSelect name="rg" label="RG" ordem="6"/>
+    <columnFiltroSelect name="apelido" label="Apelido" ordem="7"/>
+    <columnFiltroSelect name="prontuario_cnh" label="Prontuário CNH" ordem="8"/>
+    
+    <columnOrdenacaoSelect name="id" label="ID" ordem="1"/>
+    <columnOrdenacaoSelect name="nome" label="Nome" ordem="2"/>
+    <columnOrdenacaoSelect name="cpf" label="CPF" ordem="3"/>
+    <columnOrdenacaoSelect name="telefone" label="Telefone" ordem="4"/>
+    <columnOrdenacaoSelect name="cidade" label="Cidade" ordem="5"/>
+    <columnOrdenacaoSelect name="uf" label="UF" ordem="6"/>
+    <columnOrdenacaoSelect name="veiculo" label="Veículo" ordem="7"/>
+    <columnOrdenacaoSelect name="carreta" label="Carreta" ordem="8"/>
+    <columnOrdenacaoSelect name="tipo_veiculo" label="Tipo Veículo" ordem="9"/>
+    <columnOrdenacaoSelect name="cnh" label="CNH" ordem="10"/>
+    <columnOrdenacaoSelect name="rg" label="RG" ordem="11"/>
+    <columnOrdenacaoSelect name="bitrem" label="Bitrem" ordem="12"/>
+    <columnOrdenacaoSelect name="carreta3" label="3º Reboque" ordem="13"/>
+    <columnOrdenacaoSelect name="apelido" label="Apelido" ordem="14"/>
+    <columnOrdenacaoSelect name="prontuario_cnh" label="Prontuário CNH" ordem="15"/>
+    
+    
+</target>

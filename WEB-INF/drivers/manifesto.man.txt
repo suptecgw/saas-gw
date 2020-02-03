@@ -1,0 +1,9 @@
+LISTS[ctrcs_manifesto]
+
+MSG_BEFORE_PRINT=Webtrans<=N><=N>Confirme a Impressao?<=N><=N><=N>Caminho da impressora:
+
+[01,15,COND]=--------------------------------------------------------------------------------------------------------------------
+[01,16,COND,1/8]=   REMETENTE                  DESTINATARIO                  DESTINO        VOLUME      PESO       NATUREZA  CTRC
+[01,17,COND]=--------------------------------------------------------------------------------------------------------------------
+
+[01,19,COND,1/8,ctrcs_manifesto<20]= @F(rem_rzs,25,LEFT)   @F(dest_rzs,25,NOALIGN)       @F(dest_cidade,15,NOALIGN)   @F(volume_total_ctrc,08,RIGHT)    @F(peso_total_ctrc,10,RIGHT)     @F(conteudo_ctrc,10,NOALIGN)   @F(nfiscal,06,NOALIGN)

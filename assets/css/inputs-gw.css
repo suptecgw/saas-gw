@@ -1,0 +1,210 @@
+
+.alpha{
+    overflow: hidden !important;
+    padding: 5px;
+    background: #fff;
+    border-radius: 7px;
+    cursor: text;
+    border: 1px solid #999;
+    word-break: break-all;
+    color: #555555;
+    font-size: 14px;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    background: #fff; /* For browsers that do not support gradients */
+}
+
+.beta-ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.gamma-li-input{
+}
+
+.container-input{
+    height:auto;
+    /*margin-top: 5px;*/
+    background: transparent;
+}
+
+.gamma-li-chaves{
+    float: left;
+    position: relative;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin: 0px 0 5px 5px;
+    padding: 1px 5px 1px 15px;
+    background: #fff url(../img/fechar_cinza.png) no-repeat;
+    background-size: 10px;
+    background-position-x: 2px;
+    background-position-y: 4px;
+    cursor: default;
+}
+
+.gamma-li-chaves:hover{
+    background:#fff url(../img/fechar_cinza_escuro.png) no-repeat;
+    background-size:10px;
+    background-position-x:2px;
+    background-position-y:4px;
+    cursor:pointer;
+}
+
+
+.gamma-li-chaves-a{
+    position: absolute;
+    background: transparent;
+    content: ' ';
+    width: 13px;
+    height: 13px;
+    top: 4px;
+    left: 2px;
+}
+
+.delta-input{
+    width: 100%;
+    border: 0px;
+    border-color: transparent;
+    height: 20px;
+    font-size: 15px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: 2px;
+    background: transparent;
+}
+
+.delta-input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0; 
+}
+
+
+
+.span-escolha-gw{
+    margin-right: 20px;
+    border-radius: 2px;
+    padding: 5px;
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+    border-radius: 1px;
+    float: left;
+}
+
+.span-escolha-gw:hover{
+    color: rgba(255,255,255,1);
+}
+
+.container-li-valores{
+    z-index: 99999999;
+    position: absolute;
+    display: none;
+    background: rgba(255, 255, 255, 1);
+    float: left;
+    margin-bottom: 5px;
+    -webkit-box-shadow:  0px 1px 2px 2px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:     0px 1px 2px 2px rgba(50, 50, 50, 0.75);
+    box-shadow:          0px 1px 2px 2px rgba(50, 50, 50, 0.75);
+}
+
+.container-li-valores ul{
+    width: 100%;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+    color: #555;
+}
+
+.container-li-valores ul li{
+    float: left;
+    width: 100%;
+}
+
+.container-li-valores ul li span{
+    font-size: 13px;
+    float: left;
+    margin: 5px;
+    width: 100%;
+}
+
+.container-li-valores ul li:hover{
+    background: #d3d3d3;
+    cursor: pointer;
+    color: #333;
+}
+
+.div-alpha-exceto-apenas{
+    float: left;
+    width: 100%;
+}
+
+.div-beta-exceto-apenas{
+    float: left;
+}
+
+.div-gamma-exceto-apenas{
+    float: left;
+    width: 100%;
+    /*background: #ccc;*/
+}
+
+.alpha-readonly{
+    cursor: default;
+    background: #cccccc;
+}
+
+.gamma-li-chaves-readonly{
+    background-color: #cccccc;
+    color:#000;
+}
+.gamma-li-chaves-readonly:hover{
+    background-color: #cccccc;
+}
+
+/*0px 0 1px 1px*/
+
+/*
+    QUALQUER ALTERAÇÃO NO INPUT TEM QUE SER FEITA ACIMA DESSE CÓDIGO
+    ABAIXO APENAS MODO OLD
+    input old type
+*/
+
+.alpha-old{
+    padding: 0;
+    font-family: Verdana, Helvetica, sans-serif !important;
+    font-size: 10px !important;
+    border: 1px solid #003366 !important;
+    background: #cccccc !important;
+    border-radius: 3px !important;
+    color: #000 !important;
+    float: left;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.delta-input-old{
+    width: 100%;
+    border: 0px;
+    border-color: transparent;
+    height: 12px;
+    font-size: 15px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: 2px;
+    background: transparent;
+}
+
+.delta-input-old:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0; 
+}
+
+.alpha-old .gamma-li-chaves{
+    margin: 1px 0 1px 1px;
+    padding: 0px 5px 0px 12px;
+    background-size: 8px;
+    background-position-y: 3px;
+}

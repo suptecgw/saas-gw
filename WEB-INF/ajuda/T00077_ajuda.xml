@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00073">
+    <permissao sigla="cadConferente" observacao=" " />
+    <campo name="descricao" label="Descrição" observacao="Cadastro de conferentes de carga." />
+    <campo name="nome" label="Nome" observacao="Nome do Conferente." />
+    <campo name="is_ativo" label="Ativo" observacao="Informar se o conferente está ativo ou não." />
+</tela>

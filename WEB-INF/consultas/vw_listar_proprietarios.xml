@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_proprietarios" modulo="0,1,2,3,4" codTela="55">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='nome' width="" visivel="true" format="" type="varchar" label="Nome" />
+    <column name='cpf_cnpj' width="" visivel="true" format="" type="varchar" label="CPF/CNPJ" />
+    <column name='cidade_id' width="" visivel="false" format="" type="varchar" label="Cidade ID" />
+    <column name='cidade' width="" visivel="true" format="" type="varchar" label="Cidade" url_cadastro="${homePath}/CadastroControlador?codTela=102&amp;modulo=editar&amp;id=${cidade_id}"/>
+    <column name='uf' width="" visivel="true" format="" type="varchar" label="UF" />
+    <column name='cep' width="" visivel="true" format="" type="varchar" label="CEP" />
+    <column name='telefone' width="" visivel="true" format="" type="varchar" label="Telefone" />    
+    <column name='data_nascimento' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de Nascimento" />    
+    <column name='endereco' width="" visivel="true" format="" type="varchar" label="Endereço" />    
+    <column name='bairro' width="" visivel="true" format="" type="varchar" label="Bairro" />
+    <column name='contato' width="" visivel="true" format="" type="varchar" label="Contato" /> 
+    <column name='celular' width="" visivel="true" format="" type="varchar" label="Celular" />     
+    <column name='rntrc' width="" visivel="true" format="" type="int" label="RNTRC" />
+    <column name='tac' width="" visivel="true" format="" type="varchar" label="TAC" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Criada em" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Alterada em" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />                
+    <column name='tipo_cgc' width="" visivel="false" format="" type="varchar" label="Tipo CGC" />              
+    
+    <columnFiltroSelect name="nome" label="Nome" ordem="1"/>
+    <columnFiltroSelect name="cpf_cnpj" label="CPF/CNPJ" ordem="2"/>
+    <columnFiltroSelect name="cep" label="CEP" ordem="3"/>
+    <columnFiltroSelect name="telefone" label="Telefone" ordem="4"/>
+    <columnFiltroSelect name="contato" label="Contato" ordem="5"/>
+    <columnFiltroSelect name="celular" label="Celular" ordem="6"/>
+    <columnFiltroSelect name="rntrc" label="RNTRC" ordem="7"/>
+    
+    <columnOrdenacaoSelect name="nome" label="Nome" ordem="1"/>
+    <columnOrdenacaoSelect name="cpf_cnpj" label="CPF/CNPJ" ordem="2"/>
+    <columnOrdenacaoSelect name="cidade" label="Cidade" ordem="3"/>
+    <columnOrdenacaoSelect name="uf" label="UF" ordem="4"/>
+    <columnOrdenacaoSelect name="cep" label="CEP" ordem="5"/>
+    <columnOrdenacaoSelect name="telefone" label="Telefone" ordem="6"/>
+    
+    
+</target>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_veiculos" modulo="0,1,2,3,4" codTela="56">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='placa' width="" visivel="true" format="" type="varchar" label="Placa" />
+    <column name='numero_frota' width="" visivel="true" format="" type="varchar" label="Número Frota" />
+    <column name='tipo_veiculo_id' width="" visivel="false" format="" type="int" label="Tipo Veículo ID" />  
+    <column name='tipo_veiculo' width="" visivel="true" format="" type="varchar" label="Tipo Veículo" />
+    <column name='modelo' width="" visivel="true" format="" type="varchar" label="Modelo" />
+    <column name='cor' width="" visivel="true" format="" type="varchar" label="Cor" />
+    <column name='proprietario_id' width="" visivel="false" format="" type="int" label="Proprietário ID" />
+    <column name='proprietario' width="" visivel="true" format="" type="varchar" label="Proprietário" url_cadastro="${homePath}/cadproprietario?acao=editar&amp;id=${proprietario_id}"/>
+    <column name='marca_id' width="" visivel="false" format="" type="int" label="Marca ID" />
+    <column name='marca' width="" visivel="true" format="" type="varchar" label="Marca" />
+    <column name='tipo_frota' width="" visivel="true" format="" type="varchar" label="Tipo Frota" />
+    <column name='renavan' width="" visivel="true" format="" type="varchar" label="Renavan" />
+    <column name='chassi' width="" visivel="true" format="" type="varchar" label="Chassi" />
+    <column name='ano_modelo' width="" visivel="true" format="" type="varchar" label="Ano Modelo" />
+    <column name='ano_fabricacao' width="" visivel="true" format="" type="varchar" label="Ano Fabricação" />
+    <column name='cap_carga' width="" visivel="true" format="" type="varchar" label="Capacidade de carga" />
+    <column name='qtd_pallets' width="" visivel="true" format="" type="varchar" label="Quantidade de pallets" />
+    <column name='qtd_cestos' width="" visivel="true" format="" type="varchar" label="Quantidade de cestos" />
+    <column name='cubagem' width="" visivel="true" format="" type="varchar" label="Cubagem" />
+    <column name='bloqueado' width="" visivel="true" format="" type="varchar" label="Bloqueado" />
+    <column name='categoria' width="" visivel="true" format="" type="varchar" label="Categoria" />
+    <column name='cidade_id' width="" visivel="false" format="" type="int" label="Cidade" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Ultima Alteração" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado Por" />
+    
+    <columnFiltroSelect name="placa" label="Placa" ordem="1"/>
+    <columnFiltroSelect name="numero_frota" label="Número Frota" ordem="2"/>
+    <columnFiltroSelect name="modelo" label="Modelo" ordem="3"/>
+    <columnFiltroSelect name="cor" label="Cor" ordem="4"/>
+    
+    <columnOrdenacaoSelect name="placa" label="Placa" ordem="1"/>
+    <columnOrdenacaoSelect name="numero_frota" label="Número Frota" ordem="2"/>
+    <columnOrdenacaoSelect name="tipo_veiculo" label="Tipo Veículo" ordem="3"/>
+    <columnOrdenacaoSelect name="modelo" label="Modelo" ordem="4"/>
+    <columnOrdenacaoSelect name="cor" label="Cor" ordem="5"/>
+    <columnOrdenacaoSelect name="telefone" label="Telefone" ordem="6"/>
+    <columnOrdenacaoSelect name="tipo_frota" label="Tipo Frota" ordem="7"/>
+    <columnOrdenacaoSelect name="renavan" label="Renavan" ordem="8"/>
+    <columnOrdenacaoSelect name="chassi" label="Chassi" ordem="9"/>
+    <columnOrdenacaoSelect name="ano_modelo" label="Ano Modelo" ordem="10"/>
+    <columnOrdenacaoSelect name="ano_fabricacao" label="Ano Fabricação" ordem="11"/>
+    <columnOrdenacaoSelect name="cap_carga" label="Capacidade de carga" ordem="12"/>
+    <columnOrdenacaoSelect name="qtd_pallets" label="Quantidade de pallets" ordem="13"/>
+    <columnOrdenacaoSelect name="qtd_cestos" label="Quantidade de cestos" ordem="14"/>
+    <columnOrdenacaoSelect name="cubagem" label="Cubagem" ordem="15"/>
+    
+    
+</target>

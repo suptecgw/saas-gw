@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_coleta" modulo="0,1,2,3,4" codTela="24">
+    
+    <!--c.idcliente,c.razaosocial,cid.cidade,cid.uf,c.cnpj,c.inscest,c.fone,cc.contato-->
+    <column name="id" width="" visivel="false" format="" type="int" label="ID" />
+    <column name="numero" width="70px" visivel="true" format="" type="int" label="Nº Coleta" />
+    <column name="dt_socilitacao" width="120px" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Solicitação" />
+    <column name="filial" width="45px" visivel="true" format="" type="varchar" label="Filial" />
+    <column name="filial_id" width="45px" visivel="false" format="" type="varchar" label="Filial Id" />
+    <column name="cliente_id" width="45px" visivel="false" format="" type="varchar" label="Cliente Id" />
+    <column name="id_destinatario" width="45px" visivel="false" format="" type="varchar" label="Destinatario Id" />
+    <column name="motorista_id" width="45px" visivel="false" format="" type="varchar" label="Motorista Id" />
+    <column name="veiculo_id" width="45px" visivel="false" format="" type="varchar" label="Veiculo Id" />
+    <column name="cliente" width="150px" visivel="true" format="" type="varchar" label="Cliente" url_cadastro="${homePath}/cadcliente?acao=editar&amp;id=${cliente_id}" />
+    <column name="destino" width="80px" visivel="true" format="" type="varchar" label="Destino" />
+    <column name="id_cidade_destino" width="" visivel="false" format="" type="int" label="Destino ID" />
+    <column name="motorista" width="120px" visivel="true" format="" type="varchar" label="Motorista" url_cadastro="${homePath}/cadmotorista?acao=editar&amp;id=${motorista_id}" />
+    <column name="placa_veiculo" width="65px" visivel="true" format="" type="varchar" label="Veículo" url_cadastro="${homePath}/cadveiculo?acao=editar&amp;id=${veiculo_id}" />
+    <column name="placa_carreta" width="60px" visivel="true" format="" type="varchar" label="Carreta" url_cadastro="${homePath}/cadveiculo?acao=editar&amp;id=${carreta_id}" />
+    <column name="cancelada" width="55px" visivel="true" format="" type="varchar" label="Status" />    
+    <column name="dt_previsao" width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Previsão" />
+    <column name="dt_programada" width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Program." />
+    <column name="hr_programada" width="" visivel="true" format="" type="varchar" label="Hora Program." />
+    <column name="dt_coleta" width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Coleta" />
+    <column name="coleta_em" width="" visivel="false" format="" type="varchar" label="Data Coleta" />
+    <column name="coleta_programada" width="" visivel="false" format="" type="varchar" label="Data Programada" />
+    <column name="finalizada" width="" visivel="false" format="" type="varchar" label="Finalizada" />
+    <column name="is_impresso" width="" visivel="false" format="" type="varchar" label="Impressa" />
+    <column name="categoria" width="" visivel="false" format="" type="varchar" label="Categoria" />
+    <column name="coleta_as" width="" visivel="true" format="" type="varchar" label="Hora Coleta" />
+    <column name="resp_pagamento" width="" visivel="true" format="" type="varchar" label="Resp. Pagto" />
+    <column name="is_automatica" width="" visivel="true" format="" type="varchar" label="Automática" />
+    <column name="id_remetente" width="" visivel="false" format="" type="varchar" label="ID Remetente" />
+    <column name="nome_remetente" width="" visivel="true" format="" type="varchar" label="Remetente" />
+    <column name="expedidor" width="" visivel="true" format="" type="varchar" label="Expedidor" />
+    <column name="razao_destinatario" width="" visivel="true" format="" type="varchar" label="Destinatário" />
+    <column name="recebedor" width="" visivel="true" format="" type="varchar" label="Recebedor" />
+    <column name="origem" width="" visivel="false" format="" type="varchar" label="Origem" />
+    <column name="cidade_origem" width="" visivel="true" format="" type="varchar" label="Origem" />
+    <column name="bairro_coleta" width="" visivel="true" format="" type="varchar" label="Bairro Coleta" />
+    <column name="contato" width="" visivel="true" format="" type="varchar" label="Contato" />
+    <column name="numero_pedido" width="" visivel="true" format="" type="varchar" label="N° Pedido" />
+    <column name="numero_carga" width="" visivel="true" format="" type="varchar" label="N° Carga" />
+    <column name="numero_rt" width="" visivel="true" format="" type="varchar" label="N° RT" />
+    <column name="contrato_frete" width="" visivel="true" format="" type="varchar" label="Tipo de Frete" />
+    <column name="tipo_veiculo" width="" visivel="true" format="" type="varchar" label="Tipo Veículo" />
+    <column name="tipo_produto" width="" visivel="true" format="" type="varchar" label="Tipo Prod/Oper." />
+    <column name="vl_combinado" width="" visivel="true" format="##,##" type="numeric" label="Valor Combinado" />
+    <column name="qtde_entregas" width="" visivel="true" format="" type="varchar" label="QTD Entregas" />
+    <column name="peso_solicitado" width="" visivel="true" format="" type="varchar" label="Peso Solic." />
+    <column name="volume_solicitado" width="" visivel="true" format="" type="varchar" label="Vol. Solic." />
+    <column name="valor_mercadoria_solicitada" width="" visivel="true" format="" type="varchar" label="R$ Merc Solic." />
+    <column name="obs" width="" visivel="true" format="" type="varchar" label="Observação" />
+    <column name="romaneio" width="" visivel="true" format="" type="varchar" label="N° Romaneio" />
+    <column name="numero_container" width="" visivel="true" format="" type="varchar" label="N° Container" />
+    <column name="tipo_container" width="" visivel="true" format="" type="varchar" label="Tipo Container" />
+    <column name="numero_genset" width="" visivel="true" format="" type="varchar" label="N° GENSET" />
+    <column name="valor_genset" width="" visivel="true" format="" type="varchar" label="R$ GENSET" />
+    <column name="peso_container" width="" visivel="true" format="" type="varchar" label="Peso Container" />
+    <column name="rzs_arm" width="" visivel="true" format="" type="varchar" label="Armador" />
+    <column name="terminal" width="" visivel="true" format="" type="varchar" label="Terminal" />
+    <column name="numero_booking" width="" visivel="true" format="" type="varchar" label="N° Booking" />
+    <column name="numero_viagem_navio" width="" visivel="true" format="" type="varchar" label="N° Viagem Container" />
+    <column name="rzs_transp" width="" visivel="true" format="" type="varchar" label="Transportadora" />
+    <column name="placa_bitrem" width="" visivel="true" format="" type="varchar" label="Bi-Trem" url_cadastro="${homePath}/cadveiculo?acao=editar&amp;id=${bitrem_id}" />
+    <column name="numero_cte" width="" visivel="true" format="" type="varchar" label="N° CT-e" />
+    <column name="dtlancamento" width="" visivel="false" format="" type="varchar" label="Data de Inclusão" />
+    <column name="numero_nf" width="" visivel="false" format="" type="varchar" label="Nº Nota Fiscal" />
+    <column name="pedido_nf" width="" visivel="false" format="" type="varchar" label="Nº Pedido Nota" />
+    <column name="representante_id" width="" visivel="false" format="" type="varchar" label="Id do representante" />
+    <column name="representante_nome" width="" visivel="false" format="" type="varchar" label="Nome do representante" />
+    <column name="carreta_id" width="45px" visivel="false" format="" type="varchar" label="Carreta Id" />
+    <column name="bitrem_id" width="45px" visivel="false" format="" type="varchar" label="Bitrem Id" />
+    <column name="is_enviado_email_representante" width="45px" visivel="false" format="" type="varchar" label="Se o email foi enviado para o representante" />
+    <column name="numero_ano" width="80px" visivel="true" format="" type="varchar" label="Nº Coleta/Ano" />
+    
+
+    <column name="criado_por" width="" visivel="false" format="" type="varchar" label="Criado por" />
+    <column name="criado_em" width="" visivel="false" format="" type="varchar" label="Criado em" />
+    <column name="alterado_em" width="" visivel="false" format="" type="varchar" label="Alterado em" />
+    <column name="alterado_por" width="" visivel="false" format="" type="varchar" label="Alterado por" />
+    <column name="filial_destino_id" width="" visivel="false" format="" type="varchar" label="Array id filiais destino" />
+    <column name="filial_destino_abreviatura" width="" visivel="true" format="" type="varchar" label="Filiais Destino" />
+    
+    
+    
+    <columnFiltroSelect name="numero" label="Nº Coleta" ordem="1"/>
+    <columnFiltroSelect name="dt_socilitacao" label="Data Solicitação" ordem="2"/>
+    <columnFiltroSelect name="dt_previsao" label="Data Previsão" ordem="3"/>
+    <columnFiltroSelect name="dt_programada" label="Data Program." ordem="4"/>
+    <columnFiltroSelect name="dt_coleta" label="Data Coleta" ordem="5"/>
+    <columnFiltroSelect name="numero_pedido" label="Nº Pedido" ordem="6"/>
+    <columnFiltroSelect name="numero_cte" label="Nº CT-e" ordem="7"/>
+    <columnFiltroSelect name="dtlancamento" label="Data Inclusão" ordem="8"/><!--    NÃO está na documentação-->
+    <columnFiltroSelect name="numero_container" label="Nº Container" ordem="9"/>
+    <columnFiltroSelect name="numero_booking" label="Nº Booking" ordem="10"/>
+    <columnFiltroSelect name="numero_viagem_navio" label="Nº Viagem Container" ordem="11"/>
+    <columnFiltroSelect name="numero_nf" label="Nº Nota Fiscal" ordem="12"/>
+    <columnFiltroSelect name="pedido_nf" label="Nº Pedido Nota" ordem="13"/>
+    <columnFiltroSelect name="numero_ano" label="Nº Coleta/Ano" ordem="14"/>
+    
+    
+    <columnOrdenacaoSelect name="numero" label="Nº Coleta" ordem="1"/>
+    <columnOrdenacaoSelect name="dt_socilitacao" label="Data Solicitação" ordem="2"/>
+    <columnOrdenacaoSelect name="dt_previsao" label="Data Previsão" ordem="3"/>
+    <columnOrdenacaoSelect name="dt_programada" label="Data Program." ordem="4"/>
+    <columnOrdenacaoSelect name="dt_coleta" label="Data Coleta" ordem="5"/>
+    <columnOrdenacaoSelect name="numero_pedido" label="Nº Pedido" ordem="6"/>
+    <columnOrdenacaoSelect name="numero_cte" label="Nº CT-e" ordem="7"/>
+    <columnOrdenacaoSelect name="dtlancamento" label="Data Inclusão" ordem="8"/>
+    <columnOrdenacaoSelect name="numero_container" label="Nº Container" ordem="9"/>
+    <columnOrdenacaoSelect name="numero_booking" label="Nº Booking" ordem="10"/>
+    <columnOrdenacaoSelect name="numero_viagem_navio" label="Nº Viagem Container" ordem="11"/>
+    
+</target>

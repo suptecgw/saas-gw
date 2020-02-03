@@ -1,0 +1,3 @@
+LISTS[ctrcs]
+[1,2,COND]=TESTE @F(fatura,15,LEFT) @F(dtvenc,12,LEFT)
+[1,3,COND,ctrcs<50]=BLA E BLA@F(fatura,15,LEFT) @F(nfiscal,15,LEFT) @F(idmovimento,15,LEFT) 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_feriados" modulo="0,1,2,3,4" codTela="96">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='dia' width="" visivel="true" format="" type="varchar" label="Dia" />
+    <column name='mes' width="" visivel="true" format="" type="varchar" label="Mês" />
+    <column name='ano' width="" visivel="true" format="" type="varchar" label="Ano" />
+    <column name='tipo_feriado' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Tipo" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Última Alteração" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" /> 
+    <column name='feriado_setor_financeiro' width="" visivel="true" format="" type="varchar" label="Feriado Setor Financeiro" /> 
+    <column name='feriado_setor_operacional' width="" visivel="true" format="" type="varchar" label="Feriado Setor Operacional" /> 
+    <column name='ufs' width="" visivel="true" format="" type="varchar" label="UFs" /> 
+    <column name='cidades' width="" visivel="true" format="" type="varchar" label="Cidades" /> 
+    
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="dia" label="Dia" ordem="2"/>
+    <columnFiltroSelect name="mes" label="Mês" ordem="3"/>
+    <columnFiltroSelect name="ano" label="Ano" ordem="4"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnOrdenacaoSelect name="dia" label="Dia" ordem="2"/>
+    <columnOrdenacaoSelect name="mes" label="Mês" ordem="3"/>
+    <columnOrdenacaoSelect name="ano" label="Ano" ordem="4"/>
+    
+    
+</target>

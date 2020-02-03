@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_fornecedor" modulo="0,1,2,3,4" codTela="14">
+    <column name="codigo" width="70px" visivel="true" format="" type="int" label="Código" />
+    <column name="razaosocial" width="230px" visivel="true" format="" type="varchar" label="Razão Social" />
+    <column name="cpf_cnpj" width="120px" visivel="true" format="##.###.###/####-##" type="varchar" label="CPF/CNPJ" />
+    <column name="cidade" width="80px" visivel="true" format="" type="varchar" label="Cidade" />
+    <column name="uf" width="30px" visivel="true" format="" type="varchar" label="UF" />
+    <column name="fone" width="80px" visivel="true" format="" type="varchar" label="Telefone" />
+    <column name="email" width="105px" visivel="true" format="" type="varchar" label="E-mail" />
+    <column name="fornecedor_ativo" width="130px" visivel="true" format="" type="boolean" label="Fornecedor Ativo" />
+    <column name="nome_fantasia" width="" visivel="true" format="" type="varchar" label="Nome Fantasia"/>
+    <column name="bairro" visivel="true" format="" type="varchar" label="Bairro"/>
+    <column name="endereco" visivel="true" format="" type="varchar" label="Endereço"/>
+    <column name="contato" visivel="true" format="" type="varchar" label="Contato"/>
+    <column name="incluso_em" width="" visivel="true" format="" type="varchar" label="Data Inclusão" />
+    <column name="alterado_em" width="" visivel="true" format="" type="varchar" label="Data Última Alteração" />
+    <column name="incluso_por" width="" visivel="false" format="" type="varchar" label="Usuário de Inclusão" />
+    <column name="alterado_por" width="" visivel="false" format="" type="varchar" label="Usuário Última Alteração" />
+    <column name="grupos" width="" visivel="true" format="" type="varchar" label="Grupo de Fornecedor" />
+    <column name="numero_logradouro" width="" visivel="true" format="" type="varchar" label="Nº Logradouro" />
+    <column name="insc_estadual" width="" visivel="true" format="" type="varchar" label="Insc. Estadual" />
+    <column name="insc_municipal" width="" visivel="true" format="" type="varchar" label="Insc. Municipal" />
+    <column name="codigo_conta" width="" visivel="true" format="" type="varchar" label="Conta Contábil" />
+    <column name="plano_custo_descricao" width="" visivel="true" format="" type="varchar" label="Plano de Custo Default" />
+    <column name="is_ajudante" width="" visivel="false" type="varchar" format="" label="Ajudante" />
+    <column name="is_vendedor" width="" visivel="false" type="varchar" format="" label="Vendedor" />
+    <column name="is_agente_pagador" width="" visivel="false" type="varchar" format="" label="Agente Pagador" />
+    <column name="is_seguradora" width="" visivel="false" type="varchar" format="" label="Seguradora" />
+    <column name="is_companhia_aerea" width="" visivel="false" type="varchar" format="" label="Companhia Aérea" />
+    <column name="is_fornecedor_combustivel" width="" visivel="false" type="varchar" format="" label="Fornecedor de Combustível" />
+    <column name="is_agente_carga" width="" visivel="false" type="varchar" format="" label="Agente de Carga" />
+    <column name="is_proprietario" width="" visivel="false" type="varchar" format="" label="Proprietário" />
+    <column name="is_redespachante" width="" visivel="false" type="varchar" format="" label="Redespachante" />
+    <column name="is_gerenciador_risco" width="" visivel="false" type="varchar" format="" label="Gerenciador de Risco" />
+
+    <columnFiltroSelect name="codigo" label="Código" ordem="1"/>
+    <columnFiltroSelect name="razaosocial" label="Razão Social" ordem="2"/>
+    <columnFiltroSelect name="cpf_cnpj" label="CPF/CNPJ" ordem="3"/>
+    <columnFiltroSelect name="nome_fantasia" label="Nome Fantasia" ordem="4"/>
+    <columnFiltroSelect name="bairro" label="Bairro" ordem="5"/>
+    <columnFiltroSelect name="endereco" label="Endereço" ordem="6"/>
+    <columnFiltroSelect name="contato" label="Contato" ordem="7"/>
+    <columnFiltroSelect name="fone" label="Telefone" ordem="8"/>
+    <columnFiltroSelect name="email" label="E-mail" ordem="9"/>
+    <columnFiltroSelect name="incluso_em" label="Data Inclusão" ordem="10"/>
+    <columnFiltroSelect name="alterado_em" label="Data Última Alteração" ordem="11"/>
+
+    <columnOrdenacaoSelect name="codigo" label="Código" ordem="1" />
+    <columnOrdenacaoSelect name="razaosocial" label="Razão Social" ordem="2"/>
+    <columnOrdenacaoSelect name="cpf_cnpj" label="CPF/CNPJ" ordem="3"/>
+    <columnOrdenacaoSelect name="nome_fantasia" label="Nome Fantasia" ordem="4"/>
+    
+</target>

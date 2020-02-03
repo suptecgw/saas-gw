@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00139">
+    <permissao sigla="cadiscas" observacao=" "/>
+    <campo name="numero_isca_ajuda" label="Número da Isca" observacao="Número da Isca."/>
+    <campo name="status_ajuda" label="Status" observacao="Status atual da isca, poderá ser &quot;Ativada&quot; ou &quot;Desativada&quot;"/>
+    <campo name="motivo_desativacao_ajuda" label="Motivo da desativação" observacao="Motivo pelo qual a isca foi desativada."/>
+</tela>

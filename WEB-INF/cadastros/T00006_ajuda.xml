@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tela name="XmlAjuda" codigo="T00006">
+    <campo name="nomeLabel" label="Nome" observacao="Digite aqui seu nome completo!" />
+    <campo name="loginLabel" label="Login" observacao="Login do usuário para acessar o sistema." />
+    <campo name="emailLabel" label="Email" observacao="Email do usuário para acessar o sistema." />
+</tela>
+

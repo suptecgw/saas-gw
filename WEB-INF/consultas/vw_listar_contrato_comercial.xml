@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_contrato_comercial" modulo="0,1,2,3,4" codTela="79">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='numero' width="" visivel="true" format="" type="varchar" label="Número" />
+    <column name='data_emissao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de emissão" />
+    <column name='cliente_id' width="" visivel="false" format="" type="int" label="ID Cliente" />
+    <column name='cliente' width="" visivel="true" format="" type="varchar" label="Cliente" />
+    <column name='validade' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Validade" />
+    <column name='qtd_tabelas' width="" visivel="true" format="" type="varchar" label="Qtd Tabelas" />
+    <column name='filial_id' width="" visivel="false" format="" type="int" label="ID Filial" />
+    <column name='filial' width="" visivel="true" format="" type="varchar" label="Filial" />
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='alterado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Ultima Alteração" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado Por" />
+    
+    <columnFiltroSelect name="data_emissao" label="Data de emissão" ordem="1"/>
+    <columnFiltroSelect name="numero" label="Número" ordem="2"/>
+    <columnFiltroSelect name="validade" label="Validade" ordem="3"/>
+    
+    <columnOrdenacaoSelect name="data_emissao" label="Data de emissão" ordem="1"/>
+    <columnOrdenacaoSelect name="numero" label="Número" ordem="2"/>
+    <columnOrdenacaoSelect name="validade" label="Validade" ordem="3"/>
+    <columnOrdenacaoSelect name="filial" label="Filial" ordem="4"/>
+    
+    
+</target>

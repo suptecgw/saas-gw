@@ -1,0 +1,95 @@
+:root{
+--tonalidade18:#042c51;
+}
+
+#imagemLink {
+    float: right;
+    width: 20%;
+    padding-top: 3px;
+    padding-right: 5px;
+}
+
+#cod-ibge {
+    float: left;
+    width: 70%;
+}
+
+#qtd-horas {
+    margin-left: 10px;
+}
+
+.header-dom > img {
+    border-right: unset !important;
+}
+
+.ui-widget {
+    font-size: 0.8em;
+}
+
+.col-md-4 {
+    padding-top: 0px;
+    padding-bottom: 0px
+}
+
+#aeroporto {
+    background: #DCDCDC;
+}
+
+.container-campo-aeroporto {
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    background: #DCDCDC;
+    border-radius: 5px;
+}
+
+div#conteiner-areas div {
+    display: inline-block;
+    position: relative;
+}
+
+#conteiner-areas .areas {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border:solid 0.8px #C0C0C0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 0px;
+    opacity: 0.9;
+}
+
+.col-dom-area {
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: var(--tonalidade18);
+}
+
+hr{
+    border-color:#aaa;
+    box-sizing:border-box;
+    width:100%;  
+}
+
+#title-dom-areas {
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-size: 16px;
+    color: #444257;
+    padding-left: 10px;
+}
+
+#qtd-horas {
+    white: 50%; 
+}
+
+.inp-localizar {
+    margin-top: 25px;
+    width: 34px !important;
+}

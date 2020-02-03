@@ -1,0 +1,92 @@
+LISTS[notas_cartafrete]
+
+MSG_BEFORE_PRINT=Webtrans<=N><=N>Confirme a Impressao?<=N><=N><=N>Caminho da impressora:
+
+
+[27,1]=CONTRATO DE TRANSPORTE DE CARGAS
+
+#####DADOS EMPRESA#####
+
+[01,3,COND]=D A D O S   C O N T R A T A N T E
+[50,3,COND]=CARTA-FRETE N.: @F(idcartafrete,10,LEFT)
+[01,4]=-------------------------------------------------------------------------------
+[01,5,COND]=Razao social: @F(nomefilial,50,LEFT)
+[01,6,COND]=Endereco    : @F(endfilial,40,NOALIGN) , @F(bairrofilial,40,NOALIGN)
+[01,7,COND]=Cidade      : @F(cidadefilial,20,NOALIGN)-@F(uffilial,2,NOALIGN)
+[45,7,COND]=CEP         : @F(cepfilial,20,NOALIGN)
+[01,8,COND]=CNPJ        : @F(cnpjfilial,18,NOALIGN)
+[45,8,COND]=Insc. est.  : @F(iefilial,20,NOALIGN)
+
+#####DADOS MOTORISTA#####
+
+[80,3,COND]=D A D O S   C O N T R A T A D O
+[80,5,COND]=Nome         : @F(motorista,30,LEFT)
+[80,6,COND]=CPF          : @F(cpfmot,14,LEFT)
+[80,7,COND]=Placa        : @F(cavalo,8,LEFT)
+[110,7,COND]=Carreta     : @F(carreta,8,LEFT)
+[80,8,COND]=Seguradora   : @F(seguradora,9,LEFT)
+[110,8,COND]=N Liberacao : @F(liberacao_seguro,14,LEFT)
+
+#####DADOS CLIENTE#####
+
+[01,10,COND]=D A D O S   C L I E N T E
+[01,11]=-------------------------------------------------------------------------------
+[01,12,COND]=Cliente : @F(remetente,30,LEFT)
+[35,12,COND]=Cidade : @F(cidade_uf_remetente,30,LEFT)
+[70,12,COND]=CNPJ : @F(cnpj_remetente,30,LEFT)
+
+
+#####DADOS MANIFESTO#####
+
+[01,14,COND]=D A D O S   D O S   M A N I F E S T O S
+[01,15]=-------------------------------------------------------------------------------
+[01,16,COND]=Numero               CTRC               Destinatario                                      Destino                            Peso
+
+[01,17,COND,notas_cartafrete<22]=@F(manifesto,10,LEFT)          @F(ctrc_nf,10,LEFT)       @F(destinatario_nf,40,LEFT)            @F(cidade_destino_nf,30,LEFT)          @F(peso_nf,12,LEFT)
+[01,39,COND]=PESO TOTAL : @F(ctrc_vlpeso,12,RIGHT)
+[40,39,COND]=TOTAL ENTREGAS : @F(qtd_entregas,2,RIGHT)
+[01,40]=-------------------------------------------------------------------------------
+
+#####DADOS FRETE#####
+
+[01,41,COND]=D A D O S   D O   C O N T R A T O
+[01,42]=-------------------------------------------------------------------------------
+[01,43,COND]=Frete contrato   : @F(valorcontrato,12,RIGHT)
+[01,44,COND]=Outros           : @F(vloutros,12,RIGHT)
+[01,45,COND]=Adiantamento 1   : @F(vladiantado,12,RIGHT) pago em @F(adiantamento_em,10,LEFT)
+[01,46,COND]=Adiantamento 2   : @F(vladiantado2,12,RIGHT) pago em @F(adiantamento_em,10,LEFT)
+[01,47,COND]=Adiantamento 3   : @F(vladiantado3,12,RIGHT) pago em @F(adiantamento_em,10,LEFT)
+[65,43,COND]=I.R.             : @F(ir,12,RIGHT)
+[100,43,COND]=SALDO PAGO EM ______/______/________
+[65,44,COND]=I.N.S.S.         : @F(iNSS,12,RIGHT)
+[65,45,COND]=SEST/SENAT       : @F(sest,12,RIGHT)
+[65,46,COND]=Outros descontos : @F(vloutrasdeducoes,12,RIGHT)
+[100,46,COND]=_____________________________________
+[65,47,COND]=Saldo a receber  : @F(vlsaldo,12,RIGHT)
+[114,47,COND]=MOTORISTA
+
+[01,48,COND]=O B S E R V A C A O
+[01,49]=-------------------------------------------------------------------------------
+[01,50,COND]=@F(observacao,120,LEFT)
+
+[01,51]=-------------------------------------------------------------------------------
+[01,52,COND]=TERMO DE RESPONSABILIDADE
+[01,53]=-------------------------------------------------------------------------------
+[01,54,COND]=Pelo presente, declaro para fins de direito que me responsabilizo pelo transporte das mercadorias constantes do manifesto e conhecimento
+[01,55,COND]=(s) em epigrafo, do local de origem ate seu destino, isentando, assim de todas e quaisquer responsabilidades a empresa-
+[01,56,COND]=BRONZEADO OPERADOR LOGISTICO LTDA.com sede nesta cidade de JABOATAO DOS GUARARAPES - PE a rua  rod. br 101 sul, km 18 s/n gp 1,2 e 4 -
+[01,57,COND]=cep 54335-000 e declaro tambem que me responsabilizo por avarias, desvios, ou extravios de qualquer natureza que venha a sofrer ditas
+[01,58,COND]=mercadorias, seja por via amigavel ou judicial tudo de conformidade com a ligislacao vigente, inclusive encargos previstos.
+
+
+[75,60,COND]=@F(cidadefilial,30,RIGHT)
+[110,60,COND]=@F(uffilial,2,RIGHT)
+[115,60,COND]=@F(data,12,RIGHT)
+
+
+
+[01,63]=___________________________________     ___________________________________
+[15,64,COND]=@F(nomefilial,35,LEFT)                                        @F(motorista,35,LEFT)
+
+
+[01,65,COND]=

@@ -1,0 +1,172 @@
+/* 
+    Created on : 10/02/2017, 15:37:13
+    Author     : Mateus
+*/
+
+:root{
+    --tonalidade24:#122436;
+}
+.div-aguarde-pagina{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    opacity:0.5;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity=50);
+    background: black;
+}
+
+.container-video-centro{
+    display: block;
+    z-index:999999;
+    top: 50%;
+    padding: 0 0 10px 0;
+    left: 50%;
+    position: absolute;
+    width: 500px;
+    min-height: 530px;
+    margin-top: -250px;/* metade da altura */
+    margin-left: -250px;
+    background: #fff url(./assets/img/pattern_bg.png);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,1.0);
+    border-radius: 5px;
+}
+
+.topo-container{
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 100px;
+    background: var(--tonalidade24);
+}
+
+.body-container{
+    margin: 10px;
+}
+
+.footer-container{
+    width: 100%;
+    background: #ccc;
+    height: 27px;
+    padding-top: 1px;
+}
+
+.img-topo-logo{
+    margin-top: 25px;
+    float: left;
+    margin-left: 25px;
+}
+
+
+.lb-sair{
+    position: absolute;
+    color: #fff;
+    font-size: 15px;
+    float: right;
+    top: 73px;
+    left: 435px;
+}
+
+.img-topo-sair{
+    width: 40px;
+    height: 40px;
+    margin-top: 30px;
+    margin-right: 30px;
+    float: right;
+    cursor: pointer;
+}
+
+.img-topo-sair:hover{
+    transform: scale(1.1);
+}
+
+
+.cobre-video-centro{
+    position: absolute;
+    width: 480px;
+    height: 372px;
+    background: #000;
+    border-radius: 5px;
+    opacity: 0.1;
+    -moz-opacity: 0.1;
+    filter: alpha(opacity=10);
+    cursor: pointer;
+}
+
+
+.ifram-video{
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.lb-play{
+    font-size: 25px;
+    color: #135c82;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+.html5-video-player{
+    border-radius: 5px;
+}
+
+.titulo-video{
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    margin-top: 150px;
+    z-index: 60;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.nao-assisti-agora{
+    width: 140px;
+    overflow: hidden;
+    cursor:pointer;
+    font-size: 15px;
+    margin-top: 4px;
+
+}
+
+.nao-assisti-agora:hover{
+    transform: scale(1.1);
+    color:var(--tonalidade24);
+}
+
+.titulo-topo-video{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    color: var(--tonalidade24);
+    font-weight: bold;
+}
+
+.descricao-video{
+    width: 480px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    padding-left: 10px;
+    color: var(--tonalidade24);
+    word-break: break-all;
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.tab-content{
+    overflow-y: scroll;
+}

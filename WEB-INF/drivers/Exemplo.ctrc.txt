@@ -1,0 +1,79 @@
+# Kenneth F. Reis
+# Modelo de driver para CTRC com folha continua
+#
+#   Usando este driver:
+#[COLUNA,LINHA,<CONDENSADO>]=<Texto para impressao>
+
+
+MSG_BEFORE_PRINT=Transportadora exemplo<=N><=N>Confirme a Impressão dos CTRCs<=N>Caminho da impressora:
+
+#Cabecalho
+[70,5,COND,1/8]=@F(desc_cfop,25,LEFT)
+[104,5,COND,1/8]=@F(cfop,5,NOALIGN)          @F(nfiscal,6)
+[70,7,COND,1/8]=@F(localcoleta,16,LEFT)
+[92,7,COND,1/8]=@F(entrega,16,LEFT)
+[116,7,COND,1/8]=@F(dtemissao,10,LEFT)
+
+#####CLIENTES#####
+#Remetente
+[13,9,COND,1/8]=@F(rem_rzs,60,LEFT)
+[13,10,COND,1/8]=@F(rem_endereco,46,NOALIGN), @F(rem_bairro,20,LEFT)
+[13,11,COND,1/8]=@F(rem_cidade,40,LEFT)
+[61,11,COND,1/8]=@F(rem_uf,2,LEFT)
+[13,12,COND,1/8]=@F(rem_cnpj,18,LEFT)
+[50,12,COND,1/8]=@F(rem_inscest,22,LEFT)
+
+#Destinatario
+[81,9,COND,1/8]=@F(dest_rzs,60,LEFT)
+[81,10,COND,1/8]=@F(dest_endereco,45,NOALIGN) @F(dest_bairro,20,LEFT)
+[81,11,COND,1/8]=@F(dest_cidade,37,NOALIGN)
+[127,11,COND,1/8]=@F(dest_uf,2,LEFT)
+[81,12,COND,1/8]=@F(dest_cnpj,18,LEFT)
+[116,12,COND,1/8]=@F(dest_inscest,18,LEFT)
+
+#Consignatario(mostra apenas se mesmo for diferente do rem e dest)
+[40,14,COND,1/8]=@F(fretepago_sim_x,20,LEFT)@F(fretepago_nao_x,1,LEFT)
+[13,15,COND,1/8]=@F(con_rzs,60,LEFT)
+[13,16,COND,1/8]=@F(con_endereco,46,NOALIGN) @F(con_bairro,20,LEFT)
+[13,17,COND,1/8]=@F(con_cidade,40,LEFT)
+[61,17,COND,1/8]=@F(con_uf,2,LEFT)
+[13,18,COND,1/8]=@F(calculado_ate,30,LEFT)
+
+#Redespacho
+[81,15,COND,1/8]=@F(red_rzs,60,LEFT)
+[81,16,COND,1/8]=@F(red_endereco,47,NOALIGN) @F(red_bairro,20,LEFT)
+[81,17,COND,1/8]=@F(red_cidade,58,LEFT)
+[127,17,COND,1/8]=@F(red_uf,2,LEFT)
+[81,18,COND,1/8]=@F(red_cnpj,18,LEFT)
+[120,18,COND,1/8]=@F(ctoredespacho,6,LEFT)
+
+#####DADOS DO FRETE#####
+#Linha de calculo 1
+[03,21,COND,1/8]= @F(totnf_conteudo,15,LEFT)
+[25,21,COND,1/8]= @F(totnf_embalagem,15,LEFT)
+[45,21,COND,1/8]= @F(totnf_volume,12,RIGHT)
+[66,21,COND,1/8]= @F(totnf_peso,12,RIGHT)
+[85,21,COND,1/8]= @F(ct_cubmetro,8,RIGHT)
+[103,21,COND,1/8]= @F(totnf_valor,12,RIGHT)
+[120,21,COND,1/8]=@F(ve_placa,8,LEFT)
+[137,21,COND,1/8]=@F(ve_uf,2,LEFT)
+[03,24,COND,1/8]= @F(totnf_notas,130,LEFT)
+
+#Linha de calculo 2
+[07,27,COND,1/8]=@F(ct_valor_peso,12,RIGHT)
+[26,27,COND,1/8]=@F(ct_valor_frete,12,RIGHT)
+[44,27,COND,1/8]=@F(ct_valor_despacho,12,RIGHT)
+[63,27,COND,1/8]=@F(ct_valor_outros,12,RIGHT)
+[84,27,COND,1/8]=@F(ct_totalprestacao,12,RIGHT)
+[101,27,COND,1/8]=@F(ct_vlbasecalculo,12,RIGHT)
+[118,27,COND,1/8]=@F(ct_aliqfrete,5,RIGHT)
+[128,27,COND,1/8]=@F(ct_vlicms,12,RIGHT)
+
+######## OBS DO CTRC ########
+[13,29,COND,1/8]=@F(ct_obs_linha1,60,LEFT)
+[13,30,COND,1/8]=@F(ct_obs_linha2,60,LEFT)
+[13,31,COND,1/8]=@F(ct_obs_linha3,60,LEFT)
+[13,32,COND,1/8]=@F(ct_obs_linha4,60,LEFT)
+[13,33,COND,1/8]=@F(ct_obs_linha5,60,LEFT)
+[13,34,COND,1/8]=DIGITADOR:@F(usuariolancamento,20,LEFT)
+[01,41,COND,1/8]=<=N><=N>

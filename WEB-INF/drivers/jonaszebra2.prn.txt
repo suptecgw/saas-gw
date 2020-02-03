@@ -1,0 +1,11 @@
+﻿^XA
+^PW799
+^FT144,152^A0N,28,28^FH\^FDjonas^FS
+^FT269,346^A0N,28,28^FH\^FD@F(nome_emitente)^FS
+^FT321,436^A0N,28,28^FH\^FD@F(numero_gsm)^FS
+^FT161,519^A0N,28,28^FH\^FD@F(cidade_emitente)^FS
+^FT479,524^A0N,28,28^FH\^FD@F(uf_emitente)^FS
+^FT103,654^A0N,28,28^FH\^FD@F(nota_fiscal)^FS
+^FT325,649^A0N,28,28^FH\^FD@F(volume)^FS
+^FT582,678^A0N,28,28^FH\^FD@F(qtd)^FS
+^PQ1,0,1,Y^XZ

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_rateio" modulo="0,1,2,3,4" codTela="18">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Última Alteração" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado Por" />   
+    
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="data_criacao" label="Data Criação" ordem="2"/>
+    <columnFiltroSelect name="data_ultima_alteracao" label="Data Última Alteração" ordem="3"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnOrdenacaoSelect name="data_criacao" label="Data Criação" ordem="2"/>
+    <columnOrdenacaoSelect name="data_ultima_alteracao" label="Data Última Alteração" ordem="3"/>
+    
+</target>

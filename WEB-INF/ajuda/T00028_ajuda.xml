@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tela name="XmlAjuda" codigo="T00028">
+    <permissao sigla="cadmanifesto" observacao=" "/>
+    <permissao sigla="lanconhfl" observacao="Essa permissão será necessária caso o usuário precise visualizar manifestos lançados por outras filiais."/>
+</tela>

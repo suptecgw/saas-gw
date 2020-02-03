@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00097">
+    <permissao sigla="cadFeriado" observacao=" " />
+    <campo name="descricao" label="Descrição" observacao="Nome do Feriado. Exemplo: Natal, Carnaval, 7 de Setembro." />
+    <campo name="slc-dia" label="Dia" observacao="Campo para informar o dia do feriado." />
+    <campo name="slc-mes" label="Mes" observacao="Campo para informar o mês do feriado." />
+    <campo name="slc-ano" label="Ano" observacao="Campo para informar o ano do feriado. Para os feriados que se repetem na mesma data todos os anos como por exemplo: Natal, 7 de Setembro, 21 de Abril, o campo de ano poderá ficar com a opção &quot;Todos os anos.&quot; " />
+    <campo name="slc-tipo" label="Tipo feriado" observacao="Função responsável pela geração do arquivo EDI." />    
+    <campo name="header-dom-estado" label="Estado" observacao="Adicionar UFs ao feriado."/>
+    <campo name="estado" label="Uf" observacao="UF do feriado." />
+    <campo name="icone-excluir-estado" label="Excluir" observacao="Remover a UF escolhida." />
+    <campo name="header-dom-municipio" label="Município" observacao="Adicionar municipio ao feriado." />
+    <campo name="icone-excluir-municipio" label="Excluir" observacao="Remover o Município escolhido."/>
+</tela>

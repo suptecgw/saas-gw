@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_cidades" modulo="0,1,2,3,4" codTela="64">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='cidade' width="" visivel="true" format="" type="varchar" label="Cidade" />
+    <column name='uf' width="" visivel="true" format="" type="varchar" label="UF" />
+    <column name='area' width="" visivel="false" format="" type="varchar" label="Área" />
+    <column name='pais' width="" visivel="true" format="" type="varchar" label="País" />  
+    <column name='cod_municipio' width="" visivel="true" format="" type="varchar" label="Código Municipio" />  
+    <column name='cod_srf' width="" visivel="true" format="" type="varchar" label="Código SRF" />  
+    <column name='cod_ibge' width="" visivel="true" format="" type="varchar" label="Código IBGE" />  
+    <column name='cod_siafi' width="" visivel="true" format="" type="varchar" label="Código SIAFE" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />  
+    
+    <columnFiltroSelect name="cidade" label="Cidade" ordem="1"/>
+    <columnFiltroSelect name="uf" label="UF" ordem="2"/>
+    <columnFiltroSelect name="pais" label="País" ordem="3"/>
+    
+    <columnOrdenacaoSelect name="cidade" label="Cidade" ordem="1"/>
+    <columnOrdenacaoSelect name="uf" label="UF" ordem="2"/>
+    <columnOrdenacaoSelect name="pais" label="País" ordem="3"/>
+    
+    
+</target>

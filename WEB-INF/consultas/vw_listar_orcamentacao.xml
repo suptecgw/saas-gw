@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_orcamentacao" modulo="0,1,2,3,4" codTela="124">
+    <column name='numero' width="" visivel="true" format="" type="int" label="Numero" />
+    <column name='competencia' width="" visivel="true" format="" type="varchar" label="Competencia" />
+    <column name='filial' width="" visivel="true" format="" type="varchar" label="Filial" />
+    <column name='criado_por' width="" visivel="false" format="" type="varchar" label="Criador" />
+    <column name='atualizado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Última Alteração"/>
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação"/>
+    <column name='competencia_data' width="" visivel="false" format="dd/MM/yyyy" type="varchar" label="Competencia" />
+    <column name='filial_id' width="" visivel="false" format="" type="int" label="idFilial" />
+        
+    <columnFiltroSelect name="competencia_data" label="Competencia" ordem="1"/>
+    
+    <columnOrdenacaoSelect name="competencia_data" label="Competencia" ordem="1"/>
+    <columnOrdenacaoSelect name="filial" label="Filial" ordem="2"/>
+</target>

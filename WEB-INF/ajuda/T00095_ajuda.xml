@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00095">
+    <permissao sigla="cadlayoutedi" observacao=" " />
+    <campo name="descricao" label="Descrição" observacao="Descrição do Layout." />
+    <campo name="tipoEDI" label="Tipo" observacao="Tipo de EDI. Poderá ser: CONEMB, onde mostrará os conhecimentos embarcados; DOCCOB, onde mostrará as faturas emitidas; ou OCOREN, onde mostrará as ocorrências informadas no CT-e;" />
+    <campo name="nomeArquivo" label="Nome do Arquivo" observacao="Deverá ser informado o nome do arquivo que será gerado ao exportar esse EDI. Nesse campo poderão ser informados variáveis que serão substituídas na geração do arquivo. São elas:&lt;br&gt;&lt;br&gt;a) @@dia = Será substituída pelo dia atual do mês;&lt;br&gt;b) @@mes = Será substituída pelo mês atual;&lt;br&gt;c) @@ano = Será substituída pelo ano atual;&lt;br&gt;d) @@hora = Será substituída pela hora atual;&lt;br&gt;e) @@minuto = Será substituída pelo minuto atual;&lt;br&gt;f) @@segundo = Será substituída pelo segundo atual;&lt;br&gt;g) @@numero_CTE = Será substituída pelo número do CT-e;&lt;br&gt;h) @@data_Emissao_CTE = Será substituída pelo data de emissão do CT-e;" />
+    <campo name="extensaoArquivo" label="Extensão do Arquivo" observacao="Extensão do arquivo que será gerado ao exportar o EDI." />
+    <campo name="funcao" label="Função EDI" observacao="Função responsável pela geração do arquivo EDI." />
+</tela>

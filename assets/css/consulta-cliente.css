@@ -1,0 +1,65 @@
+body,html,head { 
+    overflow-y: hidden; 
+}
+
+.salvarFiltros{
+
+    color: #a0c2e4;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.carregarPesquisa{
+    color: #a0c2e4;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.div-lb-carrega-pesquisa{
+    background: rgba(12,37,62,0.4);
+    width: 25%;
+    position: absolute;
+    z-index: 999999;
+    top: 70px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.container-salvar-filtros{
+    display: none;
+    width: 0px;
+    height: 0px;
+    background: url("../img/pattern_bg.png");
+    position: absolute;
+    z-index: 999999;
+    margin-left: 17%;
+    -moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+    border-radius: 6px;
+}
+
+.container-salvar-filtros iframe{
+    width: 400px;
+    height: 315px;
+    border-radius: 4px;
+}
+
+.seta-baixo:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    /*margin-right: 10px;*/
+    width: 0; 
+    height: 0; 
+    margin-left: 3%;
+    margin-top: -5%;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    border-top: 12px solid #fff;
+}
+
+

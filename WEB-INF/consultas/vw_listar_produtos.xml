@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_produtos" modulo="0,1,2,3,4" codTela="39">
+    <column name='id' width="" visivel="false" format="" type="int" label="id" />
+    <column name='codigo' width="150px" visivel="true" format="" type="varchar" label="Código" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='und_medida_id' width="" visivel="false" format="" type="int" label="Id Und. Medida"/>
+    <column name='und_medida' width="110px" visivel="true" format="" type="varchar" label="Und. Medida"/>
+    <column name='cliente_id' width="" visivel="false" format="" type="varchar" label="ID Cliente"/>
+    <column name='cliente' width="300px" visivel="true" format="" type="varchar" label="Cliente"/>
+    <column name='codigoxml' width="" visivel="true" format="" type="varchar" label="Código XML"/>
+    <column name='referencia' width="" visivel="true" format="" type="varchar" label="Referência" />
+    <column name='peso_liquido' width="" visivel="true" format="#.##0,00" type="varchar" label="Peso Líquido"/>
+    <column name='peso_bruto' width="" visivel="true" format="#.##0,00" type="varchar" label="Peso Bruto"/>
+    <column name='codigo_barras' width="" visivel="true" format="" type="varchar" label="Código de barras"/>
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de Criação"/>
+    <column name='atualizado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de última alteração"/>
+    <column name='destinatario_ids' width="" visivel="false" format="" type="varchar" label="Destinatarios Paletização" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por"/>
+    
+    <columnFiltroSelect name="codigo" label="Código" ordem="1"/>
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="2"/>
+    <columnFiltroSelect name="und_medida" label="Und. Medida" ordem="3"/>
+    <columnFiltroSelect name="codigoxml" label="Código XML" ordem="4"/>
+    <columnFiltroSelect name="referencia" label="Referência" ordem="5"/>
+    <columnFiltroSelect name="codigo_barras" label="Código de Barras" ordem="6"/>
+    
+    <columnOrdenacaoSelect name="codigo" label="Código" ordem="1"/>
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="2"/>
+    <columnOrdenacaoSelect name="und_medida" label="Und. Medida" ordem="3"/>
+    <columnOrdenacaoSelect name="codigoxml" label="Código XML" ordem="4"/>
+    <columnOrdenacaoSelect name="referencia" label="Referência" ordem="5"/>
+    <columnOrdenacaoSelect name="codigo_barras" label="Código de barras" ordem="6"/>
+    <columnOrdenacaoSelect name="criado_em" label="Data Criação" ordem="7"/>
+    <columnOrdenacaoSelect name="atualizado_em" label="Data de última alteração" ordem="8"/>
+            
+</target>

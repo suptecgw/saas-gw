@@ -1,0 +1,142 @@
+# Kenneth F. Reis
+# Modelo de driver para CTRC com folha continua
+#
+#   Usando este driver:
+#[COLUNA,LINHA,<CONDENSADO>]=<Texto para impressao>
+
+
+MSG_BEFORE_PRINT=HGO TRANSPORTES LTDA.<=N><=N>Confirme a Impressão dos CTRCs abaixo:<=N>@F(array_ctrc)<=N><=N>Caminho da impressora:
+
+#Cabecalho
+[113,4,COND,1/8]=@F(dtemissao,10,LEFT)
+[128,4,COND,1/8]=@F(hora_atual,5,LEFT)
+[56,5,1/8]=@F(nfiscal,6,LEFT)
+[01,9,COND,1/8]=@F(cfop,5,LEFT)
+[14,9,COND,1/8]=@F(desc_cfop,40,LEFT)
+[63,9,COND,1/8]=@F(usuariolancamento,15,LEFT)
+
+#####CLIENTES#####
+#Remetente
+[11,11,COND,1/8]=@F(rem_rzs,60,LEFT)
+[112,11,COND,1/8]=@F(fretepago_sim_x,20,LEFT)@F(fretepago_nao_x,9,LEFT)
+[11,12,COND]=@F(rem_endereco,46,LEFT)
+[11,13,COND,1/8]=@F(rem_bairro,20,LEFT)
+[48,13,COND,1/8]=@F(rem_cidade,25,LEFT)
+[82,13,COND,1/8]=@F(rem_uf,2,LEFT)
+[126,13,COND,1/8]=@F(condicao_pagto,3,LEFT) Dias
+[11,14,COND]=@F(rem_cnpj,18,LEFT)
+[48,14,COND]=@F(rem_inscest,22,LEFT)
+[11,15,COND,1/8]=@F(rem_fone,15,LEFT)
+[64,15,COND,1/8]=@F(rem_cep,10,LEFT)
+[109,15,COND,1/8]=@F(localcoleta,24,RIGHT)
+
+#Destinatario
+[11,17,COND,1/8]=@F(dest_rzs,60,LEFT)
+[110,17,COND,1/8]=@F(entrega,24,RIGHT)
+[11,18,COND]=@F(dest_endereco,45,LEFT)
+[110,18,COND]=@F(calculado_ate,24,RIGHT)
+[11,19,COND]=@F(dest_bairro,25,LEFT)
+[48,19,COND]=@F(dest_cidade,25,LEFT)
+[82,19,COND]=@F(dest_uf,2,LEFT)
+[123,19,COND]=CONF. NOTA
+[11,20,COND]=@F(dest_cnpj,18,LEFT)
+[48,20,COND]=@F(dest_inscest,18,LEFT)
+[110,20,COND]=@F(totnf_volume,24,RIGHT)
+[11,21,COND]=@F(dest_fone,15,LEFT)
+[64,21,COND]=@F(dest_cep,10,LEFT)
+[129,21,COND]=VOL.
+
+#Consignatario(mostra apenas se mesmo for diferente do rem e dest)
+[11,22,COND]=@F(con_rzs,60,LEFT)
+[110,22,COND]=@F(totnf_peso,24,RIGHT)
+[11,23,COND]=@F(con_endereco,46,LEFT)
+[110,23,COND]=@F(totnf_notas,24,RIGHT)
+[11,24,COND]=@F(con_bairro,20,LEFT)
+[48,24,COND]=@F(con_cidade,25,LEFT)
+[82,24,COND]=@F(con_uf,2,LEFT)
+[110,24,COND]= @F(totnf_valor,24,RIGHT)
+[11,25,COND]=@F(con_cnpj,18,LEFT)
+[48,25,COND]=@F(con_inscest,38,LEFT)
+[110,25,COND]=@F(ct_valor_peso,24,RIGHT)
+[64,26,COND]=@F(con_cep,10,LEFT)
+[110,26,COND]=@F(ct_valor_frete,24,RIGHT)
+
+[108,27,COND]=@F(ct_valor_sec_cat,24,RIGHT)
+[01,28,COND]=@F(ct_obs_linha1,50,LEFT)
+[110,28,COND]=@F(ct_valor_despacho,24,RIGHT)
+[01,29,COND]=@F(ct_obs_linha2,50,LEFT)
+[01,30,COND]=@F(ct_obs_linha3,50,LEFT)
+[110,30,COND]=@F(ct_valor_outros,24,RIGHT)
+[108,32,COND]=@F(ct_totalprestacao,24,RIGHT)
+[128,33,COND]=0.00
+[108,34,COND]=@F(ct_aliqfrete,24,RIGHT)
+[108,35,COND,1/8]=@F(ct_vlicms,24,RIGHT)
+
+#SEGUNDA PAGINA	
+[1,42,COND,1/10]=
+[1,43,COND]=
+[113,45,COND,1/8]=@F(dtemissao,10,LEFT)
+[128,45,COND,1/8]=@F(hora_atual,5,LEFT)
+[56,46,1/8]=@F(nfiscal,6,LEFT)
+[01,50,COND,1/8]=@F(cfop,5,LEFT)
+[14,50,COND,1/8]=@F(desc_cfop,40,LEFT)
+[63,50,COND,1/8]=@F(usuariolancamento,15,LEFT)
+
+#####CLIENTES#####
+#Remetente
+[11,52,COND,1/8]=@F(rem_rzs,60,LEFT)
+[112,52,COND,1/8]=@F(fretepago_sim_x,20,LEFT)@F(fretepago_nao_x,9,LEFT)
+[11,53,COND]=@F(rem_endereco,46,LEFT)
+[11,54,COND,1/8]=@F(rem_bairro,20,LEFT)
+[48,54,COND,1/8]=@F(rem_cidade,25,LEFT)
+[82,54,COND,1/8]=@F(rem_uf,2,LEFT)
+[126,54,COND,1/8]=@F(condicao_pagto,3,LEFT) Dias
+[11,55,COND]=@F(rem_cnpj,18,LEFT)
+[48,55,COND]=@F(rem_inscest,22,LEFT)
+[11,56,COND,1/8]=@F(rem_fone,15,LEFT)
+[64,56,COND,1/8]=@F(rem_cep,10,LEFT)
+[109,56,COND,1/8]=@F(localcoleta,24,RIGHT)
+
+#Destinatario
+[11,58,COND,1/8]=@F(dest_rzs,60,LEFT)
+[110,58,COND,1/8]=@F(entrega,24,RIGHT)
+[11,59,COND]=@F(dest_endereco,45,LEFT)
+[110,59,COND]=@F(calculado_ate,24,RIGHT)
+[11,60,COND]=@F(dest_bairro,25,LEFT)
+[48,60,COND]=@F(dest_cidade,25,LEFT)
+[82,60,COND]=@F(dest_uf,2,LEFT)
+[123,60,COND]=CONF. NOTA
+[11,61,COND]=@F(dest_cnpj,18,LEFT)
+[48,61,COND]=@F(dest_inscest,18,LEFT)
+[110,61,COND]=@F(totnf_volume,24,RIGHT)
+[11,62,COND]=@F(dest_fone,15,LEFT)
+[64,62,COND]=@F(dest_cep,10,LEFT)
+[129,62,COND]=VOL.
+
+#Consignatario(mostra apenas se mesmo for diferente do rem e dest)
+[11,63,COND]=@F(con_rzs,60,LEFT)
+[110,63,COND]=@F(totnf_peso,24,RIGHT)
+[11,64,COND]=@F(con_endereco,46,LEFT)
+[110,64,COND]=@F(totnf_notas,24,RIGHT)
+[11,65,COND]=@F(con_bairro,20,LEFT)
+[48,65,COND]=@F(con_cidade,25,LEFT)
+[82,65,COND]=@F(con_uf,2,LEFT)
+[110,65,COND]= @F(totnf_valor,24,RIGHT)
+[11,66,COND]=@F(con_cnpj,18,LEFT)
+[48,66,COND]=@F(con_inscest,38,LEFT)
+[110,66,COND]=@F(ct_valor_peso,24,RIGHT)
+[64,67,COND]=@F(con_cep,10,LEFT)
+[110,67,COND]=@F(ct_valor_frete,24,RIGHT)
+
+[108,68,COND]=@F(ct_valor_sec_cat,24,RIGHT)
+[01,69,COND]=@F(ct_obs_linha1,50,LEFT)
+[110,69,COND]=@F(ct_valor_despacho,24,RIGHT)
+[01,70,COND]=@F(ct_obs_linha2,50,LEFT)
+[01,71,COND]=@F(ct_obs_linha3,50,LEFT)
+[110,71,COND]=@F(ct_valor_outros,24,RIGHT)
+[108,73,COND]=@F(ct_totalprestacao,24,RIGHT)
+[128,74,COND]=0.00
+[108,75,COND]=@F(ct_aliqfrete,24,RIGHT)
+[108,76,COND]=@F(ct_vlicms,24,RIGHT)
+
+[1,77,COND]=<=N>

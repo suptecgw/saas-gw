@@ -1,0 +1,88 @@
+#tipo_lancamento, #confirmado {
+    width: 90% !important;
+    height: 28px !important;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.4) !important;
+    font-family: "Open Sans", sans, serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    z-index: 99 !important;
+    background: #fff !important;
+    opacity: 1 !important;
+    outline: none !important;
+    border: unset !important;   
+    border-radius: 3px !important;
+}
+
+#botao_localizar_cliente {
+    padding-top: 29px;
+}
+.col-md-3 {
+    width: 26%;
+}
+
+#input_localizar {
+    width: 116%;
+}
+
+#botao_localizar_pallets {
+    padding-top: 28px !important; 
+}
+
+.inp-localizar {
+    width: 34px;
+    padding-top: 31px;
+}
+
+.combo-arrow-escuro-cte {
+    background-image: url("../../../assets/img/icon-calendar-escuro.png") !important;
+    opacity: 1 !important;
+    top: 3px !important;
+    margin-left: 30px;
+}
+
+.textbox-text {
+    padding-top: 4px !important;
+}
+
+.datebox {
+    height: 30px !important;
+}
+
+.section-check-cadastro {
+    margin-top: 7px;
+}
+
+.localizar-tela-movimentacao > div {
+    height: 17px !important;
+}
+
+.localizar-tela-movimentacao {
+    height: 28px !important;
+}
+
+.ui-selectmenu-button {
+    width: 95.5% !important;
+}
+
+.data-span-emissao {
+    width: 85% !important;
+}
+
+.input-width-83{
+    height: 28px !important;
+    width: calc(83% - 30px);
+}
+
+.beta-ul {
+    white-space: nowrap;
+    margin-top: -2px;
+}
+
+.gamma-li-chaves {
+    max-width: 93% !important;
+}
+
+.gamma-li-chaves > div {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

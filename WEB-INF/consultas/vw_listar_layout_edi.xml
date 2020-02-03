@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_layout_edi" modulo="0,1,2,3,4" codTela="94">
+    <column name="id" width="" visivel="false" format="" type="int" label="Id" />
+    <column name="descricao" width="" visivel="true" format="" type="varchar" label="Descrição"/>
+    <column name="tipo_edi" width="" visivel="true" format="" type="varchar" label="Tipo EDI"/>
+    <column name="nome_arquivo" width="" visivel="true" format="" type="varchar" label="Nome do Arquivo"/>
+    <column name="extensao" width="" visivel="true" format="" type="varchar" label="Extensão"/>
+    <column name="funcao" width="" visivel="true" format="" type="varchar" label="Função"/>
+    <column name="data_criacao" width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação"/>
+    <column name="data_ultima_alteracao" width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Última Alteração"/>
+    <column name="criado_por" width="" visivel="false" format="" type="int" label="Criados por mim" />
+    <column name="tipo_layout_edi" width="" visivel="false" format="" type="varchar" label="Tipo Layout EDI" />
+
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="nome_arquivo" label="Nome do Arquivo" ordem="2"/>
+
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnOrdenacaoSelect name="nome_arquivo" label="Nome do Arquivo" ordem="2"/>
+</target>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<tela name="XmlAjuda" codigo="T00086">
+    <permissao sigla="inventario" observacao=" "/>
+    <campo name="numero" label="Nº Inventário" observacao="Nº do inventário, será gerado automaticamente após incluir."/>
+    <campo name="filial" label="Filial" observacao="Filial responsável pelo inventário."/>
+    <campo name="descricao" label="Descrição" observacao="Local para informar uma descrição para o inventário. Ex: &quot;Inventário semanal&quot;, &quot;Inventário emergencial&quot;."/>
+    <campo name="data-inicial" label="Data Inicial" observacao="Data que o inventário será realizado."/>
+    <campo name="hora-inicial" label="Hora Inicial" observacao="Hora que o inventário será realizado."/>
+    <campo name="data-final" label="Data Final" observacao="Data que o inventário foi finalizado."/>
+    <campo name="hora-final" label="Hora Final" observacao="Hora que o inventário foi finalizado."/>
+    <campo name="observacao" label="Observação" observacao="Espaço reservado para registrar qualquer informação importante sobre o inventário."/>
+    <campo name="filial_emissao_cte" label="Mostrar CT-e(s) emitidos pela filial:" observacao="Mostrar apenas os CT-e(s) emitidos pela filial selecionada no inventário."/>
+    <campo name="filial_entrega_cte" label="Mostrar CT-e(s) de responsabilidade de entrega da filial:" observacao="Mostrar apenas os CT-e(s) de responsabilidade de entrega da  filial selecionada no inventário. Para esse filtro funcionar as cidades de entregas deverão estar vinculdadas no cadastro da filial."/>
+    <campo name="filtro_data_emissao_cte_tudo" label="Tudo" observacao="Ignorar o filtro de data e mostrar tudo"/>
+    <campo name="filtro_data_emissao_cte_periodo" label="CT-e(s) emitidos entre:" observacao="Mostrar os CT-e(s) emitidos entre as datas informadas"/>
+    <campo name="dataEm" label="Data Inicial" observacao="Data inicial do período desejado."/>
+    <campo name="dataAte" label="Data Final" observacao="Data final do período desejado."/>
+    <campo name="numeroCte" label="Nº do CT-e" observacao="Nº do CT-e. Você poderá clicar no link para visualizar os detalhes do CT-e."/>
+    <campo name="destinatario" label="Destinatário" observacao="Destinatário do CT-e."/>
+    <campo name="numeroNota" label="Nota Fiscal" observacao="Nota fiscal que foi vinculada ao CT-e. Você poderá clicar no link para visualizar os detalhes da nota fiscal."/>
+    <campo name="vol" label="Vol(s)" observacao="Volumes do CT-e."/>
+    <campo name="img-editar-cte" label="Justificativa" observacao="Adicionar uma justificativa de falta/sobra."/>
+    <campo name="img-excluir-cte" label="Remover" observacao="Remover o CT-e da lista."/>
+    <campo name="nome_arquivo_importado" label="Nome do arquivo" observacao="Nome do arquivo importado para conferência."/>
+    <campo name="icone_download_arquivo" label="Download" observacao="Efetuar download do arquivo."/>
+    <campo name="numeroEtiqueta" label="Nº Etiqueta" observacao="Nº da etiqueta bipada."/>
+    <campo name="usuario" label="Usuário" observacao="Usuário que bipou."/>
+    <campo name="status" label="Status" observacao="Nesse campo irá mostrar se a etiqueta foi localizada ou não."/>
+    <campo name="apenas-ctes-clientes" label="Apenas/Exceto o(s) cliente(s):" observacao="Poderá selecionar os CT-e(s) de um ou mais clientes."/>
+    <campo name="apenas-ctes-destino" label="Apenas/Exceto o(s) destinos(s):" observacao="Poderá selecionar os CT-e(s) de uma ou mais cidades de destino."/>
+    <campo name="apenas-ctes-areas-destino" label="Apenas/Exceto areas(s) de destino:" observacao="Poderá selecionar os CT-e(s) de uma ou mais áreas de destino."/>
+    <campo name="apenas-ctes-remetente" label="Apenas/Exceto o(s) remetente(s):" observacao="Poderá selecionar os CT-e(s) de um ou mais remetentes."/>
+    <campo name="apenas-ultima-ocorrencia" label="Apenas/Exceto com a última ocorrência:" observacao="Poderá selecionar os CT-e(s) onde a última ocorrência seja a ocorrência escolhida. Poderá escolher mais de uma ocorrência."/>
+    <campo name="radio-filial-ctes-1" label="Mostrar CT-e(s) emitidos pela filial:" observacao="Mostrar apenas os CT-e(s) emitidos pela filial selecionada no inventário."/>
+    <campo name="radio-filial-ctes-2" label="Mostrar CT-e(s) de responsabilidade de entrega da filial:" observacao="Mostrar apenas os CT-e(s) de responsabilidade de entrega da  filial selecionada no inventário. Para esse filtro funcionar as cidades de entregas deverão estar vinculdadas no cadastro da filial."/>
+    <campo name="inp-cte-emitido-em-1" label="Apenas CT-e(s) da(s) areas(s) de destino:" observacao="Ignorar o filtro de data e mostrar tudo."/>
+    <campo name="inp-cte-emitido-em-2" label="Apenas CT-e(s) da(s) areas(s) de destino:" observacao="Mostrar os CT-e(s) emitidos entre as datas informadas."/>
+    <campo name="cte-de" label="Data Inicial" observacao="Data inicial do período desejado."/>
+    <campo name="cte-ate" label="Data Final" observacao="Data final do período desejado."/>
+    <campo name="select-layout" label="Layout" observacao="Layout de importação que poderá ser utilizado para carregar várias etiquetas bipadas por um coletor de dados."/>
+    <campo name="input-etiqueta" label="Digitar etiqueta" observacao="Local para informar a etiqueta que será adicionada ao inventário, após digitação deverá teclar Enter ou clicar em Pesquisar."/>
+    <campo name="bt-pesquisar-etiqueta" label="Pesquisar" observacao="Ao clicar em Pesquisar o sistema irá adicionar a etiqueta digitada na lista."/>
+    <campo name="file" label="Importar TXT" observacao="Ao clicar em Importar TXT abrirá uma tela para o usuário escoher um arquivo que contenha as etiquetas bipadas por um coletor de dados. Após escolher o arquivo o sistema irá adicionar a lista todas as etiquetas."/>
+    <campo name="apenas-setor-entrega" label="Apenas/Exceto com o(s) setor(es) de entrega:" observacao="Poderá selecionar os CT-e(s) de um ou mais setores de entrega."/>
+</tela>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_tipos_veiculo" modulo="0,1,2,3,4" codTela="53">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='tipo_carreta' width="" visivel="true" format="" type="varchar" label="Carreta" />
+    <column name='tabela_clientes' width="" visivel="true" format="" type="varchar" label="Tabela de cliente" />  
+    <column name='tipo_veiculo_cte_id' width="" visivel="false" format="" type="int" label="Tipo Veículo CTE ID" />
+    <column name='tipo_veiculo_cte' width="" visivel="true" format="" type="varchar" label="Tipo Veículo CTE" />
+    <column name='tipo_carroceria_cte_id' width="" visivel="false" format="" type="int" label="Tipo Carroceria CTE ID" />
+    <column name='tipo_carroceria_cte' width="" visivel="true" format="" type="varchar" label="Tipo Carroceria CTE" />
+    <column name='tipo_veiculo_pamcary_id' width="" visivel="false" format="" type="int" label="Tipo Veículo Pamcary ID" />
+    <column name='tipo_veiculo_pamcary' width="" visivel="true" format="" type="varchar" label="Tipo Veículo Pamcary" />
+    <column name='codigo_gerenciador_risco' width="" visivel="false" format="" type="varchar" label="Código de Gerenciador de Risco" />
+    <column name='gerenciador_risco' width="" visivel="true" format="" type="varchar" label="Gerenciador de Risco" />
+    <column name='qtd_eixos' width="" visivel="true" format="" type="varchar" label="Quantidade de eixos" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado Por" />
+    
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+    
+    
+</target>

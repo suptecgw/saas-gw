@@ -1,0 +1,65 @@
+LISTS[cartasfretes]
+
+MSG_BEFORE_PRINT=Webtrans<=N><=N>Confirme a Impressao?<=N><=N><=N>Caminho da impressora:
+
+ 
+[27,1]=CONTRATO DE TRANPORTE DE CARGAS
+
+[01,3]=C O N T R A T A N T E
+[50,3]=CARTA-FRETE N.: @F(idcartafrete,10,LEFT)
+[01,4]=--------------------------------------------------------------------------------
+[01,5]=Razao social: @F(nomefilial,50,LEFT)
+[01,6]=Endereco    : @F(endfilial,40,NOALIGN) , @F(bairrofilial,40,NOALIGN)
+[01,7]=Cidade      : @F(cidadefilial,20,NOALIGN)-@F(uffilial,2,NOALIGN)
+[50,7]=CEP         : @F(cepfilial,20,NOALIGN)
+[01,8]=CNPJ        : @F(cnpjfilial,18,NOALIGN)   
+[50,8]=Insc. est.  : @F(iefilial,20,NOALIGN)
+
+[01,10]=C O N T R A T A D O
+[01,11]=--------------------------------------------------------------------------------
+[01,12]=DADOS MOTORISTA
+[01,13]=Nome     : @F(motorista,40,LEFT) 
+[63,13]=CPF  : @F(cpfmot,14,LEFT) 
+[01,14]=Endereco : @F(enderecomot,40,NOALIGN), @F(bairromot,40,NOALIGN)
+[01,15]=Cidade   : @F(cidademot,20,NOALIGN)-@F(ufmot,2,NOALIGN)
+
+[01,17]=DADOS DO VEICULO
+[01,18]=Placa : @F(cavalo,8,LEFT) 
+[32,18]=Modelo: @F(modelocav,20,LEFT) 
+[60,18]=Marca : @F(marcacav,16,LEFT) 
+[01,19]=Local : @F(cidadecav,50,LEFT) 
+[01,20]=Proprietario: @F(propcavalo,40,NOALIGN)
+[01,21]=Endereco: @F(endpcav,30,NOALIGN), @F(bairropcav,20,NOALIGN)
+[01,22]=Cidade: @F(cidpcav,20,NOALIGN)-@F(ufpcav,2,LEFT)
+[32,22]=CGC: @F(cgcpcav,18,LEFT) 
+
+[01,24]=DADOS DA CARRETA
+[01,25]=Placa : @F(carreta,8,LEFT) 
+[32,25]=Modelo: @F(modelocar,20,LEFT) 
+[60,25]=Marca : @F(marcacar,16,LEFT) 
+[01,26]=Local : @F(cidadecar,50,LEFT) 
+[01,27]=Proprietario: @F(propcarreta,40,NOALIGN)
+[01,28]=Endereco: @F(endpcar,30,NOALIGN), @F(bairropcar,20,NOALIGN)
+[01,29]=Cidade: @F(cidpcar,20,NOALIGN)-@F(ufpcar,2,LEFT)
+[32,29]=CGC: @F(cgcpcar,18,LEFT) 
+[01,30]=--------------------------------------------------------------------------------
+
+[01,31]=D A D O S   D O S   M A N I F E S T O S
+[01,32,COND]=Numero          Origem                         Destino                         Data saída            Previsao chegada  
+
+[01,33,COND,cartasfretes<6]=@F(nmanifesto,11,LEFT)     @F(origem,30,LEFT)  @F(destino,30,LEFT)   @F(dtsaida,10,LEFT)            @F(dtprevista,10,LEFT)
+[01,38]=--------------------------------------------------------------------------------
+[01,39]=D A D O S   D O   C O N T R A T O
+[01,40]=RECEBI A DOCUMENTACAO E A CARGA ESPECIFICADA NESTE DOCUMENTO, BEM COMO O ADIANTAMENTO NELE MENCIONADO.
+
+[01,42]=Frete contrato  : @F(vladiantado,10,RIGHT)
+[01,43]=Outros          : @F(vloutros,10,RIGHT)
+[01,44]=Adiantamento    : @F(vladiantado,10,RIGHT) pago em @F(adiantamento_em,10,LEFT) 
+[01,45]=I.R.            : @F(ir,10,RIGHT)
+[01,46]=I.N.S.S.        : @F(iNSS,10,RIGHT)
+[01,47]=SEST/SENAT      : @F(sest,10,RIGHT)
+[01,48]=Outros descontos: @F(vloutrasdeducoes,10,RIGHT)
+[01,49]=Saldo a receber : @F(vlsaldo,10,RIGHT)
+
+[01,52]=___________________________________     ___________________________________
+[01,53]=@F(nomefilial,35,LEFT)          @F(motorista,35,LEFT)

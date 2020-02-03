@@ -1,0 +1,629 @@
+/* /web  */
+
+BODY {
+    /*background: #FFFFFF url(img/bg_hpn.png) repeat-x;*/
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    MARGIN: 0px;
+    text-align: center; 
+    font: 11px/20px  sans-serif;
+    background-color: #F7F7F7;
+}
+
+
+
+.boxlogon {
+    width: 310px;
+    background-image:url(img/bkg_box.jpg);
+    margin-top:0px;
+    padding: 10px;
+    font-family:Verdana;
+    font-size:12px;
+    font-weight:bold;
+    color:#003366;
+    height:154px;
+
+}
+.boxLogon {
+    width: 310px;
+    background-image:url(img/bkg_box.jpg);
+    margin-top:0px;
+    padding: 10px;
+    font-family:Verdana;
+    font-size:12px;
+    font-weight:bold;
+    color:#003366;
+    height:154px;
+
+}
+
+.topo {
+    background-image:url(./img/topo_login.jpg);
+    background-repeat:no-repeat;
+    width:778px;
+    height:100px;
+    _height:100px;
+    max-height:100px;
+}
+
+
+.corpo {
+    background-image:url(img/bkg_login.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    margin-top:50px;
+    padding-top:50px;
+    width:778px;
+    height:400px;
+    _height:400px;
+    max-height:400px;
+    color:#FFFFFF;
+    font-family:Verdana;
+    font-size:18px bold;
+}
+
+.TextoCampos {
+    text-align: right;
+    font-size: 9pt;
+    background-color:#DBE9F1;
+    border-radius: 3px;
+}
+.textoCampos {
+    text-align: right;
+    font-size: 9pt;
+    background-color:#DBE9F1;
+    border-radius: 3px;
+}
+.TextoCamposNoAlign{
+    font-size: 9pt;
+    background-color:#DBE9F1;
+    border-radius: 3px;
+}
+.textoCamposNoAlign {
+    font-size: 9pt;
+    background-color:#DBE9F1;
+    border-radius: 3px;
+}
+
+.TextoMenu {
+    font: normal 12px Verdana, Arial, Helvetica, sans-serif;
+}
+.textoMenu {
+    font: normal 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.bordaFina{
+    border: 1px solid #003148;
+    border-radius: 3px;
+}
+
+.bordaBranca{
+    border: 2px solid white;
+}
+
+.tabela {
+    margin: 0px;
+    font: bold 12px Verdana;
+    background-color:#cccccc; 
+    color:#000000;
+    border-radius: 3px;
+}
+
+.titulo {
+    background-color:#003366;
+    MARGIN: 0px;
+    font: bold 12px Verdana;
+}
+
+.imagemLink {
+    cursor: pointer;
+    border: 0 solid #FFFFFF;
+    vertical-align:middle;
+}
+
+.imagemLinkSpc {
+    cursor: pointer;
+    border: 0 solid #FFFFFF;
+    vertical-align:middle;
+    margin-left: 5px;
+}
+
+.celula{
+    color: #000000;
+    background-color:#7FB2CC;
+    text-align: center;
+    font-family:Verdana, Arial, Helvetica, sans-serif;        
+    font-size: 11px;
+    font-weight:bold;
+
+    padding:4px;
+    padding: 0 0 0 10px;
+    border-radius: 3px;
+}
+.celulaNoAlign{
+    color: #000000;
+    background-color:#7FB2CC;
+    font-family:Verdana, Arial, Helvetica, sans-serif;        
+    font-size: 11px;
+    font-weight:bold;
+
+    padding:4px;
+    padding: 0 0 0 10px;
+    border-radius: 3px;
+}
+.CelulaZebra1{
+    color: #000000;
+    background-color:#7FB2CC;
+    text-align: left;
+    font:11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+    border-radius: 3px;
+}
+.CelulaZebra1NoAlign{
+    color: #000000;
+    background-color:#7FB2CC;
+    font:11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+    border-radius: 3px;
+}
+.celulaZebra1{
+    color: #000000;
+    background-color:#7FB2CC;
+    text-align: left;
+    font:11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+    border-radius: 3px;
+}
+.CelulaZebra2{
+    color: #000000;
+    background-color:#DBE9F1;
+    text-align:left;
+    font:11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+    border-radius: 3px;
+}
+.CelulaZebra2NoAlign{
+    color: #000000;
+    background-color:#DBE9F1;
+    font:11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+    border-radius: 3px;
+}
+.celulaZebra2{
+    color: #000000;
+    background-color:#DBE9F1;
+    text-align:left;
+    font:11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+    border-radius: 3px;
+}
+
+.linkEditar {
+    color: #000066;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.tabelaMenu{
+    width: 100%;
+    height: 100%;
+    font: 13px/20px sans-serif;
+    text-align: left;
+    border-radius: 3px;
+}
+
+.inputReadOnly{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 1px solid #003366;     
+    background-color: #cccccc ;  
+    border-radius: 3px;
+}
+
+.inputReadOnly8pt{ 
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    FONT: normal 9px/10px Verdana, Helvetica, sans-serif;
+    border: 1px solid #003366;
+    background-color: #cccccc;  
+    border-radius: 3px;
+}
+.inputReadOnly8pt2{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:  8px;
+    border: 1px solid #003366;
+    background-color: #cccccc;
+    border-radius: 3px;
+}
+
+
+.fieldMin{
+    FONT: normal 9px/10px Verdana, Helvetica, sans-serif;
+
+    BORDER-RIGHT:  #003366 1px solid;
+    BORDER-LEFT:   #003366 1px solid;
+    BORDER-TOP:    #003366 1px solid;
+    BORDER-BOTTOM: #003366 1px solid;
+    border-radius: 3px;
+}
+.fieldMin2{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 8px;
+    BORDER-RIGHT:  #003366 1px solid;
+    BORDER-LEFT:   #003366 1px solid;
+    BORDER-TOP:    #003366 1px solid;
+    BORDER-BOTTOM: #003366 1px solid;
+    border-radius: 3px;
+}
+.colorClear{
+    color: #000000;
+    background-color: #E2E2E2;
+    text-align: center;
+    font:  normal 11px Verdana, Arial, Helvetica, sans-serif;
+    height: 19px;
+}
+
+.boxlogon {
+    width: 310px;
+    background-image:url(img/bkg_box.jpg);
+    background-repeat:no-repeat;
+    margin-top:0px;
+    padding: 10px;
+    font-family:Verdana;
+    font-size:12px;
+    font-weight:bold;
+    color:#003366;
+    height:154px;
+}
+.boxLogon {
+    width: 310px;
+    background-image:url(img/bkg_box.jpg);
+    background-repeat:no-repeat;
+    margin-top:0px;
+    padding: 10px;
+    font-family:Verdana;
+    font-size:12px;
+    font-weight:bold;
+    color:#003366;
+    height:154px;
+}
+
+.topo {
+    background-image:url(./img/topo_login.jpg);
+    background-repeat:no-repeat;
+    width:778px;
+    height:100px;
+    _height:100px;
+    max-height:100px;
+}
+
+.corpo {
+    background-image:url(img/bkg_login.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    margin-top:0px;
+    padding-top:50px;
+    width:778px;
+    height:400px;
+    _height:400px;
+    max-height:400px;
+    color:#FFFFFF;
+    font-family:Verdana;
+    font-size:18px bold;
+}
+.fieldDate{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 1px solid #003366;
+    border-radius: 3px;
+}
+.fieldDecimal{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 1px solid #003366;
+    border-radius: 3px;
+    text-align: right;
+}
+.fieldDateMin{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    border: 1px solid #003366;
+    border-radius: 3px;
+}
+.inputtexto {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 1px solid #003366;
+    border-radius: 3px;
+}
+.inputTexto {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 1px solid #003366;
+    border-radius: 3px;
+}
+
+.inputbotao {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px; 
+    border: 1px solid #003366;
+    background-color:#2E76A6;
+    color:#FFFFFF;
+    border-radius: 3px;
+}
+.inputBotao {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    border: 1px solid #003366;
+    background-color:#2E76A6;
+    color:#FFFFFF;
+    border-radius: 3px;
+}
+.inputBotaoMin {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    margin-left: 5px;
+    border: 1px solid #003366;
+    background-color:#2E76A6;
+    color:#FFFFFF;
+    width: 20px;
+    border-radius: 3px;
+}
+.botoes {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    border: 1px solid #003366;
+    background-color:#2E76A6;
+    color:#FFFFFF;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+a {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-decoration:none;
+    color:#003366;
+}
+
+a:hover {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-decoration:underline;
+    color:#003366;
+}
+
+ul{
+
+}
+
+
+.opCor0{
+    background-color: rgb(255, 255, 255);
+}
+.opCor1{
+    background-color: rgb(229, 229, 229);
+}
+.opCor2{
+    background-color: rgb(205, 205, 205);
+}
+.opCor3{
+    background-color: rgb(167, 167, 167);
+}
+.opCor4{
+    background-color: rgb(128, 128, 128);
+}
+
+.limite{
+    height:150px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background-color:#DBE9F1;
+}
+.limiteMov{
+    height:34px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+
+}
+
+.limiteRel{
+    height:350px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background-color:#DBE9F1;
+}
+
+.divOpaca {
+    position:absolute;
+    background-image:url(./img/topo_login.jpg);
+    background-repeat:repeat-y;
+    background-position:center;
+    background-attachment:fixed;
+    overflow:auto;
+    background-color:red;
+    visibility:visible;
+    opacity: .5;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;    
+    border-radius: 3px;
+}
+.tabelaZerada{
+    padding:0px;
+    margin:0px;
+    background-color: #F7F7F7;
+    width:100%;
+    border-radius: 3px;
+}
+.tabelaZeradaSemPerc{
+    padding:0px;
+    margin:0px;
+    background-color: #F7F7F7;
+    border-radius: 3px;
+}
+.tdZerado{
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+fieldSet{
+    font-size: 9pt;
+    padding:2px;
+    border-radius: 3px;
+}
+legend{
+    font: 14px  verdana;
+    font-weight:bold;
+}
+
+
+.font9 {
+    font-size: 9px;
+}
+
+
+.menu {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: #000033;
+    background-color: #FFFFFF;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 5px;
+    cursor: pointer;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px;
+}
+
+.menu-sel {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000033;
+    background-color: #CCCCCC;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+    padding: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px;
+    cursor: pointer;
+}
+
+#szlider{
+    width:80%;
+    height:15px;
+    border:1px solid #000;
+    overflow:hidden; }
+#szliderbar{
+    width:37%;
+    height:15px;
+    border-right: 1px solid #000000;
+    background: #d65946; }
+#szazalek {
+    color: #000000;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    left: 25px;
+    position: relative;
+    top: -16px; }
+
+.frameIeSubstituta {
+    display: none;
+    z-index: 999999999;
+    width: 550px;
+    height: 500px;
+    background: #ccc;
+    left: calc(50% - 275px) !important;
+    top: calc(50% - 250px) !important;
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5);
+    border-radius: 7px;
+}
+#ieSubstituta {
+    width: 100%;
+    height: 100%;
+}
+
+.imagemFusionTrak {
+    width: 30px;
+    height: 30px;
+}
+
+.container-detalhes-ocorrencia{
+    width: 950px;
+    height: 700px;
+    position: absolute;
+    float: left;
+    z-index: 999999999;
+    left: calc(50% - 475px);
+    top: calc(50% - 350px);
+    display: none;
+}
+
+.cobre-tudo{
+    display: none;
+    top: 0;
+    left: 0;
+    position: absolute;
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999998;
+}
+
+#tabelaEtiquetaCliente td {
+    text-align: left;
+    padding-left: 67%;
+}
+
+.bloqueio-tela {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.5;
+    z-index: 999999998;
+    top: 0;
+    left: 0;
+}
+
+.gif-bloq-tela {
+    display: none;
+    top: 50%;
+    margin-top: -59px;
+    left: 50%;
+    margin-left: -55px;
+    z-index: 999999999;
+    position: absolute;
+}
+
+.cobre-tudo{
+    display: none;
+    top: 0;
+    left: 0;
+    position: absolute;
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    opacity: 0.5;
+    z-index: 9997;
+}

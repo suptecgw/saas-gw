@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_bairros" modulo="0,1,2,3,4" codTela="65">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='bairro' width="" visivel="true" format="" type="varchar" label="Bairro" />
+    <column name='cidade_id' width="" visivel="false" format="" type="int" label="Cidade ID" />
+    <column name='cidade' width="" visivel="true" format="" type="varchar" label="Cidade" />
+    <column name='uf' width="" visivel="true" format="" type="varchar" label="UF" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data de criação" />  
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data da última alteração" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criado por" />  
+    
+    <columnFiltroSelect name="bairro" label="Bairro" ordem="1"/>
+    
+    <columnOrdenacaoSelect name="bairro" label="Bairro" ordem="1"/>
+    <columnOrdenacaoSelect name="cidade" label="Cidade" ordem="2"/>
+    <columnOrdenacaoSelect name="uf" label="UF" ordem="3"/>
+    
+    
+</target>

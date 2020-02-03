@@ -1,0 +1,148 @@
+.container-input-file-layout {
+    float: left;
+    margin-right: 0;
+    width: 100%;
+}
+
+.btn-tertiary {
+    background: var(--tonalidade2);
+    color: #fff;
+    padding: 0;
+    line-height: 27px;
+    width: 100%;
+    margin: auto;
+    display: block;
+    border: 2px solid var(--tonalidade2);
+}
+.btn-tertiary:hover, .btn-tertiary:focus {
+    color: #fff;
+}
+
+/* input file style */
+.input-file-layout {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.input-file-layout + .js-labelFile {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 8px;
+    cursor: pointer;
+    width: 80%;
+}
+.input-file-layout + .js-labelFile .icon:before {
+    content: "\f093";
+}
+.input-file-layout + .js-labelFile.has-file .icon:before {
+    content: "\f00c";
+    color: #5AAC7B;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.btn-tertiary {
+    width: 81%;
+    margin: 0px;
+    margin-right: 100px;
+}
+
+#baixar_certificado {
+    float: left;
+    margin-left: 26px;
+    font-size: 15px;
+    color: var(--tonalidade29);
+    border-radius: 200px 200px 200px 200px;
+    border: 2px solid var(--tonalidade29);
+    text-align: center;
+    vertical-align: middle;
+}
+
+#baixar_certificado > i {
+    width: 28px;
+    height: 28px;
+    line-height: 32px;
+}
+
+#inputChamarPrompt {
+    border: 1px solid gray;
+}
+
+.div_variaveis {
+    text-align: left;
+    line-height: 28px;
+    box-shadow: unset;
+    color: unset;
+    background-color: unset;
+}
+
+.div_variaveis > ul {
+    list-style-type: none;
+    margin: 1px 0 0 -40px;
+}
+
+.variaveis {
+    text-decoration: none;
+}
+
+.celula-zebra-variaveis {
+    background: rgba(100, 100, 100, 0.1);
+    padding-left: 10px;
+    padding-right: 20px;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+.celula-zebra-variaveis:first-child {
+    border-top: 1px solid #999;
+}
+
+.celula-zebra-variaveis:nth-child(odd) {
+    background: rgba(248, 248, 248, 0.2);
+    padding-left: 10px;
+    padding-right: 20px;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+.celula-zebra-variaveis-2 {
+    background: rgba(150, 150, 150, 0.1);
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+    padding-right: 10px;
+}
+
+.celula-zebra-variaveis-2:first-child {
+    border-top: 1px solid #999;
+}
+
+.celula-zebra-variaveis-2:nth-child(odd) {
+    background: rgba(248, 248, 248, 0.2);
+    padding-right: 10px;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+}
+
+.body-dom-filiais {
+    padding-top: 8px;
+}
+
+.esconder-input {
+    visibility: hidden !important;
+}
+
+.label-razao-filial {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container-dom-filials > .body {
+    max-height: 9vw !important;
+}

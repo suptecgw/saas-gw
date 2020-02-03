@@ -1,0 +1,54 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+legend {
+	color: #F2F2F2;
+}
+
+.panel {
+	clear: both;
+	display: none;
+	background-color: #FFFFFF;
+	padding: 0em;
+}
+
+fieldset {
+	padding: 0em;
+}
+
+.panel.active-tab-body {
+	display: block;
+}
+.bar {
+	padding: 5px;
+	background-color: #FFFFFF;
+}
+
+#tabs {
+/*	position: absolute;*/
+	top: 55px;
+	height: 28px;
+	list-style: none;
+}
+
+#tabs li {
+	float: left;
+}
+
+#tabs a {
+	float: left;
+	padding: 5px 8px;
+	margin-left: 6px;
+	background-color: #CCCCCC;
+	text-decoration: none;
+	color: #000000;
+}
+
+#tabs a.active-tab {
+	background-color: #666666;
+	border-top: 3px solid #666;
+	padding-top: 3px;
+	color: #FFFFFF;
+}

@@ -1,0 +1,24 @@
+<Driver>
+   <Codigo>1542847</Codigo>
+   <Descricao>Arquivo Coletor</Descricao>
+   <Extensao>TXT</Extensao>
+   <Tipo>1</Tipo>
+   <Configuracao>
+	<permitirDuplicacao>false</permitirDuplicacao>
+   </Configuracao>	
+   <Campo>
+      <Descricao>Pedido</Descricao>
+      <Formato>a</Formato>
+      <PosicaoInicial>1</PosicaoInicial>
+      <PosicaoFinal>6</PosicaoFinal>
+      <Indice>1</Indice>
+   </Campo>
+   <Campo>
+      <Descricao>codBarras</Descricao>
+      <Formato>d</Formato>
+      <PosicaoInicial>7</PosicaoInicial>
+      <PosicaoFinal>50</PosicaoFinal>
+      <CasasDecimais>0</CasasDecimais>
+      <Indice>3</Indice>
+   </Campo>
+</Driver>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_unidade_custo" modulo="0,1,2,3,4" codTela="17">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='sigla' width="100px" visivel="true" format="" type="varchar" label="Sigla" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='data_criacao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Criação" />
+    <column name='data_ultima_alteracao' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Data Ultima Alteração" />  
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criados por mim" />    
+    
+    <columnFiltroSelect name="sigla" label="Sigla" ordem="1"/>
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="2"/>
+    <columnFiltroSelect name="data_criacao" label="Data Criação" ordem="3"/>
+    <columnFiltroSelect name="data_ultima_alteracao" label="Data Última Alteração" ordem="4"/>
+    
+    <columnOrdenacaoSelect name="sigla" label="Sigla" ordem="1"/>
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="2"/>
+    <columnOrdenacaoSelect name="data_criacao" label="Data Criação" ordem="3"/>
+    <columnOrdenacaoSelect name="data_ultima_alteracao" label="Data Última Alteração" ordem="4"/>
+    
+    
+</target>

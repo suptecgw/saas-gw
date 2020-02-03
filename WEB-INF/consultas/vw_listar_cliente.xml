@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_cliente" modulo="0,1,2,3,4" codTela="10">
+    
+    
+    <!--c.idcliente,c.razaosocial,cid.cidade,cid.uf,c.cnpj,c.inscest,c.fone,cc.contato-->
+    <column name="codigo" width="70px" visivel="true" format="" type="int" label="Código" />
+    <column name="razaosocial" width="200px" visivel="true" format="" type="varchar" label="Razão Social" />
+    <column name="nomefantasia" width="" visivel="true" format="" type="varchar" label="Nome Fantasia" />
+    <column name="cnpj" width="150px" visivel="true" format="##.###.###/####-##" type="varchar" label="CPF/CNPJ" />
+    <column name="inscest" width="" visivel="true" format="" type="varchar" label="Insc. Estadual" />
+    <column name="bairro" width="" visivel="true" format="" type="varchar" label="Bairro" />
+    <column name="endereco" width="" visivel="true" format="" type="varchar" label="Endereço" />
+    <column name="endereco_coleta" width="" visivel="false" format="" type="varchar" label="Endereço de Entrega/Coleta" />
+    <column name="contato" width="" visivel="false" format="" type="varchar" label="Contato" />
+    <column name="fone" width="" visivel="false" format="" type="varchar" label="Telefone" />
+    <column name="email" width="" visivel="false" format="" type="varchar" label="E-mail" />
+    <column name="dtlancamento" width="" visivel="false" format="" type="varchar" label="Data Inclusão" />
+    <column name="dtalteracao" width="" visivel="false" format="" type="varchar" label="Data Última Alteração" />
+    <column name="cidade" width="" visivel="true" format="" type="varchar" label="Cidade" />
+    <column name="uf" width="" visivel="true" format="" type="varchar" label="UF" />
+    <column name="is_cliente_direto" width="100px" visivel="true" format="" type="varchar" label="Cliente direto" />
+    <column name="fone" width="" visivel="true" format="" type="varchar" label="Telefone" />
+    <column name="idusuariolancamento" width="" visivel="true" format="" type="varchar" label="Criado por mim" />
+    <column name="ativo" width="" visivel="true" format="" type="boolean" label="Clientes Ativos" />
+    <column name="descricao_grupo" width="" visivel="false" format="" type="varchar" label="Descricao grupo" />
+    <column name="idvendedor" width="" visivel="false" format="" type="int" label="Id Vendedor" />
+    <column name="vendedor" width="" visivel="false" format="" type="varchar" label="Vendedor" />
+    <column name="vendedor2_id" width="" visivel="false" format="" type="varchar" label="Supervisor" />
+    <column name="cep" width="" visivel="true" format="" type="varchar" label="CEP" />
+    <column name="nlogradouro" width="" visivel="true" format="" type="varchar" label="N° Logradouro" />
+    <column name="codigo_loja" width="" visivel="true" format="" type="varchar" label="Cód. Loja" />
+    <column name="is_consumidor_final" width="" visivel="true" format="" type="varchar" label="Consumidor Final" />
+    <column name="is_cliente_armazenagem" width="" visivel="true" format="" type="varchar" label="Cliente Armazenagem" />
+    <column name="contatos" width="" visivel="true" format="" type="varchar" label="Contatos" />
+    <column name="condicaopgt" width="" visivel="true" format="" type="varchar" label="Condição Pagto" />
+    <column name="fichario" width="" visivel="true" format="" type="varchar" label="Fichário" />
+    <column name="origem" width="" visivel="true" format="" type="varchar" label="Origem" />
+    <column name="tipo_tabela" width="" visivel="true" format="" type="varchar" label="Tipo de Tabela" />
+    <column name="conta_contabil" width="" visivel="true" format="" type="varchar" label="Conta Contábil" />
+    <column name="tipo_cfop" width="" visivel="true" format="" type="varchar" label="Tipo CFOP" />
+    <column name="criado_por" width="" visivel="true" format="" type="varchar" label="Usuário Inclusão" />
+    <column name="dtlancamento" width="" visivel="true" format="" type="varchar" label="Data Inclusão" />
+    <column name="alterado_por" width="" visivel="true" format="" type="varchar" label="Usuário Última Alteração" />
+    <column name="dtalteracao" width="" visivel="true" format="" type="varchar" label="Data Última Alteração" />
+    
+    
+    <columnFiltroSelect name="codigo" label="Código" ordem="1"/>
+    <columnFiltroSelect name="razaosocial" label="Razão Social" ordem="2"/>
+    <columnFiltroSelect name="nomefantasia" label="Nome Fantasia" ordem="3"/>
+    <columnFiltroSelect name="cnpj" label="CPF/CNPJ" ordem="4"/>
+    <columnFiltroSelect name="inscest" label="Inscrição Estadual" ordem="5"/>
+    <columnFiltroSelect name="bairro" label="Bairro" ordem="6"/>
+    <columnFiltroSelect name="endereco" label="Endereço" ordem="7"/>
+    <columnFiltroSelect name="endereco_coleta" label="Endereço de Entrega/Coleta" ordem="8"/>
+    <columnFiltroSelect name="contato" label="Contato" ordem="9"/>
+    <columnFiltroSelect name="fone" label="Telefone" ordem="10"/>
+    <columnFiltroSelect name="email" label="E-mail" ordem="11"/>
+    <columnFiltroSelect name="dtlancamento" label="Data Inclusão" ordem="12"/>
+    <columnFiltroSelect name="dtalteracao" label="Data Última Alteração" ordem="12"/>
+    
+
+    <columnOrdenacaoSelect name="codigo" label="Código" ordem="1" />
+    <columnOrdenacaoSelect name="razaosocial" label="Razão Social" ordem="2"/>
+    <columnOrdenacaoSelect name="cnpj" label="CPF/CNPJ" ordem="3"/>
+    <columnOrdenacaoSelect name="cidade" label="Cidade" ordem="4"/>
+    <columnOrdenacaoSelect name="uf" label="UF" ordem="5"/>
+    <columnOrdenacaoSelect name="nomefantasia" label="Nome Fantasia" ordem="6"/>
+    <columnOrdenacaoSelect name="bairro" label="Bairro" ordem="7"/>
+    <columnOrdenacaoSelect name="tipo_tabela" label="Tipo de Tabela" ordem="8"/>
+    <columnOrdenacaoSelect name="codigo_loja" label="Cód. Loja" ordem="9"/>
+    
+</target>

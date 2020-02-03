@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_setores_entregas" modulo="0,1,2,3,4" codTela="45">
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criados por mim" />
+    <column name='atualizado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Atualizado em"/>
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Criado em"/>
+    <column name='cidade' width="" visivel="false" format="" type="varchar" label="Cidades"/>
+    <column name='bairros' width="" visivel="false" format="" type="varchar" label="Bairros"/>
+        
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    <columnFiltroSelect name="bairros" label="Bairro" ordem="2"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+
+</target>

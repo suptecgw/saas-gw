@@ -1,0 +1,17 @@
+# Kenneth F. Reis
+# Modelo de driver para impressao de cheque
+#
+#   Usando este driver:
+#[COLUNA,LINHA,<CONDENSADO>]=<Texto para impressao>
+#Expressao @F()  --> @F(<CAMPO>,<QT_CHARS>, <ALINHAMENTO[NOALIGN,LEFT,RIGHT]>)
+
+ 
+MSG_BEFORE_PRINT=Deseja mesmo imprimir este cheque?<=N><=N>Caminho da impressora:
+
+
+[50,2]=@F(vlcheque,20,RIGHT)
+[15,4,COND]=@F(vlcheque,VALOR_EXTENSO[48;1])
+[1,6,COND]=@F(vlcheque,VALOR_EXTENSO[48;2])
+[1,8,COND]=@F(nominal) 
+[34,10,COND]=@F(fi_cidade,35,RIGHT), @F(dia_pagt,2,LEFT)           @F(mes_pagt,20,LEFT)  @F(ano_pagt)
+

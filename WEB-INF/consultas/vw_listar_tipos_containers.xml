@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<target name="vw_listar_tipos_containers" modulo="0,1,2,3,4" codTela="40">
+
+    <column name='id' width="" visivel="false" format="" type="int" label="Id" />
+    <column name='descricao' width="200px" visivel="true" format="" type="varchar" label="Descrição" />
+    <column name='peso' width="200px" visivel="true" format="#,###" type="numeric" label="Peso" />
+    <column name='valor' width="200px" visivel="true" format="#,##" type="numeric" label="Valor" />  
+    <column name='atualizado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Atualizado em"/>
+    <column name='criado_em' width="" visivel="true" format="dd/MM/yyyy" type="varchar" label="Criado em"/>
+    <column name='criado_por' width="" visivel="false" format="" type="int" label="Criados por mim" />
+        
+    <columnFiltroSelect name="descricao" label="Descrição" ordem="1"/>
+    
+    <columnOrdenacaoSelect name="descricao" label="Descrição" ordem="1"/>
+
+</target>
